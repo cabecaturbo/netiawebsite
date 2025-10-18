@@ -18,16 +18,16 @@ export const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#demo"
+                href="#trial"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pill rounded-full hover:bg-gray-800 transition-colors"
               >
-                See it in Action
+                Add to Your Website
               </a>
               <a
-                href="/pricing"
+                href="#demo"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
               >
-                View Pricing
+                See It In Action
               </a>
             </div>
 
