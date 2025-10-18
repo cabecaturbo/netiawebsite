@@ -7,20 +7,25 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .stone { fill: none; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-              .stone-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+              .calendar { fill: none; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+              .calendar-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
             `}</style>
           </defs>
-          {/* Base stones */}
-          <path className="stone" d="M20 70 Q30 65 40 70 Q50 75 60 70 Q70 65 80 70 Q85 75 80 80 Q70 85 60 80 Q50 75 40 80 Q30 85 20 80 Z" />
-          <path className="stone" d="M25 60 Q35 55 45 60 Q55 65 65 60 Q70 65 65 70 Q55 75 45 70 Q35 65 25 70 Z" />
-          {/* Middle stone */}
-          <path className="stone" d="M35 50 Q45 45 55 50 Q60 55 55 60 Q45 65 35 60 Z" />
-          {/* Top stone with hand placing it */}
-          <path className="stone-filled" d="M40 40 Q45 35 50 40 Q52 45 50 50 Q45 55 40 50 Z" />
-          {/* Hand outline */}
-          <path className="stone" d="M30 35 Q25 30 30 25 Q35 20 40 25 Q45 30 50 35 Q55 40 60 35" strokeWidth="2" />
-          <path className="stone" d="M25 30 Q20 25 25 20 Q30 15 35 20" strokeWidth="2" />
+          {/* Calendar base */}
+          <rect className="calendar" x="20" y="30" width="60" height="50" rx="8" />
+          {/* Calendar header */}
+          <rect className="calendar-filled" x="20" y="30" width="60" height="20" rx="8" />
+          {/* Calendar rings */}
+          <circle className="calendar" cx="30" cy="40" r="3" />
+          <circle className="calendar" cx="70" cy="40" r="3" />
+          {/* Calendar grid */}
+          <line className="calendar" x1="35" y1="55" x2="35" y2="70" strokeWidth="2" />
+          <line className="calendar" x1="50" y1="55" x2="50" y2="70" strokeWidth="2" />
+          <line className="calendar" x1="65" y1="55" x2="65" y2="70" strokeWidth="2" />
+          <line className="calendar" x1="30" y1="60" x2="70" y2="60" strokeWidth="2" />
+          {/* Calendar numbers */}
+          <circle className="calendar" cx="42" cy="65" r="2" />
+          <circle className="calendar" cx="58" cy="65" r="2" />
         </svg>
       )
     },
@@ -35,17 +40,15 @@ export const Features = () => {
               .bolt-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
             `}</style>
           </defs>
-          {/* Lightning bolt base */}
-          <path className="bolt" d="M30 75 Q35 70 40 75 Q45 80 50 75 Q55 70 60 75 Q65 80 70 75" />
-          {/* Lightning bolt middle */}
-          <path className="bolt" d="M40 60 Q45 55 50 60 Q55 65 60 60" />
-          {/* Lightning bolt top with energy burst */}
-          <path className="bolt-filled" d="M45 45 Q50 40 55 45 Q60 50 55 55 Q50 60 45 55 Z" />
-          {/* Energy lines */}
-          <path className="bolt" d="M35 40 Q40 35 45 40" strokeWidth="2" />
-          <path className="bolt" d="M60 40 Q65 35 70 40" strokeWidth="2" />
-          <path className="bolt" d="M35 60 Q40 55 45 60" strokeWidth="2" />
-          <path className="bolt" d="M60 60 Q65 55 70 60" strokeWidth="2" />
+          {/* Lightning bolt main body */}
+          <path className="bolt" d="M35 25 L45 45 L40 45 L50 75 L40 55 L45 55 L35 25" />
+          {/* Lightning bolt filled center */}
+          <path className="bolt-filled" d="M37 30 L43 45 L41 45 L47 70 L41 55 L43 55 L37 30" />
+          {/* Energy sparks */}
+          <path className="bolt" d="M25 35 Q30 30 35 35" strokeWidth="2" />
+          <path className="bolt" d="M60 35 Q65 30 70 35" strokeWidth="2" />
+          <path className="bolt" d="M30 60 Q35 55 40 60" strokeWidth="2" />
+          <path className="bolt" d="M55 60 Q60 55 65 60" strokeWidth="2" />
         </svg>
       )
     },
@@ -56,22 +59,24 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .gear { fill: none; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-              .gear-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-              .center { fill: #1677ff; stroke: #0a0a0a; stroke-width: 2; }
+              .art { fill: none; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+              .art-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+              .brush { fill: none; stroke: #0a0a0a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
             `}</style>
           </defs>
-          {/* Outer gear ring */}
-          <circle className="gear" cx="50" cy="50" r="25" />
-          {/* Gear teeth */}
-          <path className="gear" d="M50 25 L55 20 L65 20 L70 25 L70 35 L65 40 L55 40 L50 35" strokeWidth="2" />
-          <path className="gear" d="M75 50 L80 45 L80 35 L75 30 L65 30 L60 35 L60 45 L65 50" strokeWidth="2" />
-          <path className="gear" d="M50 75 L45 80 L35 80 L30 75 L30 65 L35 60 L45 60 L50 65" strokeWidth="2" />
-          <path className="gear" d="M25 50 L20 45 L20 35 L25 30 L35 30 L40 35 L40 45 L35 50" strokeWidth="2" />
-          {/* Inner gear */}
-          <circle className="gear" cx="50" cy="50" r="15" />
-          {/* Center hub */}
-          <circle className="center" cx="50" cy="50" r="8" />
+          {/* Canvas frame */}
+          <rect className="art" x="20" y="25" width="60" height="45" rx="4" />
+          {/* Paint strokes */}
+          <path className="art" d="M30 35 Q35 30 40 35 Q45 40 50 35 Q55 30 60 35" strokeWidth="2" />
+          <path className="art" d="M25 45 Q35 40 45 45 Q55 50 65 45" strokeWidth="2" />
+          <path className="art" d="M30 55 Q40 50 50 55 Q60 60 70 55" strokeWidth="2" />
+          {/* Paint blob */}
+          <circle className="art-filled" cx="45" cy="50" r="8" />
+          {/* Paint brush */}
+          <path className="brush" d="M70 20 L75 15 L80 20 L75 25 Z" />
+          <line className="brush" x1="75" y1="25" x2="75" y2="35" />
+          {/* Brush handle */}
+          <line className="brush" x1="75" y1="35" x2="75" y2="45" strokeWidth="3" />
         </svg>
       )
     }
