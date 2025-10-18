@@ -24,9 +24,8 @@ export default function ProSignup() {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000))
     
-    // TODO: Integrate with Stripe for payment
-    // For now, redirect to dashboard
-    window.location.href = '/dashboard'
+    // Redirect to Stripe payment
+    window.location.href = 'https://buy.stripe.com/test_14AdRb1mRfra9NZeua2oE00'
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
