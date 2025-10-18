@@ -57,7 +57,7 @@ export const Hero = () => {
             </div>
 
             {/* Metrics Section */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50 animate-fade-in animate-stagger-6">
+            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border/50 animate-fade-in animate-stagger-6">
               <div className="text-left">
                 <div className="text-2xl font-display font-bold text-fg">24/7</div>
                 <div className="text-sm text-muted">Availability</div>
@@ -65,10 +65,6 @@ export const Hero = () => {
               <div className="text-left">
                 <div className="text-2xl font-display font-bold text-fg">2.3s</div>
                 <div className="text-sm text-muted">Avg Response</div>
-              </div>
-              <div className="text-left">
-                <div className="text-2xl font-display font-bold text-fg">98%</div>
-                <div className="text-sm text-muted">Accuracy</div>
               </div>
             </div>
           </div>
