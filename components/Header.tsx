@@ -10,31 +10,15 @@ export const Header = () => {
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
+          {/* Logo and Pricing */}
+          <div className="flex items-center space-x-8">
             <Link href="/" className="font-display font-semibold text-xl text-fg">
               Netia
             </Link>
+            <Link href="/pricing" className="text-sm text-muted hover:text-fg transition-colors">
+              Pricing
+            </Link>
           </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              Product
-            </button>
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              AI Technology
-            </button>
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              Solutions
-            </button>
-            <a href="#customers" className="text-sm text-muted hover:text-fg transition-colors">
-              Customers
-            </a>
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              Resources
-            </button>
-          </nav>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
@@ -78,21 +62,9 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border">
             <div className="py-4 space-y-3">
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Product
-              </button>
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                AI Technology
-              </button>
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Solutions
-              </button>
-              <a href="#customers" className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Customers
-              </a>
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Resources
-              </button>
+              <Link href="/pricing" className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
+                Pricing
+              </Link>
               <div className="pt-4 space-y-2">
                 <a
                   href="#demo"
