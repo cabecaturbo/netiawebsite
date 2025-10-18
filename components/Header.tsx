@@ -19,36 +19,18 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              Product
-            </button>
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              AI Technology
-            </button>
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              Solutions
-            </button>
-            <a href="#customers" className="text-sm text-muted hover:text-fg transition-colors">
-              Customers
-            </a>
-            <button className="text-sm text-muted hover:text-fg transition-colors">
-              Resources
-            </button>
+            <Link href="/pricing" className="text-sm text-muted hover:text-fg transition-colors">
+              Pricing
+            </Link>
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <a
               href="#demo"
-              className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
-            >
-              View demo
-            </a>
-            <a
-              href="#trial"
               className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors"
             >
-              Start free trial
+              See it in Action
             </a>
           </div>
 
@@ -78,33 +60,15 @@ export const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-border">
             <div className="py-4 space-y-3">
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Product
-              </button>
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                AI Technology
-              </button>
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Solutions
-              </button>
-              <a href="#customers" className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Customers
-              </a>
-              <button className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
-                Resources
-              </button>
+              <Link href="/pricing" className="block w-full text-left text-sm text-muted hover:text-fg transition-colors">
+                Pricing
+              </Link>
               <div className="pt-4 space-y-2">
                 <a
                   href="#demo"
-                  className="block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface transition-colors"
-                >
-                  View demo
-                </a>
-                <a
-                  href="#trial"
                   className="block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-colors"
                 >
-                  Start free trial
+                  See it in Action
                 </a>
               </div>
             </div>
