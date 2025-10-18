@@ -34,11 +34,11 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .bolt { fill: none; stroke: #0a0a0a; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+              .bolt { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Exact lightning bolt outline */}
-          <path className="bolt" d="M25 25 L45 45 L40 45 L65 70 L35 55 L40 55 L25 25" />
+          {/* Solid black lightning bolt */}
+          <path className="bolt" d="M30 25 L50 45 L45 45 L65 75 L40 60 L45 60 L30 25" />
         </svg>
       )
     },
