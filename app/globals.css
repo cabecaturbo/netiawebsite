@@ -256,21 +256,7 @@ body {
   font-style: normal;
 }
 
-/* Dark mode styles */
-.dark {
-  --bg: #0a0a0a;
-  --fg: #ffffff;
-  --muted: #a3a3a3;
-  --surface: #1a1a1a;
-  --border: #333333;
-}
-
-.dark body {
-  background-color: var(--bg);
-  color: var(--fg);
-}
-
-/* Dark mode transitions */
+/* Smooth transitions */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
