@@ -34,11 +34,17 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .bolt { fill: #0a0a0a; }
+              .bubble { fill: none; stroke: #0a0a0a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+              .bubble-tail { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Solid black lightning bolt */}
-          <path className="bolt" d="M30 25 L50 45 L45 45 L65 75 L40 60 L45 60 L30 25" />
+          {/* Speech bubble */}
+          <rect className="bubble" x="20" y="25" width="60" height="40" rx="8" />
+          {/* Speech bubble tail */}
+          <polygon className="bubble-tail" points="35,65 45,65 40,75" />
+          {/* Text lines */}
+          <line className="bubble" x1="30" y1="40" x2="70" y2="40" strokeWidth="2" />
+          <line className="bubble" x1="30" y1="50" x2="60" y2="50" strokeWidth="2" />
         </svg>
       )
     },
