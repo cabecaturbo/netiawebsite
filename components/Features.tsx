@@ -37,8 +37,8 @@ export const Features = () => {
               .bolt { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Simple lightning bolt shape */}
-          <path className="bolt" d="M40 25 L50 45 L45 45 L55 75 L45 55 L50 55 L40 25" />
+          {/* Exact lightning bolt shape with two distinct bends */}
+          <path className="bolt" d="M35 20 L50 40 L45 40 L55 70 L40 55 L45 55 L35 20" />
         </svg>
       )
     },
