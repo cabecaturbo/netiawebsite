@@ -88,7 +88,7 @@ export const AnimatedChat = () => {
         {messages.map((message, index) => (
           <div
             key={message.id}
-            className={`flex ${message.isUser ? 'justify-end' : 'justify-start space-x-2'} transition-all duration-500 ease-out`}
+            className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} transition-all duration-500 ease-out`}
             style={{ 
               animation: 'fadeInUp 0.6s ease-out forwards',
               opacity: 0,
@@ -97,7 +97,7 @@ export const AnimatedChat = () => {
             }}
           >
             {!message.isUser && (
-              <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0"></div>
+              <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
             )}
             <div
               className={`rounded-2xl px-4 py-2 max-w-xs ${
