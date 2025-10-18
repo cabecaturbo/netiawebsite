@@ -55,7 +55,7 @@ add_action('wp_footer', 'add_netia_widget');`
               Integration Guide
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Set up webhook integration with your existing Tidio chat widget. AI responds to customer questions and handles appointment booking using your business profile.
+              Set up webhook integration with your existing chat widget. AI responds to customer questions and handles appointment booking using your business profile.
             </p>
           </div>
 

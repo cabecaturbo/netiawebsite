@@ -8,8 +8,8 @@ export const Process = () => {
     },
     {
       number: "02", 
-      title: "Connect Tidio",
-      description: "Set up webhook integration with your existing Tidio chat widget.",
+      title: "Connect Netia",
+      description: "Set up webhook integration with your existing chat widget.",
       action: "View setup"
     },
     {
@@ -34,7 +34,7 @@ export const Process = () => {
             Get started in 4 simple steps
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Set up your business profile, connect your Tidio chat widget, and start answering customer questions with AI. 
+            Set up your business profile, connect your chat widget, and start answering customer questions with AI. 
             No coding required—just add your business information and go live.
           </p>
         </div>

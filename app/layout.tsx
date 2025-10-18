@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Netia - AI That Works",
   description: "AI-powered customer service that schedules appointments, answers instantly, and works seamlessly with your business.",
-  keywords: ["AI", "customer service", "automation", "chatbot", "appointments", "Tidio integration", "business AI"],
+  keywords: ["AI", "customer service", "automation", "chatbot", "appointments", "Netia integration", "business AI"],
   authors: [{ name: "Netia" }],
   creator: "Netia",
   publisher: "Netia",

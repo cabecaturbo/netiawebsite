@@ -18,7 +18,7 @@ export const Footer = () => {
       links: [
         { name: "AI Chat", href: "/features/chat" },
         { name: "Business Profiles", href: "/features/profiles" },
-        { name: "Tidio Integration", href: "/features/tidio" },
+        { name: "Netia Integration", href: "/features/netia" },
         { name: "Multi-tenant", href: "/features/multi-tenant" }
       ]
     },
@@ -55,7 +55,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-muted text-sm leading-relaxed">
-              AI receptionist that answers customer questions 24/7 and handles appointment booking. Integrates with Tidio chat widgets.
+              AI receptionist that answers customer questions 24/7 and handles appointment booking. Integrates with chat widgets.
             </p>
             <div className="flex items-center space-x-0.5 pt-4">
               <span className="text-sm text-gray-600">Powered by</span>
