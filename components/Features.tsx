@@ -1,3 +1,5 @@
+import { FloatingBalls } from './FloatingBalls'
+
 export const Features = () => {
   const features = [
     {
@@ -67,27 +69,44 @@ export const Features = () => {
   ]
 
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-50/20 to-transparent"></div>
+      
+      {/* Floating elements */}
+      <FloatingBalls />
+      
+      <div className="container mx-auto px-4 relative">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {features.map((feature, index) => (
-            <div key={index} className="text-center space-y-6">
+            <div 
+              key={index} 
+              className="text-center space-y-6 group animate-fade-in-up hover-lift transition-all duration-500"
+              style={{animationDelay: `${index * 0.2}s`}}
+            >
               {/* Icon Card */}
               <div className="flex justify-center">
-                <div className="w-24 h-24 bg-surface border border-border rounded-lg flex items-center justify-center">
-                  <span className="text-4xl">{feature.icon}</span>
+                <div className="w-24 h-24 bg-surface border border-border rounded-lg flex items-center justify-center group-hover:bg-primary-50 group-hover:border-primary-200 transition-all duration-300 relative overflow-hidden">
+                  {/* Shimmer effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300 relative z-10">
+                    {feature.icon}
+                  </span>
                 </div>
               </div>
               
               {/* Content */}
               <div className="space-y-4">
-                <h3 className="font-display text-xl font-semibold text-fg">
+                <h3 className="font-display text-xl font-semibold text-fg group-hover:text-primary-600 transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-muted leading-relaxed max-w-sm mx-auto">
+                <p className="text-muted leading-relaxed max-w-sm mx-auto group-hover:text-gray-700 transition-colors duration-300">
                   {feature.description}
                 </p>
               </div>
+              
+              {/* Decorative line */}
+              <div className="w-0 group-hover:w-12 h-0.5 bg-primary-500 mx-auto transition-all duration-500"></div>
             </div>
           ))}
         </div>

@@ -16,7 +16,7 @@ export const Process = () => {
       number: "03",
       title: "Go live", 
       description: "AI starts responding to customer questions and handling appointment booking immediately using your business data.",
-      action: "See demo"
+      action: "See it in action"
     },
     {
       number: "04",

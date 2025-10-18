@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { FloatingBalls } from "@/components/FloatingBalls"
 
 export default function Integrate() {
   const codeSnippet = `<!-- Netia AI Chat Widget -->
@@ -40,15 +41,18 @@ function add_netia_widget() {
 add_action('wp_footer', 'add_netia_widget');`
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Floating elements */}
+      <FloatingBalls />
+      
       <Header />
       <main className="py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative">
           
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              Connect to Tidio
+              Integration Guide
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
               Set up webhook integration with your existing Tidio chat widget. AI responds to customer questions and handles appointment booking using your business profile.
@@ -269,7 +273,7 @@ add_action('wp_footer', 'add_netia_widget');`
                   href="/demo"
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
                 >
-                  View Demo
+                  See it in action
                 </a>
               </div>
             </div>

@@ -1,12 +1,16 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
+import { FloatingBalls } from "@/components/FloatingBalls"
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Floating elements */}
+      <FloatingBalls />
+      
       <Header />
       <main className="py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative">
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
@@ -21,7 +25,7 @@ export default function Pricing() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             
             {/* Starter Card */}
-            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full">
+            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group animate-fade-in-up">
               <div className="mb-6">
                 <h3 className="font-display text-2xl font-semibold text-fg mb-2">
                   Starter
