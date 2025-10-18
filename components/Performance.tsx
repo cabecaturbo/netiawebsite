@@ -9,7 +9,7 @@ export const Performance = () => {
               Unrivalled Performance
             </h2>
             <h3 className="font-display text-2xl md:text-3xl font-semibold text-fg mb-8">
-              Fin outperforms every competitor. Every time.
+              Netia outperforms every competitor. Every time.
             </h3>
           </div>
 
@@ -24,7 +24,7 @@ export const Performance = () => {
                   Fig 2.A
                 </h4>
                 <p className="text-muted">
-                  Fin&apos;s average resolution rate increases 1% every month
+                  Netia&apos;s average resolution rate increases 1% every month
                 </p>
               </div>
             </div>
@@ -38,7 +38,7 @@ export const Performance = () => {
                   Fig 2.B
                 </h4>
                 <p className="text-muted">
-                  Fin wins every head-to-head test ON RESOLUTION RATE
+                  Netia wins every head-to-head test ON RESOLUTION RATE
                 </p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export const Performance = () => {
                   Fig 2.C
                 </h4>
                 <p className="text-muted">
-                  Resolution rate based on independent testing conducted by Fin customers
+                  Resolution rate based on independent testing conducted by Netia customers
                 </p>
               </div>
             </div>
@@ -67,7 +67,7 @@ export const Performance = () => {
                 </div>
                 <div className="flex-1">
                   <blockquote className="text-lg md:text-xl text-fg leading-relaxed mb-4">
-                    &ldquo;Fin is in a completely different league. It&apos;s now involved in 99% of conversations 
+                    &ldquo;Netia is in a completely different league. It&apos;s now involved in 99% of conversations 
                     and successfully resolves up to 65% end-to-end&mdash;even the more complex ones.&rdquo;
                   </blockquote>
                   <div className="flex items-center space-x-4">
@@ -80,7 +80,7 @@ export const Performance = () => {
                       </p>
                     </div>
                     <div className="text-sm text-muted">
-                      Fintech Customer
+                      Netia Customer
                     </div>
                   </div>
                 </div>

@@ -6,11 +6,11 @@ export const Footer = () => {
       title: "Product",
       links: [
         { name: "Home", href: "/" },
-        { name: "Fin Overview", href: "/overview" },
+        { name: "Netia Overview", href: "/overview" },
         { name: "Channels", href: "/channels" },
         { name: "Voice", href: "/voice" },
         { name: "Procedures", href: "/procedures" },
-        { name: "Fin Insights", href: "/insights" }
+        { name: "Netia Insights", href: "/insights" }
       ]
     },
     {
@@ -35,7 +35,7 @@ export const Footer = () => {
         { name: "Customers", href: "/customers" },
         { name: "Pioneer", href: "/pioneer" },
         { name: "Webinars", href: "/webinars" },
-        { name: "Fin 3", href: "/fin3" },
+        { name: "Netia 3", href: "/netia3" },
         { name: "Help Center", href: "/help" },
         { name: "Safety & security", href: "/security" },
         { name: "Ideas Blog", href: "/blog" }

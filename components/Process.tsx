@@ -3,25 +3,25 @@ export const Process = () => {
     {
       number: "01",
       title: "Train",
-      description: "Train Fin to resolve even the most complex queries with your Procedures, knowledge and policies.",
+      description: "Train Netia to handle your business processes, knowledge base, and customer service policies.",
       action: "Learn more"
     },
     {
       number: "02", 
       title: "Test",
-      description: "Run fully simulated customer conversations from start to finish to see exactly how Fin will behave before going live",
+      description: "Run simulated customer conversations to see exactly how Netia will respond before going live",
       action: "Learn more"
     },
     {
       number: "03",
       title: "Deploy", 
-      description: "Set Fin live across every channel—voice, email, chat, and social—for consistent support wherever customers reach out.",
+      description: "Launch Netia across every channel—voice, email, chat, and social—for consistent customer support.",
       action: "Learn more"
     },
     {
       number: "04",
       title: "Analyze",
-      description: "Use AI-powered Insights to analyze and improve Fin's performance and deliver better customer experiences.",
+      description: "Use AI-powered insights to analyze and improve Netia's performance and deliver better customer experiences.",
       action: "Learn more"
     }
   ]
@@ -31,12 +31,12 @@ export const Process = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-fg mb-4">
-            Fin resolves the most complex queries on every channel
+            Netia handles every customer interaction seamlessly
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Fin handles even the most complex queries through a continuous improvement loop called the Fin Flywheel. 
-            Train Fin on your Procedures, knowledge, and policies, test performance before launch, deploy across every channel, 
-            then analyze and improve with AI-powered Insights—so every query is resolved accurately and consistently.
+            Netia processes customer inquiries through a smart workflow that learns and improves continuously. 
+            Train Netia on your business processes, test performance before going live, deploy across all channels, 
+            then analyze and optimize with AI insights—ensuring every customer gets the right answer every time.
           </p>
         </div>
 
