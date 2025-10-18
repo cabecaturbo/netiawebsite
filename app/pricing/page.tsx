@@ -13,7 +13,7 @@ export default function Pricing() {
               Simple, transparent pricing
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Pick a plan that fits your business.
+              Start free and upgrade as you grow. All plans include AI responses powered by OpenAI.
             </p>
           </div>
 

@@ -29,10 +29,10 @@ export default function Dashboard() {
           {/* Dashboard Header */}
           <div className="mb-8">
             <h1 className="font-display text-3xl font-semibold text-fg mb-2">
-              Welcome to your Netia Dashboard
+              Netia Dashboard
             </h1>
             <p className="text-muted">
-              Monitor your AI customer service performance and manage your settings.
+              Manage your business profile and monitor AI conversations with customers.
             </p>
           </div>
 

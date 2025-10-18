@@ -6,48 +6,37 @@ export const Footer = () => {
       title: "Product",
       links: [
         { name: "Home", href: "/" },
-        { name: "Netia Overview", href: "/overview" },
-        { name: "Channels", href: "/channels" },
-        { name: "Voice", href: "/voice" },
-        { name: "Procedures", href: "/procedures" },
-        { name: "Netia Insights", href: "/insights" }
+        { name: "Demo", href: "/demo" },
+        { name: "Pricing", href: "/pricing" },
+        { name: "Integration Guide", href: "/integrate" },
+        { name: "Dashboard", href: "/dashboard" }
       ]
     },
     {
-      title: "AI Technology",
+      title: "Features",
       links: [
-        { name: "AI Engine", href: "/ai-engine" },
-        { name: "Models", href: "/models" },
-        { name: "AI Research", href: "/research" }
+        { name: "AI Chat", href: "/features/chat" },
+        { name: "Business Profiles", href: "/features/profiles" },
+        { name: "Tidio Integration", href: "/features/tidio" },
+        { name: "Multi-tenant", href: "/features/multi-tenant" }
       ]
     },
     {
-      title: "Solutions",
+      title: "Support",
       links: [
-        { name: "Financial Services", href: "/solutions/financial" },
-        { name: "Retail and ecommerce", href: "/solutions/retail" },
-        { name: "Enterprise", href: "/solutions/enterprise" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { name: "Customers", href: "/customers" },
-        { name: "Pioneer", href: "/pioneer" },
-        { name: "Webinars", href: "/webinars" },
-        { name: "Netia 3", href: "/netia3" },
         { name: "Help Center", href: "/help" },
-        { name: "Safety & security", href: "/security" },
-        { name: "Ideas Blog", href: "/blog" }
+        { name: "API Documentation", href: "/docs" },
+        { name: "Setup Guide", href: "/setup" },
+        { name: "Contact Support", href: "/contact" }
       ]
     },
     {
       title: "Company",
       links: [
         { name: "About", href: "/about" },
-        { name: "Contact Us", href: "/contact" },
-        { name: "Careers", href: "/careers" },
-        { name: "Press & Media", href: "/press" }
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms of Service", href: "/terms" },
+        { name: "Security", href: "/security" }
       ]
     }
   ]
@@ -65,7 +54,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-muted text-sm leading-relaxed">
-              AI-powered customer service that works seamlessly with your business.
+              AI receptionist that answers customer questions 24/7 and handles appointment booking. Integrates with Tidio chat widgets.
             </p>
             <div className="flex items-center space-x-0.5 pt-4">
               <span className="text-sm text-gray-600">Powered by</span>
@@ -104,7 +93,7 @@ export const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-6">
               <p className="text-sm text-muted">
-                © 2025 Netia. All rights reserved.
+                © 2025 Netia. All rights reserved. Seattle, WA
               </p>
             </div>
             <div className="flex items-center space-x-6">

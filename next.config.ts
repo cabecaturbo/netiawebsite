@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Optimized for Vercel deployment
+  outputFileTracingRoot: undefined,
 };
 
 export default nextConfig;

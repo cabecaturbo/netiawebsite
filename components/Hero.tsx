@@ -19,8 +19,7 @@ export const Hero = () => {
                 />
               </div>
               <p className="text-lg md:text-xl text-muted max-w-lg leading-relaxed">
-                Responds to pricing, hours, and service questions in seconds — no wait times. 
-                Let customers book appointments and get instant answers.
+                AI receptionist that answers customer questions 24/7 and handles appointment booking. Uses your business profile to give accurate responses about hours, pricing, and services.
               </p>
             </div>
             
@@ -29,13 +28,13 @@ export const Hero = () => {
                 href="/integrate"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pill rounded-full hover:bg-gray-800 transition-colors"
               >
-                Add to Your Website
+                Connect to Tidio
               </a>
               <a
                 href="/demo"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
               >
-                See It In Action
+                Try the Demo
               </a>
             </div>
 

@@ -1,8 +1,8 @@
 export const Features = () => {
   const features = [
     {
-      title: "Schedules services.",
-      description: "Let customers book appointments or schedule services directly through chat.",
+      title: "Answers & schedules.",
+      description: "AI responds to customer questions 24/7 and handles appointment booking when customers want to schedule.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
@@ -28,8 +28,8 @@ export const Features = () => {
       )
     },
     {
-      title: "Answers instantly.",
-      description: "Responds to pricing, hours, and service questions in seconds — no wait times.",
+      title: "Your data stays private.",
+      description: "Each business gets their own secure workspace. Your customer information is completely separate and protected.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
@@ -49,8 +49,8 @@ export const Features = () => {
       )
     },
     {
-      title: "Custom to your business.",
-      description: "Trained on your hours, services, and tone so it sounds like part of your team.",
+      title: "Business profiles.",
+      description: "Store hours, policies, contact info, and service pricing for accurate AI responses.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>

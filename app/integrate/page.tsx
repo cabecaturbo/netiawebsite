@@ -48,10 +48,10 @@ add_action('wp_footer', 'add_netia_widget');`
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              Add Netia to Your Website
+              Connect to Tidio
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Get Netia AI working on your website in minutes with our simple integration code.
+              Set up webhook integration with your existing Tidio chat widget. AI responds to customer questions and handles appointment booking using your business profile.
             </p>
           </div>
 

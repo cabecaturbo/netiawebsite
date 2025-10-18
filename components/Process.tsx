@@ -2,27 +2,27 @@ export const Process = () => {
   const steps = [
     {
       number: "01",
-      title: "Train",
-      description: "Train Netia to handle your business processes, knowledge base, and customer service policies.",
-      action: "Learn more"
+      title: "Set up profile",
+      description: "Add your business hours, contact info, services, and pricing to your profile.",
+      action: "Get started"
     },
     {
       number: "02", 
-      title: "Test",
-      description: "Run simulated customer conversations to see exactly how Netia will respond before going live",
-      action: "Learn more"
+      title: "Connect Tidio",
+      description: "Set up webhook integration with your existing Tidio chat widget.",
+      action: "View setup"
     },
     {
       number: "03",
-      title: "Deploy", 
-      description: "Launch Netia across every channel—voice, email, chat, and social—for consistent customer support.",
-      action: "Learn more"
+      title: "Go live", 
+      description: "AI starts responding to customer questions and handling appointment booking immediately using your business data.",
+      action: "See demo"
     },
     {
       number: "04",
-      title: "Analyze",
-      description: "Use AI-powered insights to analyze and improve Netia's performance and deliver better customer experiences.",
-      action: "Learn more"
+      title: "Manage",
+      description: "Use the admin dashboard to update settings and monitor conversations.",
+      action: "View dashboard"
     }
   ]
 
@@ -31,12 +31,11 @@ export const Process = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-fg mb-4">
-            Netia handles every customer interaction seamlessly
+            Get started in 4 simple steps
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Netia processes customer inquiries through a smart workflow that learns and improves continuously. 
-            Train Netia on your business processes, test performance before going live, deploy across all channels, 
-            then analyze and optimize with AI insights—ensuring every customer gets the right answer every time.
+            Set up your business profile, connect your Tidio chat widget, and start answering customer questions with AI. 
+            No coding required—just add your business information and go live.
           </p>
         </div>
 

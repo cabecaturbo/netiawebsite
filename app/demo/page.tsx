@@ -10,10 +10,10 @@ export default function Demo() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              See Netia in Action
+              Try the AI Demo
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Experience how Netia AI responds to customer questions and schedules appointments in real-time.
+              See how our AI receptionist answers customer questions about hours, pricing, and services, then handles appointment booking when customers want to schedule.
             </p>
           </div>
 

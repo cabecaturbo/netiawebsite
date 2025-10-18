@@ -26,13 +26,13 @@ export const Header = () => {
               href="/demo"
               className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
             >
-              View demo
+              Try demo
             </a>
             <a
               href="/signup/starter"
               className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors"
             >
-              Start free trial
+              Start free
             </a>
           </div>
 
@@ -70,13 +70,13 @@ export const Header = () => {
                   href="/demo"
                   className="block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface transition-colors"
                 >
-                  View demo
+                  Try demo
                 </a>
                 <a
                   href="/signup/starter"
                   className="block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-colors"
                 >
-                  Start free trial
+                  Start free
                 </a>
               </div>
             </div>
