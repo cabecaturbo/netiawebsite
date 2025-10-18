@@ -7,25 +7,23 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .calendar { fill: none; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-              .calendar-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+              .calendar { fill: none; stroke: #0a0a0a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+              .calendar-filled { fill: #0a0a0a; }
+              .calendar-ring { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Calendar base */}
-          <rect className="calendar" x="20" y="30" width="60" height="50" rx="8" />
-          {/* Calendar header */}
-          <rect className="calendar-filled" x="20" y="30" width="60" height="20" rx="8" />
-          {/* Calendar rings */}
-          <circle className="calendar" cx="30" cy="40" r="3" />
-          <circle className="calendar" cx="70" cy="40" r="3" />
-          {/* Calendar grid */}
-          <line className="calendar" x1="35" y1="55" x2="35" y2="70" strokeWidth="2" />
-          <line className="calendar" x1="50" y1="55" x2="50" y2="70" strokeWidth="2" />
-          <line className="calendar" x1="65" y1="55" x2="65" y2="70" strokeWidth="2" />
-          <line className="calendar" x1="30" y1="60" x2="70" y2="60" strokeWidth="2" />
-          {/* Calendar numbers */}
-          <circle className="calendar" cx="42" cy="65" r="2" />
-          <circle className="calendar" cx="58" cy="65" r="2" />
+          {/* Calendar body with rounded corners */}
+          <rect className="calendar" x="25" y="35" width="50" height="45" rx="6" />
+          {/* Top hanger rings */}
+          <path className="calendar-ring" d="M35 35 Q35 25 40 25 Q40 35 35 35" />
+          <path className="calendar-ring" d="M65 35 Q65 25 60 25 Q60 35 65 35" />
+          {/* Calendar grid - 2 rows of 3 squares */}
+          <rect className="calendar-filled" x="32" y="42" width="8" height="8" />
+          <rect className="calendar-filled" x="46" y="42" width="8" height="8" />
+          <rect className="calendar-filled" x="60" y="42" width="8" height="8" />
+          <rect className="calendar-filled" x="32" y="56" width="8" height="8" />
+          <rect className="calendar-filled" x="46" y="56" width="8" height="8" />
+          <rect className="calendar-filled" x="60" y="56" width="8" height="8" />
         </svg>
       )
     },
@@ -36,19 +34,11 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .bolt { fill: none; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-              .bolt-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+              .bolt { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Lightning bolt main body */}
-          <path className="bolt" d="M35 25 L45 45 L40 45 L50 75 L40 55 L45 55 L35 25" />
-          {/* Lightning bolt filled center */}
-          <path className="bolt-filled" d="M37 30 L43 45 L41 45 L47 70 L41 55 L43 55 L37 30" />
-          {/* Energy sparks */}
-          <path className="bolt" d="M25 35 Q30 30 35 35" strokeWidth="2" />
-          <path className="bolt" d="M60 35 Q65 30 70 35" strokeWidth="2" />
-          <path className="bolt" d="M30 60 Q35 55 40 60" strokeWidth="2" />
-          <path className="bolt" d="M55 60 Q60 55 65 60" strokeWidth="2" />
+          {/* Simple lightning bolt shape */}
+          <path className="bolt" d="M40 25 L50 45 L45 45 L55 75 L45 55 L50 55 L40 25" />
         </svg>
       )
     },
@@ -59,24 +49,22 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .art { fill: none; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-              .art-filled { fill: #1677ff; stroke: #0a0a0a; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-              .brush { fill: none; stroke: #0a0a0a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+              .frame { fill: none; stroke: #0a0a0a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+              .frame-thin { fill: none; stroke: #0a0a0a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+              .triangle { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Canvas frame */}
-          <rect className="art" x="20" y="25" width="60" height="45" rx="4" />
-          {/* Paint strokes */}
-          <path className="art" d="M30 35 Q35 30 40 35 Q45 40 50 35 Q55 30 60 35" strokeWidth="2" />
-          <path className="art" d="M25 45 Q35 40 45 45 Q55 50 65 45" strokeWidth="2" />
-          <path className="art" d="M30 55 Q40 50 50 55 Q60 60 70 55" strokeWidth="2" />
-          {/* Paint blob */}
-          <circle className="art-filled" cx="45" cy="50" r="8" />
-          {/* Paint brush */}
-          <path className="brush" d="M70 20 L75 15 L80 20 L75 25 Z" />
-          <line className="brush" x1="75" y1="25" x2="75" y2="35" />
-          {/* Brush handle */}
-          <line className="brush" x1="75" y1="35" x2="75" y2="45" strokeWidth="3" />
+          {/* Outer frame */}
+          <rect className="frame" x="20" y="25" width="60" height="50" rx="4" />
+          {/* Triangle hanger */}
+          <polygon className="triangle" points="50,20 45,30 55,30" />
+          {/* Inner frame */}
+          <rect className="frame-thin" x="30" y="35" width="40" height="30" />
+          {/* Perspective lines - vertical line from center top */}
+          <line className="frame-thin" x1="50" y1="35" x2="50" y2="55" />
+          {/* Diagonal lines to bottom corners */}
+          <line className="frame-thin" x1="50" y1="55" x2="30" y2="65" />
+          <line className="frame-thin" x1="50" y1="55" x2="70" y2="65" />
         </svg>
       )
     }
