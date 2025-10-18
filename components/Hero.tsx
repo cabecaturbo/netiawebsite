@@ -67,7 +67,7 @@ export const Hero = () => {
                 <div className="text-sm text-muted">Avg Response</div>
               </div>
               <div className="text-left">
-                <div className="text-2xl font-display font-bold text-fg">GPT-4</div>
+                <div className="text-2xl font-display font-bold text-fg">GPT</div>
                 <div className="text-sm text-muted">AI Engine</div>
               </div>
             </div>
