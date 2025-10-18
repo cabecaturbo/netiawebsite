@@ -41,9 +41,9 @@ export const Process = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="space-y-4">
+            <div key={index} className="flex flex-col h-full">
               {/* Step Number */}
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 mb-4">
                 <div className="w-12 h-12 bg-primary-50 text-primary-600 rounded-full flex items-center justify-center font-display font-semibold text-lg">
                   {step.number}
                 </div>
@@ -53,14 +53,14 @@ export const Process = () => {
               </div>
               
               {/* Description */}
-              <p className="text-muted leading-relaxed">
+              <p className="text-muted leading-relaxed flex-grow mb-4">
                 {step.description}
               </p>
               
               {/* Action Link */}
               <a 
                 href="#learn-more"
-                className="inline-flex items-center text-primary-500 hover:text-primary-600 font-medium transition-colors"
+                className="inline-flex items-center text-primary-500 hover:text-primary-600 font-medium transition-colors mt-auto"
               >
                 {step.action}
                 <svg 
