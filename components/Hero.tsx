@@ -5,11 +5,19 @@ export const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-2">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
                 <span className="block">AI That</span>
                 <span className="block text-primary-500">Works</span>
               </h1>
+              <div className="flex items-center space-x-0.5">
+                <span className="text-sm text-gray-600">Powered by</span>
+                <img 
+                  src="/openai-logo.png" 
+                  alt="OpenAI" 
+                  className="h-8"
+                />
+              </div>
               <p className="text-lg md:text-xl text-muted max-w-lg leading-relaxed">
                 Responds to pricing, hours, and service questions in seconds — no wait times. 
                 Let customers book appointments and get instant answers.
@@ -18,13 +26,13 @@ export const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#trial"
+                href="/integrate"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pill rounded-full hover:bg-gray-800 transition-colors"
               >
                 Add to Your Website
               </a>
               <a
-                href="#demo"
+                href="/demo"
                 className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
               >
                 See It In Action

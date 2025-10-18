@@ -11,7 +11,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo and Pricing */}
-          <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4">
             <Link href="/" className="font-display font-semibold text-xl text-fg">
               Netia
             </Link>
@@ -23,13 +23,13 @@ export const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <a
-              href="#demo"
+              href="/demo"
               className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
             >
               View demo
             </a>
             <a
-              href="#trial"
+              href="/signup/starter"
               className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors"
             >
               Start free trial
@@ -67,13 +67,13 @@ export const Header = () => {
               </Link>
               <div className="pt-4 space-y-2">
                 <a
-                  href="#demo"
+                  href="/demo"
                   className="block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface transition-colors"
                 >
                   View demo
                 </a>
                 <a
-                  href="#trial"
+                  href="/signup/starter"
                   className="block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-colors"
                 >
                   Start free trial

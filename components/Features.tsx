@@ -9,21 +9,21 @@ export const Features = () => {
             <style>{`
               .calendar { fill: none; stroke: #0a0a0a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
               .calendar-filled { fill: #0a0a0a; }
-              .calendar-ring { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Calendar body with rounded corners */}
-          <rect className="calendar" x="25" y="35" width="50" height="45" rx="6" />
-          {/* Top hanger rings */}
-          <path className="calendar-ring" d="M35 35 Q35 25 40 25 Q40 35 35 35" />
-          <path className="calendar-ring" d="M65 35 Q65 25 60 25 Q60 35 65 35" />
-          {/* Calendar grid - 2 rows of 3 squares */}
-          <rect className="calendar-filled" x="32" y="42" width="8" height="8" />
-          <rect className="calendar-filled" x="46" y="42" width="8" height="8" />
-          <rect className="calendar-filled" x="60" y="42" width="8" height="8" />
-          <rect className="calendar-filled" x="32" y="56" width="8" height="8" />
-          <rect className="calendar-filled" x="46" y="56" width="8" height="8" />
-          <rect className="calendar-filled" x="60" y="56" width="8" height="8" />
+          {/* Simple calendar */}
+          <rect className="calendar" x="25" y="30" width="50" height="45" rx="4" />
+          {/* Calendar header */}
+          <rect className="calendar-filled" x="25" y="30" width="50" height="15" />
+          {/* Calendar grid - simple dots */}
+          <circle className="calendar-filled" cx="35" cy="55" r="3" />
+          <circle className="calendar-filled" cx="45" cy="55" r="3" />
+          <circle className="calendar-filled" cx="55" cy="55" r="3" />
+          <circle className="calendar-filled" cx="65" cy="55" r="3" />
+          <circle className="calendar-filled" cx="35" cy="65" r="3" />
+          <circle className="calendar-filled" cx="45" cy="65" r="3" />
+          <circle className="calendar-filled" cx="55" cy="65" r="3" />
+          <circle className="calendar-filled" cx="65" cy="65" r="3" />
         </svg>
       )
     },
@@ -55,22 +55,12 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .frame { fill: none; stroke: #0a0a0a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-              .frame-thin { fill: none; stroke: #0a0a0a; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-              .triangle { fill: #0a0a0a; }
+              .brush { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Outer frame */}
-          <rect className="frame" x="20" y="25" width="60" height="50" rx="4" />
-          {/* Triangle hanger */}
-          <polygon className="triangle" points="50,20 45,30 55,30" />
-          {/* Inner frame */}
-          <rect className="frame-thin" x="30" y="35" width="40" height="30" />
-          {/* Perspective lines - vertical line from center top */}
-          <line className="frame-thin" x1="50" y1="35" x2="50" y2="55" />
-          {/* Diagonal lines to bottom corners */}
-          <line className="frame-thin" x1="50" y1="55" x2="30" y2="65" />
-          <line className="frame-thin" x1="50" y1="55" x2="70" y2="65" />
+          {/* Simple paint brush */}
+          <rect className="brush" x="45" y="25" width="10" height="50" />
+          <rect className="brush" x="40" y="75" width="20" height="15" />
         </svg>
       )
     }

@@ -67,6 +67,14 @@ export const Footer = () => {
             <p className="text-muted text-sm leading-relaxed">
               AI-powered customer service that works seamlessly with your business.
             </p>
+            <div className="flex items-center space-x-0.5 pt-4">
+              <span className="text-sm text-gray-600">Powered by</span>
+              <img 
+                src="/openai-logo.png" 
+                alt="OpenAI" 
+                className="h-8"
+              />
+            </div>
           </div>
 
           {/* Footer Links */}
