@@ -70,18 +70,13 @@ export const Performance = () => {
                     &ldquo;The AI answers customer questions about our hours and pricing instantly, and handles appointment booking when they want to schedule. 
                     It&apos;s like having a receptionist that never sleeps and always knows the right answer.&rdquo;
                   </blockquote>
-                  <div className="flex items-center space-x-4">
-                    <div>
-                      <cite className="font-display font-semibold text-fg not-italic">
-                        Sarah Chen
-                      </cite>
-                      <p className="text-muted text-sm">
-                        Owner, Chen&apos;s Dental Practice
-                      </p>
-                    </div>
-                    <div className="text-sm text-muted">
-                      Netia Customer
-                    </div>
+                  <div>
+                    <cite className="font-display font-semibold text-fg not-italic">
+                      Sarah Chen
+                    </cite>
+                    <p className="text-muted text-sm">
+                      Owner, Chen&apos;s Dental Practice
+                    </p>
                   </div>
                 </div>
               </div>
