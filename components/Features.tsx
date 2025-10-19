@@ -52,7 +52,7 @@ export const Features = () => {
     },
     {
       title: "Tailored to you.",
-      description: "Store hours, policies, contact info, and service pricing for accurate AI responses. Custom branding options available with your logo, colors, and domain.",
+      description: "Store hours, policies, contact info, and service pricing for accurate AI responses. Custom branding available.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
@@ -104,7 +104,7 @@ export const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="text-center space-y-6 group animate-fade-in-up hover-lift transition-all duration-500 p-6"
+              className="text-center space-y-4 group animate-fade-in-up hover-lift transition-all duration-500 p-6"
               style={{animationDelay: `${index * 0.2}s`}}
             >
               {/* Icon Card */}
