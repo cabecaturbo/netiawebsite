@@ -51,8 +51,8 @@ export const Features = () => {
       )
     },
     {
-      title: "Business profiles.",
-      description: "Store hours, policies, contact info, and service pricing for accurate AI responses.",
+      title: "Tailored to you.",
+      description: "Store hours, policies, contact info, and service pricing for accurate AI responses. Custom branding options available with your logo, colors, and domain.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
