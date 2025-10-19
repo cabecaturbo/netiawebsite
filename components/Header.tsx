@@ -64,7 +64,7 @@ export const Header = () => {
               See it in action
             </a>
             <a
-              href="/signup/starter"
+              href="/pricing"
               className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced hover-glow"
             >
               Start free
@@ -152,7 +152,7 @@ export const Header = () => {
                 See it in action
               </a>
               <a
-                href="/signup/starter"
+                href="/pricing"
                 className={`block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-all duration-300 hover-lift hover-glow transform ${
                   isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                 }`}
