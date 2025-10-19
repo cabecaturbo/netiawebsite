@@ -117,7 +117,7 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \\
     },
     {
       "role": "assistant", 
-      "content": "We're open Monday-Friday 9AM-5PM",
+      "content": "We&apos;re open Monday-Friday 9AM-5PM",
       "timestamp": "2024-01-01T12:00:01Z"
     }
   ]

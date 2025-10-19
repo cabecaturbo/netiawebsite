@@ -34,7 +34,7 @@ export default function ProfilesFeature() {
                 </div>
                 <h3 className="font-display text-xl font-semibold text-fg mb-3">Business Hours</h3>
                 <p className="text-muted">
-                  Set your operating hours, holidays, and special schedules so customers always know when you're available.
+                  Set your operating hours, holidays, and special schedules so customers always know when you&apos;re available.
                 </p>
               </div>
 
