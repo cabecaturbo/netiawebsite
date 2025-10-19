@@ -83,7 +83,7 @@ export const Hero = () => {
               
               {/* Additional floating balls in margins */}
               
-              <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4 shadow-lg hover-lift transition-all duration-500 relative overflow-hidden min-h-[500px]">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4 shadow-lg hover-lift transition-all duration-500 relative overflow-hidden">
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50/10 via-transparent to-transparent pointer-events-none"></div>
                 
