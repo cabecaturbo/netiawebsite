@@ -129,7 +129,7 @@ export default function FeaturesPage() {
             {features.map((feature, index) => (
               <div
                 key={feature.name}
-                className={`bg-white rounded-2xl p-8 shadow-lg hover-lift transition-all duration-500 border border-gray-100 relative overflow-hidden group ${
+                className={`bg-white rounded-2xl p-8 shadow-lg hover-lift transition-all duration-500 border border-gray-100 relative overflow-hidden group flex flex-col h-full ${
                   feature.isComingSoon ? 'border-primary-200 bg-gradient-to-br from-primary-50/30 to-white' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -142,7 +142,7 @@ export default function FeaturesPage() {
                   </div>
                 )}
                 
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
                     <feature.icon className="w-6 h-6 text-primary-600 group-hover:text-white transition-colors duration-300" />
                   </div>
@@ -151,11 +151,11 @@ export default function FeaturesPage() {
                     {feature.name}
                   </h3>
                   
-                  <p className="text-muted mb-6 leading-relaxed">
+                  <p className="text-muted mb-6 leading-relaxed flex-grow">
                     {feature.description}
                   </p>
                   
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {feature.highlights.map((highlight, idx) => (
                       <li key={idx} className="flex items-center text-sm text-muted">
                         <CheckIcon className="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" />
@@ -165,7 +165,7 @@ export default function FeaturesPage() {
                   </ul>
                   
                   {feature.isComingSoon && (
-                    <div className="mt-6">
+                    <div className="mt-auto">
                       <a
                         href="/waitlist"
                         className="w-full bg-primary-500 text-white text-center py-3 px-4 rounded-xl font-semibold hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced inline-block"
