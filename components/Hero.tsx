@@ -43,17 +43,6 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Social Proof */}
-            <div className="pt-8 animate-fade-in animate-stagger-5">
-              <div className="flex items-center space-x-8 opacity-60">
-                {[1, 2, 3, 4].map((i) => (
-                  <div 
-                    key={i}
-                    className="w-24 h-8 bg-muted/20 rounded hover:bg-muted/30 transition-all duration-300 hover:scale-105"
-                  ></div>
-                ))}
-              </div>
-            </div>
 
             {/* Metrics Section */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50 animate-fade-in animate-stagger-6">
