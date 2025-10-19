@@ -69,6 +69,7 @@ export const Features = () => {
     {
       title: "AI Voice Assistant.",
       description: "Coming soon: Natural voice conversations that answer calls and handle customer inquiries with human-like responses.",
+      isComingSoon: true,
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
@@ -124,7 +125,13 @@ export const Features = () => {
                   {feature.title}
                 </h3>
                 <p className="text-muted leading-relaxed max-w-sm mx-auto group-hover:text-gray-700 transition-colors duration-300">
-                  {feature.description}
+                  {feature.isComingSoon ? (
+                    <>
+                      <span className="text-primary-600 font-medium">Coming soon:</span> {feature.description.replace('Coming soon: ', '')}
+                    </>
+                  ) : (
+                    feature.description
+                  )}
                 </p>
               </div>
               
