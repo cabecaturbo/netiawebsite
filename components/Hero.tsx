@@ -43,6 +43,9 @@ export const Hero = () => {
               </a>
             </div>
 
+            {/* Spacing to maintain layout */}
+            <div className="pt-8">
+            </div>
 
             {/* Metrics Section */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50 animate-fade-in animate-stagger-6">
