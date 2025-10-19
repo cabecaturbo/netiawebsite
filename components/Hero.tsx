@@ -44,7 +44,7 @@ export const Hero = () => {
             </div>
 
             {/* Spacing to maintain layout */}
-            <div className="pt-8">
+            <div className="pt-16">
             </div>
 
             {/* Metrics Section */}
