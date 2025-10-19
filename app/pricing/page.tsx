@@ -22,7 +22,7 @@ export default function Pricing() {
           </div>
 
           {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             
             {/* Starter Card */}
             <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group animate-fade-in-up">
@@ -31,7 +31,7 @@ export default function Pricing() {
                   Starter
                 </h3>
                 <div className="text-4xl font-bold text-fg mt-4">
-                  $0
+                  $0<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
                   Perfect for small businesses getting started with AI customer service
@@ -72,7 +72,7 @@ export default function Pricing() {
                   Pro
                 </h3>
                 <div className="text-4xl font-bold text-fg mt-4">
-                  $49
+                  $49<span className="text-lg font-normal text-muted">/month</span>
                 </div>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -116,7 +116,7 @@ export default function Pricing() {
                   Business
                 </h3>
                 <div className="text-4xl font-bold text-fg mt-4">
-                  $89
+                  $89<span className="text-lg font-normal text-muted">/month</span>
                 </div>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -154,7 +154,7 @@ export default function Pricing() {
                   <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Custom branding
+                  Custom branding available
                 </li>
                 <li className="flex items-center text-muted">
                   <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -168,6 +168,53 @@ export default function Pricing() {
                 className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-white transition-colors mt-auto text-center"
               >
                 Get Started
+              </a>
+            </div>
+
+            {/* Custom Card */}
+            <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
+              <div className="mb-6">
+                <h3 className="font-display text-2xl font-semibold text-fg mb-2">
+                  Custom
+                </h3>
+                <div className="text-4xl font-bold text-primary-600 mt-4">
+                  $299<span className="text-lg font-normal text-muted"> one-time</span>
+                </div>
+                <p className="text-sm text-muted mt-2">
+                  Complete white-label solution with custom branding and domain
+                </p>
+              </div>
+              <ul className="space-y-3 mb-8 flex-grow">
+                <li className="flex items-center text-muted">
+                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Custom domain & branding
+                </li>
+                <li className="flex items-center text-muted">
+                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Logo & color customization
+                </li>
+                <li className="flex items-center text-muted">
+                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Remove all third-party branding
+                </li>
+                <li className="flex items-center text-muted">
+                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Setup & configuration included
+                </li>
+              </ul>
+              <a
+                href="/contact"
+                className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
+              >
+                Get Custom Setup
               </a>
             </div>
           </div>
