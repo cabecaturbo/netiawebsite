@@ -27,15 +27,11 @@ export const Header = () => {
       
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo and Pricing */}
-          <div className="flex items-center space-x-6">
+          {/* Logo */}
+          <div className="flex items-center">
             <Link href="/" className="font-display font-semibold text-xl text-fg hover:text-primary-600 transition-colors duration-300 group">
               Netia
               <span className="block w-0 group-hover:w-full h-0.5 bg-primary-500 transition-all duration-300"></span>
-            </Link>
-            <Link href="/pricing" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
-              Pricing
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </div>
 
