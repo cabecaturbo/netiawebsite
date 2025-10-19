@@ -97,7 +97,7 @@ export default function Demo() {
                   href="#trial"
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
                 >
-                  Start Free Trial
+                  Start Free
                 </a>
               </div>
             </div>

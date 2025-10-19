@@ -163,7 +163,7 @@ export default function StarterSignup() {
                 disabled={isSubmitting}
                 className="w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Creating Your Account...' : 'Start Free Trial'}
+                {isSubmitting ? 'Creating Your Account...' : 'Start Free'}
               </button>
             </form>
 
