@@ -27,12 +27,32 @@ export const Header = () => {
       
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
+          {/* Logo and Navigation */}
+          <div className="flex items-center space-x-8">
             <Link href="/" className="font-display font-semibold text-xl text-fg hover:text-primary-600 transition-colors duration-300 group">
               Netia
               <span className="block w-0 group-hover:w-full h-0.5 bg-primary-500 transition-all duration-300"></span>
             </Link>
+            
+            {/* Navigation Links */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link href="/features" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
+                Features
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="/pricing" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
+                Pricing
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="/demo" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
+                Demo
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link href="/integrate" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
+                Integrate
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            </nav>
           </div>
 
           {/* CTA Buttons */}
@@ -79,20 +99,47 @@ export const Header = () => {
         <div 
           id="mobile-menu"
           className={`md:hidden border-t border-border transition-all duration-300 overflow-hidden ${
-            isMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+            isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
           }`}
           role="navigation"
           aria-label="Mobile navigation"
         >
           <div className="py-4 space-y-3">
             <Link 
-              href="/pricing" 
+              href="/features" 
               className={`block w-full text-left text-sm text-muted hover:text-fg transition-all duration-300 transform ${
                 isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
               }`}
               style={{transitionDelay: isMenuOpen ? '0.1s' : '0s'}}
             >
+              Features
+            </Link>
+            <Link 
+              href="/pricing" 
+              className={`block w-full text-left text-sm text-muted hover:text-fg transition-all duration-300 transform ${
+                isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
+              }`}
+              style={{transitionDelay: isMenuOpen ? '0.15s' : '0s'}}
+            >
               Pricing
+            </Link>
+            <Link 
+              href="/demo" 
+              className={`block w-full text-left text-sm text-muted hover:text-fg transition-all duration-300 transform ${
+                isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
+              }`}
+              style={{transitionDelay: isMenuOpen ? '0.2s' : '0s'}}
+            >
+              Demo
+            </Link>
+            <Link 
+              href="/integrate" 
+              className={`block w-full text-left text-sm text-muted hover:text-fg transition-all duration-300 transform ${
+                isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
+              }`}
+              style={{transitionDelay: isMenuOpen ? '0.25s' : '0s'}}
+            >
+              Integrate
             </Link>
             <div className="pt-4 space-y-2">
               <a
@@ -100,7 +147,7 @@ export const Header = () => {
                 className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
                   isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                 }`}
-                style={{transitionDelay: isMenuOpen ? '0.2s' : '0s'}}
+                style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
               >
                 See it in action
               </a>
@@ -109,7 +156,7 @@ export const Header = () => {
                 className={`block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-all duration-300 hover-lift hover-glow transform ${
                   isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                 }`}
-                style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
+                style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
               >
                 Start free
               </a>
