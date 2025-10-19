@@ -58,7 +58,7 @@ export default function CustomSignup() {
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Business Information */}
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <h3 className="font-display text-xl font-semibold text-fg">Business Information</h3>
                 
                 <div>
