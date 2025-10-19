@@ -17,7 +17,7 @@ export const AnimatedChat = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   const chatMessages: Omit<Message, 'id'>[] = useMemo(() => [
-    { text: "Hey! I'm looking for a dentist - what kind of stuff do you guys do?", isUser: true, delay: 1500 },
+    { text: "Hey! I'm looking for a dentist - what kind of stuff do you guys do?", isUser: true, delay: 750 },
     { text: "We offer comprehensive dental services including cleanings ($120), fillings ($180), crowns ($1200), and cosmetic procedures. What type of service are you looking for?", isUser: false, delay: 1500 },
     { text: "When are you open? I work during the day so I need something after hours", isUser: true, delay: 1500 },
     { text: "We're open Monday-Friday 8am-6pm, Saturday 9am-3pm, and closed Sundays. We also offer evening appointments until 7pm on Tuesdays and Thursdays.", isUser: false, delay: 1500 },
