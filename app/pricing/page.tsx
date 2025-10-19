@@ -2,7 +2,7 @@ import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { FloatingBalls } from "@/components/FloatingBalls"
 
-export default function Pricing() {
+export default function Pricing() { 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Floating elements */}
