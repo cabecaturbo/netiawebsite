@@ -17,33 +17,35 @@ export const AnimatedChat = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   const chatMessages: Omit<Message, 'id'>[] = useMemo(() => [
-    { text: "Hey! I'm looking for a dentist - what kind of stuff do you guys do?", isUser: true, delay: 1000 },
+    { text: "Hey! I'm looking for a dentist - what kind of stuff do you guys do?", isUser: true, delay: 1500 },
     { text: "We offer comprehensive dental services including cleanings ($120), fillings ($180), crowns ($1200), and cosmetic procedures. What type of service are you looking for?", isUser: false, delay: 2000 },
-    { text: "When are you open? I work during the day so I need something after hours", isUser: true, delay: 2000 },
+    { text: "When are you open? I work during the day so I need something after hours", isUser: true, delay: 1500 },
     { text: "We're open Monday-Friday 8am-6pm, Saturday 9am-3pm, and closed Sundays. We also offer evening appointments until 7pm on Tuesdays and Thursdays.", isUser: false, delay: 2000 },
-    { text: "Cool! Do you take insurance? I have Delta Dental", isUser: true, delay: 2000 },
-    { text: "Yes! We accept most major insurance plans including Delta Dental, Cigna, Aetna, and MetLife. We also offer flexible payment plans and a 5% discount for cash payments.", isUser: false, delay: 2500 },
-    { text: "Perfect! I need a cleaning and checkup - what's that gonna cost me?", isUser: true, delay: 2000 },
-    { text: "A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. With insurance, you'd typically pay just your copay. Would you like to schedule an appointment?", isUser: false, delay: 2500 },
-    { text: "Yeah that sounds good, how do I book something?", isUser: true, delay: 2000 },
+    { text: "Cool! Do you take insurance? I have Delta Dental", isUser: true, delay: 1500 },
+    { text: "Yes! We accept most major insurance plans including Delta Dental, Cigna, Aetna, and MetLife. We also offer flexible payment plans and a 5% discount for cash payments.", isUser: false, delay: 2000 },
+    { text: "Perfect! I need a cleaning and checkup - what's that gonna cost me?", isUser: true, delay: 1500 },
+    { text: "A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. With insurance, you'd typically pay just your copay. Would you like to schedule an appointment?", isUser: false, delay: 2000 },
+    { text: "Yeah that sounds good, how do I book something?", isUser: true, delay: 1500 },
     { text: "Great! Here's our scheduling calendar where you can see available times and book your appointment:", isUser: false, delay: 2000 }
   ], [])
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTo({
-        top: scrollContainerRef.current.scrollHeight,
-        behavior: 'smooth'
-      })
+      setTimeout(() => {
+        scrollContainerRef.current.scrollTo({
+          top: scrollContainerRef.current.scrollHeight,
+          behavior: 'smooth'
+        })
+      }, 300) // Increased delay for smoother scroll
     }
   }
 
   useEffect(() => {
-    // Small delay to let the message render first
+    // Delay to let the message render and animate first
     const timer = setTimeout(() => {
       scrollToBottom()
-    }, 100)
+    }, 200)
     return () => clearTimeout(timer)
   }, [messages])
 
@@ -88,12 +90,9 @@ export const AnimatedChat = () => {
         {messages.map((message, index) => (
           <div
             key={message.id}
-            className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} transition-all duration-500 ease-out`}
+            className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} animate-fade-in-up`}
             style={{ 
-              animation: 'fadeInUp 0.6s ease-out forwards',
-              opacity: 0,
-              transform: 'translateY(10px)',
-              animationDelay: `${index * 0.1}s`
+              animationDelay: `${index * 0.2}s`
             }}
           >
             {!message.isUser && (
