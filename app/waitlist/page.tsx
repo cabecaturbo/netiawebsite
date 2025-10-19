@@ -15,7 +15,7 @@ export default function WaitlistPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-12 md:py-16 relative overflow-hidden">
+      <section className="py-4 md:py-6 relative overflow-hidden">
         <div className="container mx-auto px-4 relative">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-6">
