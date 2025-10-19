@@ -74,6 +74,9 @@ export default function Pricing() {
                 <div className="text-4xl font-bold text-fg mt-4">
                   $49<span className="text-lg font-normal text-muted">/month</span>
                 </div>
+                <p className="text-sm text-muted mt-2">
+                  Perfect for growing businesses that need more conversations and integrations
+                </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center text-muted">
@@ -118,6 +121,9 @@ export default function Pricing() {
                 <div className="text-4xl font-bold text-fg mt-4">
                   $89<span className="text-lg font-normal text-muted">/month</span>
                 </div>
+                <p className="text-sm text-muted mt-2">
+                  Ideal for established businesses with high volume and advanced needs
+                </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-center text-muted">
