@@ -53,9 +53,6 @@ export default function CustomSignup() {
             <p className="text-lg text-muted">
               Complete white-label solution with your branding, colors, and domain
             </p>
-            <div className="mt-4 text-2xl font-bold text-primary-600">
-              $299 one-time setup
-            </div>
           </div>
 
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
