@@ -45,7 +45,6 @@ export const Hero = () => {
 
             {/* Social Proof */}
             <div className="pt-8 animate-fade-in animate-stagger-5">
-              <p className="text-sm text-muted mb-4">Trusted by businesses worldwide</p>
               <div className="flex items-center space-x-8 opacity-60">
                 {[1, 2, 3, 4].map((i) => (
                   <div 
