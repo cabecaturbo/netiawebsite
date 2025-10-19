@@ -44,26 +44,27 @@ export const Hero = () => {
             </div>
 
             {/* Social Media Integration */}
-            <div className="flex items-center justify-start mt-4 animate-fade-in-up animate-stagger-6">
-              <p className="text-sm text-muted mr-3">Works with your social media chat platforms.</p>
-              <div className="flex items-center space-x-2">
+            <div className="flex items-center justify-start mt-20 animate-fade-in-up animate-stagger-6">
+              <p className="text-base font-display font-semibold text-fg mr-4">Integrates with your social media chat platforms</p>
+              <div className="flex items-center space-x-1">
                 {/* Facebook Logo */}
                 <img 
                   src="/facebook-logo-facebook-icon-transparent-free-png.webp" 
                   alt="Facebook" 
-                  className="w-5 h-5" 
+                  className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
                 />
                 {/* Instagram Logo */}
                 <img 
                   src="/instagram.jpg" 
                   alt="Instagram" 
-                  className="w-5 h-5" 
+                  className="w-8 h-8 hover:scale-110 transition-transform duration-300 rounded-full" 
+                  style={{backgroundColor: 'transparent'}}
                 />
               </div>
             </div>
 
             {/* Spacing to maintain layout */}
-            <div className="pt-16">
+            <div className="pt-8">
             </div>
 
             {/* Metrics Section */}

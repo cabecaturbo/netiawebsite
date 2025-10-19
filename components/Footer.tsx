@@ -25,7 +25,7 @@ export const Footer = () => {
       title: "Support",
       links: [
         { name: "Help Center", href: "/help" },
-        { name: "API Documentation", href: "/docs" },
+        { name: "API Documentation", href: "/api-docs" },
         { name: "Setup Guide", href: "/setup" },
         { name: "Contact Support", href: "/contact" }
       ]
