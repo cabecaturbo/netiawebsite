@@ -52,10 +52,12 @@ export const AnimatedChat = () => {
   useEffect(() => {
     if (currentMessageIndex < chatMessages.length) {
       const message = chatMessages[currentMessageIndex]
+      // Add typing delay before showing the message
+      const typingDelay = 800 // Show typing for 800ms before message appears
       const timer = setTimeout(() => {
         setMessages(prev => [...prev, { ...message, id: currentMessageIndex }])
         setCurrentMessageIndex(prev => prev + 1)
-      }, message.delay)
+      }, typingDelay + message.delay)
 
       return () => clearTimeout(timer)
     } else {
@@ -116,7 +118,7 @@ export const AnimatedChat = () => {
         ))}
         
         {/* Typing indicator - show for both user and AI when waiting for next message */}
-        {currentMessageIndex < chatMessages.length && messages.length > 0 && (
+        {currentMessageIndex < chatMessages.length && (
           <div className={`flex space-x-2 transition-all duration-300 ease-out ${chatMessages[currentMessageIndex]?.isUser ? 'justify-end' : 'justify-start'}`}>
             {!chatMessages[currentMessageIndex]?.isUser && (
               <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0"></div>
