@@ -133,31 +133,31 @@ export default function ChatFeature() {
                   <h3 className="font-semibold text-fg mb-3">Business Hours & Location</h3>
                   <p className="text-muted mb-4">&quot;What are your hours?&quot; &quot;Where are you located?&quot; &quot;Are you open on weekends?&quot;</p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"We're open Monday-Friday 9AM-5PM and Saturday 10AM-2PM. We're located at 123 Main Street, Downtown."</p>
+                    <p className="text-sm text-muted italic">&quot;We&apos;re open Monday-Friday 9AM-5PM and Saturday 10AM-2PM. We&apos;re located at 123 Main Street, Downtown.&quot;</p>
                   </div>
                 </div>
 
                 <div className="bg-surface border border-border rounded-lg p-6">
                   <h3 className="font-semibold text-fg mb-3">Services & Pricing</h3>
-                  <p className="text-muted mb-4">"What services do you offer?" "How much does a cleaning cost?" "Do you take insurance?"</p>
+                  <p className="text-muted mb-4">&quot;What services do you offer?&quot; &quot;How much does a cleaning cost?&quot; &quot;Do you take insurance?&quot;</p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"We offer general dentistry, cleanings, and cosmetic procedures. A cleaning costs $150. Yes, we accept most major insurance plans."</p>
+                    <p className="text-sm text-muted italic">&quot;We offer general dentistry, cleanings, and cosmetic procedures. A cleaning costs $150. Yes, we accept most major insurance plans.&quot;</p>
                   </div>
                 </div>
 
                 <div className="bg-surface border border-border rounded-lg p-6">
                   <h3 className="font-semibold text-fg mb-3">Appointment Booking</h3>
-                  <p className="text-muted mb-4">"Can I book an appointment?" "Do you have availability tomorrow?" "How do I cancel?"</p>
+                  <p className="text-muted mb-4">&quot;Can I book an appointment?&quot; &quot;Do you have availability tomorrow?&quot; &quot;How do I cancel?&quot;</p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"I can help you book an appointment! Let me check our availability and get you scheduled."</p>
+                    <p className="text-sm text-muted italic">&quot;I can help you book an appointment! Let me check our availability and get you scheduled.&quot;</p>
                   </div>
                 </div>
 
                 <div className="bg-surface border border-border rounded-lg p-6">
                   <h3 className="font-semibold text-fg mb-3">General Information</h3>
-                  <p className="text-muted mb-4">"What should I bring to my appointment?" "Do you have parking?" "What's your cancellation policy?"</p>
+                  <p className="text-muted mb-4">&quot;What should I bring to my appointment?&quot; &quot;Do you have parking?&quot; &quot;What&apos;s your cancellation policy?&quot;</p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"Please bring your ID and insurance card. We have free parking in the rear. We require 24 hours notice for cancellations."</p>
+                    <p className="text-sm text-muted italic">&quot;Please bring your ID and insurance card. We have free parking in the rear. We require 24 hours notice for cancellations.&quot;</p>
                   </div>
                 </div>
               </div>
