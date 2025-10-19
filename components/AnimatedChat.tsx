@@ -33,10 +33,12 @@ export const AnimatedChat = () => {
   const scrollToBottom = () => {
     if (scrollContainerRef.current) {
       setTimeout(() => {
-        scrollContainerRef.current.scrollTo({
-          top: scrollContainerRef.current.scrollHeight,
-          behavior: 'smooth'
-        })
+        if (scrollContainerRef.current) {
+          scrollContainerRef.current.scrollTo({
+            top: scrollContainerRef.current.scrollHeight,
+            behavior: 'smooth'
+          })
+        }
       }, 300) // Increased delay for smoother scroll
     }
   }
