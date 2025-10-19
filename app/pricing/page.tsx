@@ -66,7 +66,7 @@ export default function Pricing() {
             </div>
 
             {/* Pro Card */}
-            <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
+            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
               <div className="mb-6">
                 <h3 className="font-display text-2xl font-semibold text-fg mb-2">
                   Pro
@@ -113,15 +113,15 @@ export default function Pricing() {
             </div>
 
             {/* Business Card */}
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
+            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
               <div className="mb-6">
-                <h3 className="font-display text-2xl font-semibold text-white mb-2">
+                <h3 className="font-display text-2xl font-semibold text-fg mb-2">
                   Business
                 </h3>
-                <div className="text-4xl font-bold text-white mt-4">
-                  $89<span className="text-lg font-normal text-gray-300">/month</span>
+                <div className="text-4xl font-bold text-fg mt-4">
+                  $89<span className="text-lg font-normal text-muted">/month</span>
                 </div>
-                <p className="text-sm text-gray-300 mt-2">
+                <p className="text-sm text-muted mt-2">
                   Perfect for established businesses with high-volume customer interactions
                 </p>
               </div>
