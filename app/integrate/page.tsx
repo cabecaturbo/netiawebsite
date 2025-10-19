@@ -262,16 +262,16 @@ add_action('wp_footer', 'add_netia_widget');`
               <p className="text-muted mb-8">
                 Our support team is here to help you get Netia integrated successfully.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="mailto:support@netia.ai"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors btn-enhanced"
                 >
                   Contact Support
                 </a>
                 <a
                   href="/demo"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
+                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors btn-enhanced"
                 >
                   See it in action
                 </a>
