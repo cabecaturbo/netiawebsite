@@ -259,7 +259,7 @@ app.post('/webhook', async (req, res) => {
                 View Demo
               </a>
               <a
-                href="/signup/starter"
+                href="/pricing"
                 className="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-all duration-300 hover-lift btn-enhanced"
               >
                 Start Free
