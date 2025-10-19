@@ -127,7 +127,7 @@ export const Features = () => {
                 <p className="text-muted leading-relaxed max-w-sm mx-auto group-hover:text-gray-700 transition-colors duration-300">
                   {feature.isComingSoon ? (
                     <>
-                      <span className="text-primary-600 font-medium">Coming soon:</span> {feature.description.replace('Coming soon: ', '')}
+                      <span className="text-primary-600 font-bold">Coming soon:</span> {feature.description.replace('Coming soon: ', '')}
                     </>
                   ) : (
                     feature.description
