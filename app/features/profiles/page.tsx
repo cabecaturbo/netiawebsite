@@ -184,7 +184,7 @@ export default function ProfilesFeature() {
                     The more detailed your profile, the better your AI can answer customer questions with specific, accurate information.
                   </p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"We're open Monday-Friday 9AM-5PM and Saturday 10AM-2PM. We're located at 123 Main Street, Downtown."</p>
+                    <p className="text-sm text-muted italic">&quot;We&apos;re open Monday-Friday 9AM-5PM and Saturday 10AM-2PM. We&apos;re located at 123 Main Street, Downtown.&quot;</p>
                   </div>
                 </div>
 
@@ -194,7 +194,7 @@ export default function ProfilesFeature() {
                     Our guided setup process helps you create a comprehensive profile in minutes, not hours.
                   </p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"A cleaning costs $150 and takes about 45 minutes. We recommend scheduling every 6 months."</p>
+                    <p className="text-sm text-muted italic">&quot;A cleaning costs $150 and takes about 45 minutes. We recommend scheduling every 6 months.&quot;</p>
                   </div>
                 </div>
 
@@ -204,7 +204,7 @@ export default function ProfilesFeature() {
                     Change your hours, update pricing, or modify policies anytime. Changes take effect immediately.
                   </p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"We accept most major insurance plans. Please bring your insurance card to your appointment."</p>
+                    <p className="text-sm text-muted italic">&quot;We accept most major insurance plans. Please bring your insurance card to your appointment.&quot;</p>
                   </div>
                 </div>
 
@@ -214,7 +214,7 @@ export default function ProfilesFeature() {
                     Custom branding ensures your AI assistant matches your brand voice and visual identity.
                   </p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
-                    <p className="text-sm text-muted italic">"Thank you for choosing Acme Dental! We're committed to providing excellent dental care."</p>
+                    <p className="text-sm text-muted italic">&quot;Thank you for choosing Acme Dental! We&apos;re committed to providing excellent dental care.&quot;</p>
                   </div>
                 </div>
               </div>
