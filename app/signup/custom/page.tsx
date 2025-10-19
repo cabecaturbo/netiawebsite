@@ -15,7 +15,7 @@ export default function CustomSignup() {
     brandColors: '',
     logoUrl: '',
     customDomain: '',
-    monthlyPlan: 'none', // none, starter, pro, business
+    monthlyPlan: '', // pro, business
     additionalRequirements: ''
   })
 
@@ -195,22 +195,22 @@ export default function CustomSignup() {
 
               {/* Monthly Plan Selection */}
               <div className="space-y-4">
-                <h3 className="font-display text-xl font-semibold text-fg">Monthly Plan (Optional)</h3>
-                <p className="text-sm text-muted">Choose a monthly plan to go with your custom branding, or select "None" for custom branding only.</p>
+                <h3 className="font-display text-xl font-semibold text-fg">Monthly Plan *</h3>
+                <p className="text-sm text-muted">Choose a monthly plan to go with your custom branding.</p>
                 
                 <div>
                   <label htmlFor="monthlyPlan" className="block text-sm font-medium text-fg mb-2">
-                    Monthly Plan
+                    Monthly Plan *
                   </label>
                   <select
                     id="monthlyPlan"
                     name="monthlyPlan"
+                    required
                     value={formData.monthlyPlan}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
-                    <option value="none">None - Custom branding only</option>
-                    <option value="starter">Starter - $0/month</option>
+                    <option value="">Select a plan</option>
                     <option value="pro">Pro - $49/month</option>
                     <option value="business">Business - $89/month</option>
                   </select>
@@ -238,8 +238,21 @@ export default function CustomSignup() {
                 disabled={isSubmitting}
                 className="w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Submitting...' : 'Get Started with Custom Branding'}
+                {isSubmitting ? 'Processing...' : 'Continue to Payment'}
               </button>
+              
+              <div className="mt-4 text-center">
+                <p className="text-sm text-muted mb-2">Secure payment processing powered by</p>
+                <div className="flex justify-center items-center space-x-4">
+                  <span className="text-sm font-medium text-gray-600">Stripe</span>
+                  <div className="flex space-x-2">
+                    <div className="w-8 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold">V</div>
+                    <div className="w-8 h-5 bg-red-600 rounded text-white text-xs flex items-center justify-center font-bold">M</div>
+                    <div className="w-8 h-5 bg-blue-800 rounded text-white text-xs flex items-center justify-center font-bold">A</div>
+                    <div className="w-8 h-5 bg-orange-600 rounded text-white text-xs flex items-center justify-center font-bold">D</div>
+                  </div>
+                </div>
+              </div>
             </form>
 
             <p className="text-xs text-muted text-center mt-6">
