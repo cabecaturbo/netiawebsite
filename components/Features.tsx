@@ -31,7 +31,7 @@ export const Features = () => {
     },
     {
       title: "Your data stays private.",
-      description: "Each business gets their own secure workspace. Your customer information is completely separate and protected.",
+      description: "Each user gets their own secure workspace. Your customer information is completely separate and protected.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
