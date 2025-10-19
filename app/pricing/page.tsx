@@ -58,10 +58,10 @@ export default function Pricing() {
                 </li>
               </ul>
               <a
-                href="#waitlist"
-                className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
+                href="/signup/starter"
+                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-white transition-colors mt-auto text-center"
               >
-                Join the Waitlist
+                Get Started
               </a>
             </div>
 
