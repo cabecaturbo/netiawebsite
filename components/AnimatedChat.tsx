@@ -18,15 +18,15 @@ export const AnimatedChat = () => {
 
   const chatMessages: Omit<Message, 'id'>[] = useMemo(() => [
     { text: "Hey! I'm looking for a dentist - what kind of stuff do you guys do?", isUser: true, delay: 1500 },
-    { text: "We offer comprehensive dental services including cleanings ($120), fillings ($180), crowns ($1200), and cosmetic procedures. What type of service are you looking for?", isUser: false, delay: 2000 },
+    { text: "We offer comprehensive dental services including cleanings ($120), fillings ($180), crowns ($1200), and cosmetic procedures. What type of service are you looking for?", isUser: false, delay: 1500 },
     { text: "When are you open? I work during the day so I need something after hours", isUser: true, delay: 1500 },
-    { text: "We're open Monday-Friday 8am-6pm, Saturday 9am-3pm, and closed Sundays. We also offer evening appointments until 7pm on Tuesdays and Thursdays.", isUser: false, delay: 2000 },
+    { text: "We're open Monday-Friday 8am-6pm, Saturday 9am-3pm, and closed Sundays. We also offer evening appointments until 7pm on Tuesdays and Thursdays.", isUser: false, delay: 1500 },
     { text: "Cool! Do you take insurance? I have Delta Dental", isUser: true, delay: 1500 },
-    { text: "Yes! We accept most major insurance plans including Delta Dental, Cigna, Aetna, and MetLife. We also offer flexible payment plans and a 5% discount for cash payments.", isUser: false, delay: 2000 },
+    { text: "Yes! We accept most major insurance plans including Delta Dental, Cigna, Aetna, and MetLife. We also offer flexible payment plans and a 5% discount for cash payments.", isUser: false, delay: 1500 },
     { text: "Perfect! I need a cleaning and checkup - what's that gonna cost me?", isUser: true, delay: 1500 },
-    { text: "A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. With insurance, you'd typically pay just your copay. Would you like to schedule an appointment?", isUser: false, delay: 2000 },
+    { text: "A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. With insurance, you'd typically pay just your copay. Would you like to schedule an appointment?", isUser: false, delay: 1500 },
     { text: "Yeah that sounds good, how do I book something?", isUser: true, delay: 1500 },
-    { text: "Great! Here's our scheduling calendar where you can see available times and book your appointment:", isUser: false, delay: 2000 }
+    { text: "Great! Here's our scheduling calendar where you can see available times and book your appointment:", isUser: false, delay: 1500 }
   ], [])
 
   // Auto-scroll to bottom when new messages arrive
