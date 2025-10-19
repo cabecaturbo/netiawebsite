@@ -193,7 +193,7 @@ export default function Pricing() {
                 </p>
               </div>
               <a
-                href="#waitlist"
+                href="/waitlist"
                 className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
                 Join the Waitlist
