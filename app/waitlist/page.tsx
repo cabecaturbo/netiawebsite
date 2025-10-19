@@ -70,19 +70,6 @@ export default function WaitlistPage() {
                 </div>
                 
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-fg mb-2">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
-                    placeholder="Enter your company name"
-                  />
-                </div>
-                
-                <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-fg mb-2">
                     Phone Number
                   </label>
@@ -90,45 +77,24 @@ export default function WaitlistPage() {
                     type="tel"
                     id="phone"
                     name="phone"
+                    required
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
                     placeholder="Enter your phone number"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="industry" className="block text-sm font-medium text-fg mb-2">
-                    Industry
+                  <label htmlFor="company" className="block text-sm font-medium text-fg mb-2">
+                    Business Name
                   </label>
-                  <select
-                    id="industry"
-                    name="industry"
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
                     className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300"
-                  >
-                    <option value="">Select your industry</option>
-                    <option value="healthcare">Healthcare</option>
-                    <option value="dental">Dental</option>
-                    <option value="legal">Legal</option>
-                    <option value="real-estate">Real Estate</option>
-                    <option value="retail">Retail</option>
-                    <option value="restaurant">Restaurant</option>
-                    <option value="fitness">Fitness</option>
-                    <option value="beauty">Beauty & Wellness</option>
-                    <option value="automotive">Automotive</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-fg mb-2">
-                    Tell us about your use case
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-300 resize-none"
-                    placeholder="How do you plan to use our AI voice receptionist?"
-                  ></textarea>
+                    placeholder="Enter your business name"
+                  />
                 </div>
                 
                 <button
