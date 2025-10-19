@@ -75,7 +75,7 @@ export default function Pricing() {
                   $49<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
-                  Perfect for growing businesses that need more conversations and integrations
+                  Perfect for growing businesses ready to scale their customer service
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -122,7 +122,7 @@ export default function Pricing() {
                   $89<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
-                  Ideal for established businesses with high volume and advanced needs
+                  Perfect for established businesses with high-volume customer interactions
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
