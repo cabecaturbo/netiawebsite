@@ -57,13 +57,11 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .pencil { fill: #0a0a0a; }
+              .star { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Simple pencil icon */}
-          <rect className="pencil" x="35" y="20" width="30" height="50" rx="2" />
-          <rect className="pencil" x="40" y="15" width="20" height="10" rx="1" />
-          <rect className="pencil" x="45" y="10" width="10" height="8" rx="1" />
+          {/* Simple star icon */}
+          <polygon className="star" points="50,10 60,35 85,35 65,55 75,80 50,65 25,80 35,55 15,35 40,35" />
         </svg>
       )
     },
