@@ -84,43 +84,14 @@ export default function FeaturesPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary-50/30">
       <Header />
       
-      {/* Hero Section */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="font-display font-semibold text-4xl md:text-6xl text-fg mb-6">
-              Powerful AI Features
-            </h1>
-            <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
-              Discover how Netia's advanced AI technology transforms customer service with intelligent automation, 
-              lightning-fast responses, and seamless business integration.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/demo"
-                className="px-6 py-3 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced"
-              >
-                See it in action
-              </a>
-              <a
-                href="/signup/starter"
-                className="px-6 py-3 border border-primary-200 text-primary-600 rounded-full hover:bg-primary-50 transition-all duration-300 hover-lift btn-enhanced"
-              >
-                Start free trial
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Core Features */}
-      <section className="py-20 relative">
+      <section className="py-20 md:py-32 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-display font-semibold text-3xl md:text-4xl text-fg mb-4">
+            <h1 className="font-display font-semibold text-4xl md:text-6xl text-fg mb-6">
               Core AI Capabilities
-            </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
+            </h1>
+            <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
               Built with cutting-edge technology to deliver exceptional customer experiences
             </p>
           </div>
