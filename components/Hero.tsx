@@ -2,7 +2,7 @@
 
 export const Hero = () => {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
+    <section className="py-12 md:py-16 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 via-transparent to-primary-50/20"></div>
       
