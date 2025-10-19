@@ -256,7 +256,7 @@ app.post('/webhook', async (req, res) => {
                 href="/demo"
                 className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 hover-lift btn-enhanced"
               >
-                Try Demo
+                View Demo
               </a>
               <a
                 href="/signup/starter"
