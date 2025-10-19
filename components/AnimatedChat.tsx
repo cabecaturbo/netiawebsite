@@ -53,7 +53,7 @@ export const AnimatedChat = () => {
     if (currentMessageIndex < chatMessages.length) {
       const message = chatMessages[currentMessageIndex]
       // Add typing delay before showing the message
-      const typingDelay = currentMessageIndex === 0 ? 400 : 800 // First message: 400ms, others: 800ms
+      const typingDelay = currentMessageIndex === 0 ? 200 : 800 // First message: 200ms, others: 800ms
       const timer = setTimeout(() => {
         setMessages(prev => [...prev, { ...message, id: currentMessageIndex }])
         setCurrentMessageIndex(prev => prev + 1)
