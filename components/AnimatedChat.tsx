@@ -145,7 +145,7 @@ export const AnimatedChat = () => {
         <input
           type="text"
           placeholder="Try asking about pricing, hours, or services..."
-          className="flex-1 px-4 py-2 border border-border rounded-lg text-sm"
+          className="flex-1 px-4 py-2 border border-border rounded-lg text-sm bg-white"
           disabled
         />
         <button className="px-4 py-2 bg-primary-500 text-white rounded-lg text-sm hover:bg-primary-600 transition-colors" disabled>
