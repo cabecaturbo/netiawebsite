@@ -152,7 +152,7 @@ export const AnimatedChat = () => {
           Send
         </button>
       </div>
-      <p className="text-xs text-muted mt-2 text-center">Demo mode - chat is simulated</p>
+      <p className="text-xs text-muted mt-4 text-center">Demo mode - chat is simulated</p>
     </div>
   )
 }
