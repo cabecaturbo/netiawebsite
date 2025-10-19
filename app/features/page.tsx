@@ -88,7 +88,7 @@ export default function FeaturesPage() {
       <section className="py-20 md:py-32 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h1 className="font-display font-semibold text-4xl md:text-6xl text-fg mb-6">
+            <h1 className="font-display font-semibold text-4xl md:text-5xl text-fg mb-4">
               Core AI Capabilities
             </h1>
             <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
