@@ -106,7 +106,7 @@ export const AnimatedChat = () => {
               }`}
             >
               <p className="text-sm">{message.text}</p>
-              {!message.isUser && message.id === messages.length - 1 && (
+              {!message.isUser && message.text.includes("scheduling calendar") && (
                 <div className="mt-2 bg-white/20 rounded-lg px-3 py-2">
                   <p className="text-xs text-white">📅 View Available Times & Book</p>
                 </div>
@@ -115,17 +115,22 @@ export const AnimatedChat = () => {
           </div>
         ))}
         
-        {/* Typing indicator - only show when waiting for AI response after user message */}
-        {currentMessageIndex < chatMessages.length && messages.length > 0 && chatMessages[currentMessageIndex]?.isUser === false && (
-          <div className="flex justify-start space-x-2 transition-all duration-300 ease-out">
-            <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0"></div>
-            <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2">
+        {/* Typing indicator - show for both user and AI when waiting for next message */}
+        {currentMessageIndex < chatMessages.length && messages.length > 0 && (
+          <div className={`flex space-x-2 transition-all duration-300 ease-out ${chatMessages[currentMessageIndex]?.isUser ? 'justify-end' : 'justify-start'}`}>
+            {!chatMessages[currentMessageIndex]?.isUser && (
+              <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0"></div>
+            )}
+            <div className={`bg-blue-600 rounded-2xl px-4 py-2 ${chatMessages[currentMessageIndex]?.isUser ? 'rounded-br-md' : 'rounded-bl-md'}`}>
               <div className="flex space-x-1">
                 <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" style={{animationDuration: '1.4s'}}></div>
                 <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" style={{animationDelay: '0.2s', animationDuration: '1.4s'}}></div>
                 <div className="w-2 h-2 bg-white/60 rounded-full animate-pulse" style={{animationDelay: '0.4s', animationDuration: '1.4s'}}></div>
               </div>
             </div>
+            {chatMessages[currentMessageIndex]?.isUser && (
+              <div className="w-6 h-6 bg-gray-400 rounded-full flex-shrink-0"></div>
+            )}
           </div>
         )}
         
