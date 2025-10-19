@@ -60,8 +60,8 @@ export const Features = () => {
               .star { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Simple star icon */}
-          <polygon className="star" points="50,10 60,35 85,35 65,55 75,80 50,65 25,80 35,55 15,35 40,35" />
+          {/* Modern star icon */}
+          <path className="star" d="M50 15 L58 35 L80 35 L62 50 L70 70 L50 60 L30 70 L38 50 L20 35 L42 35 Z" />
         </svg>
       )
     },
