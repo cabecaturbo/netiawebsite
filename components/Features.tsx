@@ -65,6 +65,29 @@ export const Features = () => {
           <rect className="brush" x="40" y="75" width="20" height="15" />
         </svg>
       )
+    },
+    {
+      title: "AI Voice Assistant.",
+      description: "Coming soon: Natural voice conversations that answer calls and handle customer inquiries with human-like responses.",
+      icon: (
+        <svg viewBox="0 0 100 100" className="w-16 h-16">
+          <defs>
+            <style>{`
+              .mic { fill: none; stroke: #0a0a0a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+              .mic-fill { fill: #0a0a0a; }
+            `}</style>
+          </defs>
+          {/* Microphone body */}
+          <rect className="mic" x="40" y="30" width="20" height="35" rx="10" />
+          {/* Microphone stand */}
+          <rect className="mic" x="45" y="65" width="10" height="15" />
+          {/* Microphone base */}
+          <rect className="mic-fill" x="35" y="80" width="30" height="8" rx="4" />
+          {/* Sound waves */}
+          <path className="mic" d="M25 45 Q20 50 25 55" strokeWidth="2" />
+          <path className="mic" d="M75 45 Q80 50 75 55" strokeWidth="2" />
+        </svg>
+      )
     }
   ]
 
@@ -77,7 +100,7 @@ export const Features = () => {
       <FloatingBalls />
       
       <div className="container mx-auto px-4 relative">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {features.map((feature, index) => (
             <div 
               key={index} 
