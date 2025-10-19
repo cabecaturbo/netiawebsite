@@ -59,7 +59,7 @@ export default function Pricing() {
               </ul>
               <a
                 href="/signup/starter"
-                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-white transition-colors mt-auto text-center"
+                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 mt-auto text-center"
               >
                 Get Started
               </a>
@@ -103,7 +103,7 @@ export default function Pricing() {
               </ul>
               <a
                 href="/signup/pro"
-                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-white transition-colors mt-auto text-center"
+                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 mt-auto text-center"
               >
                 Get Started
               </a>
@@ -165,7 +165,7 @@ export default function Pricing() {
               </ul>
               <a
                 href="/signup/business"
-                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-white transition-colors mt-auto text-center"
+                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 mt-auto text-center"
               >
                 Get Started
               </a>
@@ -212,7 +212,7 @@ export default function Pricing() {
               </ul>
               <a
                 href="/signup/custom"
-                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-white transition-colors mt-auto text-center"
+                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 mt-auto text-center"
               >
                 Get Started
               </a>
