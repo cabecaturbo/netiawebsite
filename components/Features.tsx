@@ -57,12 +57,14 @@ export const Features = () => {
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
             <style>{`
-              .brush { fill: #0a0a0a; }
+              .suit { fill: #0a0a0a; }
             `}</style>
           </defs>
-          {/* Simple paint brush */}
-          <rect className="brush" x="45" y="25" width="10" height="50" />
-          <rect className="brush" x="40" y="75" width="20" height="15" />
+          {/* Simple suit icon */}
+          <rect className="suit" x="30" y="20" width="40" height="25" rx="3" />
+          <rect className="suit" x="35" y="45" width="30" height="35" rx="2" />
+          <rect className="suit" x="25" y="50" width="15" height="25" rx="1" />
+          <rect className="suit" x="60" y="50" width="15" height="25" rx="1" />
         </svg>
       )
     },
