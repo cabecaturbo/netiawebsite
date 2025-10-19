@@ -81,7 +81,7 @@ export const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="text-center space-y-6 group animate-fade-in-up hover-lift transition-all duration-500"
+              className="text-center space-y-6 group animate-fade-in-up hover-lift transition-all duration-500 p-6"
               style={{animationDelay: `${index * 0.2}s`}}
             >
               {/* Icon Card */}
