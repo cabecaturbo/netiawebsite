@@ -36,7 +36,7 @@ export default function WaitlistPage() {
       </section>
 
       {/* Waitlist Form */}
-      <section className="py-20 relative">
+      <section className="py-8 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
