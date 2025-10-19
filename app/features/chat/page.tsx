@@ -17,7 +17,7 @@ export default function ChatFeature() {
               AI Chat
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Intelligent conversations that feel natural and provide instant, accurate responses to your customers' questions.
+              Intelligent conversations that feel natural and provide instant, accurate responses to your customers&apos; questions.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function ChatFeature() {
                 </div>
                 <h3 className="font-display text-xl font-semibold text-fg mb-3">Smart Escalation</h3>
                 <p className="text-muted">
-                  Automatically escalates complex issues to human agents when the AI determines it's necessary.
+                  Automatically escalates complex issues to human agents when the AI determines it&apos;s necessary.
                 </p>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function ChatFeature() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-surface border border-border rounded-lg p-6">
                   <h3 className="font-semibold text-fg mb-3">Business Hours & Location</h3>
-                  <p className="text-muted mb-4">"What are your hours?" "Where are you located?" "Are you open on weekends?"</p>
+                  <p className="text-muted mb-4">&quot;What are your hours?&quot; &quot;Where are you located?&quot; &quot;Are you open on weekends?&quot;</p>
                   <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
                     <p className="text-sm text-muted italic">"We're open Monday-Friday 9AM-5PM and Saturday 10AM-2PM. We're located at 123 Main Street, Downtown."</p>
                   </div>
