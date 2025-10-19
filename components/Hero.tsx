@@ -45,8 +45,8 @@ export const Hero = () => {
 
             {/* Social Media Integration */}
             <div className="flex items-center justify-start mt-20 animate-fade-in-up animate-stagger-6">
-              <p className="text-base font-display font-semibold text-fg mr-2">Integrates with your social media chat platforms</p>
-              <div className="flex items-center space-x-1">
+              <p className="text-base font-display font-semibold text-fg mr-1">Integrates with your website and social media</p>
+              <div className="flex items-center space-x-0.5">
                 {/* Facebook Logo */}
                 <img 
                   src="/facebook-logo-facebook-icon-transparent-free-png.webp" 
