@@ -80,24 +80,18 @@ export default function Demo() {
 
             {/* CTA Section */}
             <div className="text-center mt-16">
-              <h2 className="font-display text-2xl font-semibold text-fg mb-4">
+              <h2 className="font-display text-2xl font-semibold text-primary-600 mb-4">
                 Ready to get started?
               </h2>
               <p className="text-muted mb-8">
                 Join thousands of businesses already using Netia to improve their customer service.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex justify-center">
                 <a
-                  href="/pricing"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gray-900 rounded-full hover:bg-gray-800 transition-colors"
+                  href="/signup/starter"
+                  className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors btn-enhanced"
                 >
-                  View Pricing
-                </a>
-                <a
-                  href="#trial"
-                  className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-colors"
-                >
-                  Start Free
+                  Get Started
                 </a>
               </div>
             </div>
