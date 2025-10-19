@@ -173,9 +173,9 @@ export default function Privacy() {
               <h2 className="font-display text-2xl font-semibold text-fg mb-6">Questions About Privacy?</h2>
               
               <div className="bg-primary-50 border border-primary-200 rounded-lg p-8 text-center">
-                <h3 className="font-semibold text-fg mb-4">We're here to help</h3>
+                <h3 className="font-semibold text-fg mb-4">We&apos;re here to help</h3>
                 <p className="text-muted mb-6">
-                  If you have any questions about this privacy policy or how we handle your data, please don't hesitate to contact us.
+                  If you have any questions about this privacy policy or how we handle your data, please don&apos;t hesitate to contact us.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
