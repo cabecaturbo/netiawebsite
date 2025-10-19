@@ -21,38 +21,6 @@ export default function Pricing() {
             </p>
           </div>
 
-          {/* AI Voice Receptionist Coming Soon */}
-          <div className="text-center mb-16">
-            <div className="bg-gradient-to-r from-primary-50 to-primary-100 border border-primary-200 rounded-2xl p-8 max-w-2xl mx-auto">
-              <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                </svg>
-              </div>
-              <h2 className="font-display text-2xl font-semibold text-fg mb-3">
-                AI Voice Receptionist Coming Soon
-              </h2>
-              <p className="text-muted mb-6">
-                Get early access to our revolutionary AI voice receptionist that can answer calls, 
-                schedule appointments, and handle customer inquiries with natural conversation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#waitlist"
-                  className="px-6 py-3 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced"
-                >
-                  Join the Waitlist
-                </a>
-                <a
-                  href="/demo"
-                  className="px-6 py-3 border border-primary-200 text-primary-600 rounded-full hover:bg-primary-50 transition-all duration-300 hover-lift btn-enhanced"
-                >
-                  See Current Demo
-                </a>
-              </div>
-            </div>
-          </div>
-
           {/* Pricing Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             
@@ -200,6 +168,35 @@ export default function Pricing() {
                 className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-white transition-colors mt-auto text-center"
               >
                 Get Started
+              </a>
+            </div>
+          </div>
+
+          {/* AI Voice Receptionist Coming Soon */}
+          <div className="mt-16 max-w-md mx-auto">
+            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
+              <div className="mb-6">
+                <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                </div>
+                <h3 className="font-display text-2xl font-semibold text-fg mb-2">
+                  AI Voice Receptionist
+                </h3>
+                <div className="text-sm text-primary-600 font-medium mb-4">
+                  Coming Soon
+                </div>
+                <p className="text-muted text-sm">
+                  Revolutionary AI voice receptionist that answers calls, schedules appointments, 
+                  and handles customer inquiries with natural conversation.
+                </p>
+              </div>
+              <a
+                href="#waitlist"
+                className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
+              >
+                Join the Waitlist
               </a>
             </div>
           </div>
