@@ -61,7 +61,7 @@ export default function Setup() {
                   </p>
                   
                   <div className="bg-surface border border-border rounded-lg p-6 mb-6">
-                    <h3 className="font-semibold text-fg mb-3">What you'll need:</h3>
+                    <h3 className="font-semibold text-fg mb-3">What you&apos;ll need:</h3>
                     <ul className="space-y-2 text-muted">
                       <li>• Business email address</li>
                       <li>• Company name</li>

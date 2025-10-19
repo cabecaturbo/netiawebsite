@@ -17,7 +17,7 @@ export default function Terms() {
               Terms of Service
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              These terms govern your use of Netia's AI customer service platform.
+              These terms govern your use of Netia&apos;s AI customer service platform.
             </p>
             <p className="text-sm text-muted mt-4">
               Last updated: January 1, 2024
@@ -31,7 +31,7 @@ export default function Terms() {
               <h2 className="font-display text-2xl font-semibold text-fg mb-6">Acceptance of Terms</h2>
               <div className="bg-surface border border-border rounded-lg p-6">
                 <p className="text-muted">
-                  By accessing or using Netia's services, you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services.
+                  By accessing or using Netia&apos;s services, you agree to be bound by these Terms of Service. If you do not agree to these terms, you may not use our services.
                 </p>
               </div>
             </section>
@@ -95,7 +95,7 @@ export default function Terms() {
                   <li>• Transmit harmful or malicious content</li>
                   <li>• Attempt to gain unauthorized access to our systems</li>
                   <li>• Use the service for illegal activities</li>
-                  <li>• Interfere with other users' access to the service</li>
+                  <li>• Interfere with other users&apos; access to the service</li>
                   <li>• Reverse engineer or attempt to extract source code</li>
                 </ul>
               </div>
@@ -134,7 +134,7 @@ export default function Terms() {
               
               <div className="space-y-6">
                 <div className="bg-surface border border-border rounded-lg p-6">
-                  <h3 className="font-semibold text-fg mb-3">Netia's Rights</h3>
+                  <h3 className="font-semibold text-fg mb-3">Netia&apos;s Rights</h3>
                   <p className="text-muted">
                     Netia retains all rights, title, and interest in our platform, including all intellectual property rights. You may not copy, modify, or distribute our software without permission.
                   </p>
@@ -155,7 +155,7 @@ export default function Terms() {
               
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
                 <p className="text-muted">
-                  Netia provides services "as is" without warranties. We are not liable for any indirect, incidental, or consequential damages. Our total liability is limited to the amount you paid for our services in the 12 months preceding the claim.
+                  Netia provides services &quot;as is&quot; without warranties. We are not liable for any indirect, incidental, or consequential damages. Our total liability is limited to the amount you paid for our services in the 12 months preceding the claim.
                 </p>
               </div>
             </section>
@@ -176,7 +176,7 @@ export default function Terms() {
               <h2 className="font-display text-2xl font-semibold text-fg mb-6">Questions About Terms?</h2>
               
               <div className="bg-primary-50 border border-primary-200 rounded-lg p-8 text-center">
-                <h3 className="font-semibold text-fg mb-4">We're here to help</h3>
+                <h3 className="font-semibold text-fg mb-4">We&apos;re here to help</h3>
                 <p className="text-muted mb-6">
                   If you have any questions about these terms or need clarification on any section, please contact us.
                 </p>
