@@ -39,6 +39,13 @@ const features = [
     description: 'Enterprise-grade security with end-to-end encryption and compliance.',
     icon: ShieldCheckIcon,
     highlights: ['GDPR compliant', 'SOC 2 certified', 'Data encryption']
+  },
+  {
+    name: 'AI Voice Receptionist',
+    description: 'Coming soon: Natural voice conversations that answer calls and handle customer inquiries with human-like responses.',
+    icon: ChatBubbleLeftRightIcon,
+    highlights: ['Natural voice conversations', 'Call handling', 'Human-like responses'],
+    isComingSoon: true
   }
 ]
 
@@ -122,10 +129,18 @@ export default function FeaturesPage() {
             {features.map((feature, index) => (
               <div
                 key={feature.name}
-                className="bg-white rounded-2xl p-8 shadow-lg hover-lift transition-all duration-500 border border-gray-100 relative overflow-hidden group"
+                className={`bg-white rounded-2xl p-8 shadow-lg hover-lift transition-all duration-500 border border-gray-100 relative overflow-hidden group ${
+                  feature.isComingSoon ? 'border-primary-200 bg-gradient-to-br from-primary-50/30 to-white' : ''
+                }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                {feature.isComingSoon && (
+                  <div className="absolute top-4 right-4 bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Coming Soon
+                  </div>
+                )}
                 
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-500 transition-colors duration-300">
@@ -148,6 +163,17 @@ export default function FeaturesPage() {
                       </li>
                     ))}
                   </ul>
+                  
+                  {feature.isComingSoon && (
+                    <div className="mt-6">
+                      <a
+                        href="/waitlist"
+                        className="w-full bg-primary-500 text-white text-center py-3 px-4 rounded-xl font-semibold hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced inline-block"
+                      >
+                        Join the Waitlist
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
