@@ -103,7 +103,7 @@ export const Hero = () => {
                 <div className="space-y-4 relative z-10">
                   {/* Customer Message */}
                   <div className="flex justify-end">
-                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-3 max-w-xs hover:bg-gray-200 transition-colors duration-300">
                       <p className="text-sm text-gray-800">What are your business hours?</p>
                     </div>
                   </div>
@@ -111,14 +111,14 @@ export const Hero = () => {
                   {/* AI Response */}
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
-                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-3 max-w-xs hover:bg-blue-700 transition-colors duration-300">
                       <p className="text-sm text-white">We&apos;re open Monday-Friday 9am-6pm and Saturday 10am-4pm. Would you like me to help you schedule an appointment?</p>
                     </div>
                   </div>
                   
                   {/* Customer Response */}
                   <div className="flex justify-end">
-                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-3 max-w-xs hover:bg-gray-200 transition-colors duration-300">
                       <p className="text-sm text-gray-800">Yes, I&apos;d like to book a consultation</p>
                     </div>
                   </div>
@@ -126,7 +126,7 @@ export const Hero = () => {
                   {/* AI with Link */}
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
-                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-3 max-w-xs hover:bg-blue-700 transition-colors duration-300">
                       <p className="text-sm text-white">Perfect! Here&apos;s our scheduling link:</p>
                       <div className="mt-2 bg-white/20 rounded-lg px-3 py-2 hover:bg-white/30 transition-colors duration-300 cursor-pointer group">
                         <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300">📅 Book Appointment</p>
