@@ -17,7 +17,7 @@ export default function ApiDocs() {
               API Documentation
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Build powerful integrations with Netia's REST API. Access AI conversations, manage business profiles, and automate workflows.
+              Build powerful integrations with Netia&apos;s REST API. Access AI conversations, manage business profiles, and automate workflows.
             </p>
           </div>
 

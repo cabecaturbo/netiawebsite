@@ -17,7 +17,7 @@ export default function About() {
               About Netia
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              We're building the future of customer service with AI that understands your business and delivers exceptional experiences.
+              We&apos;re building the future of customer service with AI that understands your business and delivers exceptional experiences.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ export default function About() {
               <div>
                 <h2 className="font-display text-3xl font-semibold text-fg mb-6">Our Mission</h2>
                 <p className="text-lg text-muted mb-6">
-                  Every business deserves access to world-class customer service. We're democratizing AI-powered customer support by making it accessible, affordable, and easy to implement for businesses of all sizes.
+                  Every business deserves access to world-class customer service. We&apos;re democratizing AI-powered customer support by making it accessible, affordable, and easy to implement for businesses of all sizes.
                 </p>
                 <p className="text-muted">
                   From small dental practices to growing e-commerce stores, Netia helps businesses provide 24/7 customer support that feels personal, professional, and perfectly aligned with their brand.
@@ -96,10 +96,10 @@ export default function About() {
             <div className="bg-surface border border-border rounded-lg p-8">
               <div className="text-center">
                 <p className="text-lg text-muted mb-6">
-                  Netia was founded by entrepreneurs who understand the challenges of running a business. We've experienced firsthand how difficult it can be to provide excellent customer service while managing all the other aspects of growing a company.
+                  Netia was founded by entrepreneurs who understand the challenges of running a business. We&apos;ve experienced firsthand how difficult it can be to provide excellent customer service while managing all the other aspects of growing a company.
                 </p>
                 <p className="text-muted">
-                  That's why we built Netia - to give every business access to the kind of customer service that used to be reserved for large corporations with dedicated support teams.
+                  That&apos;s why we built Netia - to give every business access to the kind of customer service that used to be reserved for large corporations with dedicated support teams.
                 </p>
               </div>
             </div>
