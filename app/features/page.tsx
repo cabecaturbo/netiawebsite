@@ -153,7 +153,7 @@ export default function FeaturesPage() {
       </section>
 
       {/* Technical Specifications */}
-      <section className="py-20 bg-white relative">
+      <section className="py-10 bg-white relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-display font-semibold text-3xl md:text-4xl text-fg mb-4">
