@@ -61,13 +61,13 @@ export const Header = () => {
               href="/demo"
               className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
             >
-              See it in action
+              Watch Demo
             </a>
             <a
               href="/pricing"
-              className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced hover-glow"
+              className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced hover-glow shadow-md"
             >
-              Start free
+              Start Free Trial
             </a>
           </div>
 
@@ -149,7 +149,7 @@ export const Header = () => {
                 }`}
                 style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
               >
-                See it in action
+                Watch Demo
               </a>
               <a
                 href="/pricing"
@@ -158,7 +158,7 @@ export const Header = () => {
                 }`}
                 style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
               >
-                Start free
+                Start Free Trial
               </a>
             </div>
           </div>

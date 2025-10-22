@@ -12,9 +12,9 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-2 animate-fade-in-up">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
-                <span className="block animate-slide-in-left animate-stagger-1">AI That</span>
+                <span className="block animate-slide-in-left animate-stagger-1">AI Receptionist</span>
                 <span className="block text-primary-500 animate-slide-in-left animate-stagger-2 relative">
-                  Works
+                  That Never Sleeps
                   <span className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse-subtle"></span>
                 </span>
               </h1>
@@ -26,60 +26,71 @@ export const Hero = () => {
                   className="h-8 hover-glow transition-all duration-300"
                 />
               </div>
-              <p className="text-lg md:text-xl text-muted max-w-lg leading-relaxed animate-fade-in-up animate-stagger-4">
-                AI receptionist that answers customer questions 24/7 and handles appointment booking. Uses your business profile to give accurate responses about hours, pricing, and services.
+              <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-4">
+                Answer customer questions 24/7, handle appointment booking, and never miss a lead again. 
+                <span className="text-fg font-medium">Start free, no credit card required.</span>
               </p>
+              
+              {/* Social Proof */}
+              <div className="flex items-center space-x-4 animate-fade-in-up animate-stagger-5">
+                <div className="flex -space-x-2">
+                  <div className="w-8 h-8 bg-primary-100 rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-blue-100 rounded-full border-2 border-white"></div>
+                  <div className="w-8 h-8 bg-green-100 rounded-full border-2 border-white"></div>
+                </div>
+                <div>
+                  <div className="flex items-center space-x-1">
+                    <div className="flex text-yellow-400">
+                      {'★'.repeat(5)}
+                    </div>
+                    <span className="text-sm text-muted ml-1">4.9/5</span>
+                  </div>
+                  <p className="text-xs text-muted">Trusted by 500+ businesses</p>
+                </div>
+              </div>
             </div>
             
-            <div className="flex justify-start animate-fade-in-up animate-stagger-5">
+            {/* Urgency Banner */}
+            <div className="inline-flex items-center px-4 py-2 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 animate-fade-in-up animate-stagger-5">
+              <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
+              Free trial • No setup fees • Cancel anytime
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-stagger-6">
+              <a
+                href="/pricing"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced group shadow-lg"
+              >
+                <span className="relative z-10">Start Free Trial</span>
+                <svg className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
               <a
                 href="/demo"
-                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-fg border border-border rounded-full hover:bg-surface transition-all duration-300 hover-lift btn-enhanced group"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-fg border-2 border-border rounded-full hover:bg-surface transition-all duration-300 hover-lift btn-enhanced group"
               >
-                <span className="relative z-10">See it in action</span>
-                <svg className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="relative z-10">Watch Demo</span>
+                <svg className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
               </a>
             </div>
 
-            {/* Social Media Integration */}
-            <div className="flex items-center justify-start mt-20 animate-fade-in-up animate-stagger-6">
-              <p className="text-base font-display font-semibold text-fg mr-1">Integrates with your website and social media</p>
-              <div className="flex items-center space-x-0.5">
-                {/* Facebook Logo */}
-                <img 
-                  src="/facebook-logo-facebook-icon-transparent-free-png.webp" 
-                  alt="Facebook" 
-                  className="w-8 h-8 hover:scale-110 transition-transform duration-300" 
-                />
-                {/* Instagram Logo */}
-                <img 
-                  src="/instagram.jpg" 
-                  alt="Instagram" 
-                  className="w-8 h-8 hover:scale-110 transition-transform duration-300 rounded-full" 
-                  style={{backgroundColor: 'transparent'}}
-                />
-              </div>
-            </div>
-
-            {/* Spacing to maintain layout */}
-            <div className="pt-8">
-            </div>
-
             {/* Metrics Section */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50 animate-fade-in animate-stagger-6">
-              <div className="text-left">
-                <div className="text-2xl font-display font-bold text-fg">24/7</div>
-                <div className="text-sm text-muted">Availability</div>
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/30 animate-fade-in animate-stagger-7">
+              <div className="text-center">
+                <div className="text-3xl font-display font-bold text-primary-500">24/7</div>
+                <div className="text-sm text-muted">Always Available</div>
               </div>
-              <div className="text-left">
-                <div className="text-2xl font-display font-bold text-fg">2.3s</div>
+              <div className="text-center">
+                <div className="text-3xl font-display font-bold text-primary-500">2.3s</div>
                 <div className="text-sm text-muted">Avg Response</div>
               </div>
-              <div className="text-left">
-                <div className="text-2xl font-display font-bold text-fg">GPT</div>
-                <div className="text-sm text-muted">AI Engine</div>
+              <div className="text-center">
+                <div className="text-3xl font-display font-bold text-primary-500">99.9%</div>
+                <div className="text-sm text-muted">Uptime</div>
               </div>
             </div>
           </div>
@@ -94,7 +105,7 @@ export const Hero = () => {
               
               {/* Additional floating balls in margins */}
               
-              <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4 shadow-lg hover-lift transition-all duration-500 relative overflow-hidden">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover-lift transition-all duration-500 relative overflow-hidden h-[28rem]">
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50/10 via-transparent to-transparent pointer-events-none"></div>
                 
@@ -120,37 +131,117 @@ export const Hero = () => {
                 </div>
                 
                 {/* Chat Messages */}
-                <div className="space-y-4 relative z-10">
+                <div className="space-y-3 relative z-10 max-h-[24rem] overflow-y-auto">
                   {/* Customer Message */}
                   <div className="flex justify-end">
-                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-3 max-w-xs hover:bg-gray-200 transition-colors duration-300">
-                      <p className="text-sm text-gray-800">What are your business hours?</p>
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                      <p className="text-sm text-gray-800">Hey! What services do you offer?</p>
                     </div>
                   </div>
                   
                   {/* AI Response */}
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
-                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-3 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">We&apos;re open Monday-Friday 9am-6pm and Saturday 10am-4pm. Would you like me to help you schedule an appointment?</p>
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                      <p className="text-sm text-white">We offer comprehensive dental services including cleanings ($120), fillings ($180), crowns ($1200), and cosmetic procedures. What type of service are you looking for?</p>
                     </div>
                   </div>
                   
                   {/* Customer Response */}
                   <div className="flex justify-end">
-                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-3 max-w-xs hover:bg-gray-200 transition-colors duration-300">
-                      <p className="text-sm text-gray-800">Yes, I&apos;d like to book a consultation</p>
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                      <p className="text-sm text-gray-800">I need a cleaning and checkup. How much does that cost?</p>
+                    </div>
+                  </div>
+                  
+                  {/* AI Response */}
+                  <div className="flex justify-start">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                      <p className="text-sm text-white">A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. We also accept most insurance plans, so you'd typically just pay your copay.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Customer Response */}
+                  <div className="flex justify-end">
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                      <p className="text-sm text-gray-800">What about a filling? I think I might need one</p>
+                    </div>
+                  </div>
+                  
+                  {/* AI Response */}
+                  <div className="flex justify-start">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                      <p className="text-sm text-white">A filling typically costs $180-250 depending on the size and location. During your checkup, we'll let you know if you need one and give you an exact price.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Customer Response */}
+                  <div className="flex justify-end">
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                      <p className="text-sm text-gray-800">Do you take Delta Dental insurance?</p>
+                    </div>
+                  </div>
+                  
+                  {/* AI Response */}
+                  <div className="flex justify-start">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                      <p className="text-sm text-white">Yes! We accept Delta Dental and most other major insurance plans. We'll verify your coverage and let you know your exact out-of-pocket cost before treatment.</p>
+                    </div>
+                  </div>
+                  
+                  {/* Customer Response */}
+                  <div className="flex justify-end">
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                      <p className="text-sm text-gray-800">Perfect! When can I schedule an appointment?</p>
                     </div>
                   </div>
                   
                   {/* AI with Link */}
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
-                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-3 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">Perfect! Here&apos;s our scheduling link:</p>
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                      <p className="text-sm text-white">We're open Monday-Friday 8am-6pm and Saturday 9am-3pm. We also have evening appointments until 7pm on Tuesdays and Thursdays. What works best for you?</p>
                       <div className="mt-2 bg-white/20 rounded-lg px-3 py-2 hover:bg-white/30 transition-colors duration-300 cursor-pointer group">
-                        <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300">📅 Book Appointment</p>
+                        <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300">📅 Book Your Appointment</p>
+                        <p className="text-xs text-white/80 mt-1">Click to view available times</p>
                       </div>
+                    </div>
+                  </div>
+                  
+                  {/* Customer Response - Specific Time */}
+                  <div className="flex justify-end">
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                      <p className="text-sm text-gray-800">I work during the day, so evening or weekend would be great</p>
+                    </div>
+                  </div>
+                  
+                  {/* AI Response - Calendar Link */}
+                  <div className="flex justify-start">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                      <p className="text-sm text-white">Perfect! I'll send you our scheduling calendar where you can see all available evening and weekend times:</p>
+                      <div className="mt-2 bg-white/20 rounded-lg px-3 py-2 hover:bg-white/30 transition-colors duration-300 cursor-pointer group">
+                        <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300">📅 Book Your Appointment</p>
+                        <p className="text-xs text-white/80 mt-1">Click to view available times</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Customer Response - Confirmation */}
+                  <div className="flex justify-end">
+                    <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
+                      <p className="text-sm text-gray-800">Awesome, thanks! I'll book through that link</p>
+                    </div>
+                  </div>
+                  
+                  {/* AI Response - Final */}
+                  <div className="flex justify-start">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                    <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
+                      <p className="text-sm text-white">You're welcome! We'll send you a confirmation email once you book. Looking forward to seeing you soon! 😊</p>
                     </div>
                   </div>
                 </div>

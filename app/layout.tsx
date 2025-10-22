@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { inter, sora } from "./fonts";
 import "./globals.css";
+import { PapercupsBootstrap } from "@/src/components/integrations/PapercupsBootstrap";
 
 export const metadata: Metadata = {
   title: "Netia - AI That Works",
@@ -46,6 +47,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
       <body className="font-sans antialiased bg-white text-fg">
         {children}
+        <PapercupsBootstrap />
       </body>
     </html>
   );
