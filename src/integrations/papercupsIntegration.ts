@@ -3,6 +3,7 @@ import type { PapercupsConfig, PapercupsUser, PapercupsMessage } from '@/src/con
 declare global {
   interface Window {
     Papercups?: {
+      init: (config: { accountId: string; inboxId: string; token?: string }) => void;
       widget: {
         open: () => void;
         close: () => void;
@@ -156,11 +157,11 @@ export class PapercupsClient {
     script.async = true;
     script.onload = () => {
       // Initialize Papercups with configuration
-      if (window.Papercups) {
+      if (window.Papercups && typeof window.Papercups.init === 'function' && this.config.accountId && this.config.inboxId) {
         window.Papercups.init({
           accountId: this.config.accountId,
           inboxId: this.config.inboxId,
-          token: this.config.token,
+          ...(this.config.token && { token: this.config.token }),
         });
       }
     };

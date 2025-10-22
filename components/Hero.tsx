@@ -158,7 +158,7 @@ export const Hero = () => {
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. We also accept most insurance plans, so you'd typically just pay your copay.</p>
+                      <p className="text-sm text-white">A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. We also accept most insurance plans, so you&apos;d typically just pay your copay.</p>
                     </div>
                   </div>
                   
@@ -173,7 +173,7 @@ export const Hero = () => {
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">A filling typically costs $180-250 depending on the size and location. During your checkup, we'll let you know if you need one and give you an exact price.</p>
+                      <p className="text-sm text-white">A filling typically costs $180-250 depending on the size and location. During your checkup, we&apos;ll let you know if you need one and give you an exact price.</p>
                     </div>
                   </div>
                   
@@ -188,7 +188,7 @@ export const Hero = () => {
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">Yes! We accept Delta Dental and most other major insurance plans. We'll verify your coverage and let you know your exact out-of-pocket cost before treatment.</p>
+                      <p className="text-sm text-white">Yes! We accept Delta Dental and most other major insurance plans. We&apos;ll verify your coverage and let you know your exact out-of-pocket cost before treatment.</p>
                     </div>
                   </div>
                   
@@ -203,7 +203,7 @@ export const Hero = () => {
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">We're open Monday-Friday 8am-6pm and Saturday 9am-3pm. We also have evening appointments until 7pm on Tuesdays and Thursdays. What works best for you?</p>
+                      <p className="text-sm text-white">We&apos;re open Monday-Friday 8am-6pm and Saturday 9am-3pm. We also have evening appointments until 7pm on Tuesdays and Thursdays. What works best for you?</p>
                       <div className="mt-2 bg-white/20 rounded-lg px-3 py-2 hover:bg-white/30 transition-colors duration-300 cursor-pointer group">
                         <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300">📅 Book Your Appointment</p>
                         <p className="text-xs text-white/80 mt-1">Click to view available times</p>
@@ -222,7 +222,7 @@ export const Hero = () => {
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">Perfect! I'll send you our scheduling calendar where you can see all available evening and weekend times:</p>
+                      <p className="text-sm text-white">Perfect! I&apos;ll send you our scheduling calendar where you can see all available evening and weekend times:</p>
                       <div className="mt-2 bg-white/20 rounded-lg px-3 py-2 hover:bg-white/30 transition-colors duration-300 cursor-pointer group">
                         <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300">📅 Book Your Appointment</p>
                         <p className="text-xs text-white/80 mt-1">Click to view available times</p>
@@ -233,7 +233,7 @@ export const Hero = () => {
                   {/* Customer Response - Confirmation */}
                   <div className="flex justify-end">
                     <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
-                      <p className="text-sm text-gray-800">Awesome, thanks! I'll book through that link</p>
+                      <p className="text-sm text-gray-800">Awesome, thanks! I&apos;ll book through that link</p>
                     </div>
                   </div>
                   
@@ -241,7 +241,7 @@ export const Hero = () => {
                   <div className="flex justify-start">
                     <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
-                      <p className="text-sm text-white">You're welcome! We'll send you a confirmation email once you book. Looking forward to seeing you soon! 😊</p>
+                      <p className="text-sm text-white">You&apos;re welcome! We&apos;ll send you a confirmation email once you book. Looking forward to seeing you soon! 😊</p>
                     </div>
                   </div>
                 </div>

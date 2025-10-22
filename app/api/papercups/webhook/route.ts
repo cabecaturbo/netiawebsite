@@ -18,7 +18,7 @@ interface PapercupsWebhookPayload {
  * Verify Papercups webhook signature (if they provide one)
  * This is a placeholder - implement based on Papercups documentation
  */
-function verifySignature(payload: string, signature: string, secret: string): boolean {
+function verifySignature(_payload: string, _signature: string, _secret: string): boolean {
   // TODO: Implement signature verification based on Papercups webhook documentation
   // For now, we'll return true as a placeholder
   return true;
