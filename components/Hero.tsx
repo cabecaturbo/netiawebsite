@@ -52,9 +52,13 @@ export const Hero = () => {
             </div>
             
             {/* Urgency Banner - Moved down with more spacing */}
-            <div className="inline-flex items-center px-4 py-2 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 animate-fade-in-up animate-stagger-5 pt-4">
+            <div className="inline-flex items-center px-4 py-3 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 animate-fade-in-up animate-stagger-5">
               <div className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></div>
-              Free trial • No setup fees • Cancel anytime
+              <span>Free trial</span>
+              <span className="mx-2">•</span>
+              <span>No setup fees</span>
+              <span className="mx-2">•</span>
+              <span>Cancel anytime</span>
             </div>
           </div>
 
