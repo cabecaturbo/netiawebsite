@@ -227,7 +227,7 @@ export default function Pricing() {
                   Get Started
                 </a>
                 <p className="text-sm text-muted mt-3">
-                  Credit card required • Cancel anytime
+                  Credit card required • Processed by Stripe • Cancel anytime
                 </p>
               </div>
             </div>
