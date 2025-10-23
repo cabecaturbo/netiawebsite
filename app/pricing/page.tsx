@@ -197,14 +197,14 @@ export default function Pricing() {
 
           {/* Selection Flow */}
           <div className="mt-16 max-w-4xl mx-auto">
-            <div id="ai-selection-box" className="relative bg-white border-2 border-blue-200 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div id="ai-selection-box" className="relative bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-300 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="relative z-10">
                 <h3 className="font-display text-3xl font-bold text-fg mb-2 text-center">
                   Choose Your AI Solutions
                 </h3>
                 <p className="text-muted text-center mb-8 text-lg">Select the AI tools that will transform your business</p>
                 <div className="space-y-4">
-                  <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group">
+                  <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group has-[:checked]:bg-blue-600 has-[:checked]:border-blue-600 has-[:checked]:text-white">
                     <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
                     <div className="ml-4 flex-1">
                       <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI ChatBot - $79/month</div>
@@ -213,7 +213,7 @@ export default function Pricing() {
                     <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </label>
                   
-                  <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group">
+                  <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group has-[:checked]:bg-blue-600 has-[:checked]:border-blue-600 has-[:checked]:text-white">
                     <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
                     <div className="ml-4 flex-1">
                       <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Receptionist - $199/month</div>
@@ -222,7 +222,7 @@ export default function Pricing() {
                     <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </label>
                   
-                  <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group">
+                  <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group has-[:checked]:bg-blue-600 has-[:checked]:border-blue-600 has-[:checked]:text-white">
                     <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
                     <div className="ml-4 flex-1">
                       <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Lead Follow-Up - $199/month</div>
