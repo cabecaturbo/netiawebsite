@@ -2,26 +2,26 @@ export const Process = () => {
   const steps = [
     {
       number: "01",
-      title: "Set up profile",
-      description: "Add your business hours, contact info, services, and pricing to your profile.",
+      title: "Tell us about your business",
+      description: "Add your hours, services, and prices. Takes 5 minutes.",
       action: "Get started"
     },
     {
       number: "02", 
-      title: "Connect Netia",
-      description: "Set up webhook integration with your existing chat widget.",
+      title: "Connect your phone/website",
+      description: "One click and you're live. No tech skills needed.",
       action: "View setup"
     },
     {
       number: "03",
-      title: "Go live", 
-      description: "AI starts responding to customer questions and handling appointment booking immediately using your business data.",
+      title: "Start booking customers", 
+      description: "Your AI starts working immediately. No training required.",
       action: "See it in action"
     },
     {
       number: "04",
-      title: "Manage",
-      description: "Use the admin dashboard to update settings and monitor conversations.",
+      title: "Watch your business grow",
+      description: "More appointments, fewer missed calls, happier customers.",
       action: "View dashboard"
     }
   ]
@@ -31,11 +31,11 @@ export const Process = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-fg mb-4">
-            Get started in 4 simple steps
+            From Setup to Success in 15 Minutes
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Set up your business profile, connect your chat widget, and start answering customer questions with AI. 
-            No coding required—just add your business information and go live.
+            Tell us about your business, connect your phone/website, and start booking customers immediately. 
+            No tech skills needed—just add your information and watch the appointments roll in.
           </p>
         </div>
 

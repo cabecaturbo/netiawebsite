@@ -3,8 +3,8 @@ import { FloatingBalls } from './FloatingBalls'
 export const Features = () => {
   const features = [
     {
-      title: "Chat & schedules.",
-      description: "AI chatbot responds to customer questions 24/7 and handles appointment booking when customers want to schedule.",
+      title: "Turn Every Visitor Into a Customer",
+      description: "Your website visitors get instant answers to their questions. No more 'I'll call you back' - they book appointments right then and there.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
@@ -30,8 +30,8 @@ export const Features = () => {
       )
     },
     {
-      title: "Your data stays private.",
-      description: "Each user gets their own secure workspace. Your customer information is completely separate and protected.",
+      title: "Your Business, Your Rules",
+      description: "We never share your customer data. Each business gets their own secure space. Your information stays private and protected.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
@@ -51,8 +51,8 @@ export const Features = () => {
       )
     },
     {
-      title: "Tailored to you.",
-      description: "Store hours, policies, contact info, and service pricing for accurate AI chatbot responses. Custom branding available.",
+      title: "Knows Your Business Inside Out",
+      description: "Tell us your hours, services, and prices once. Our AI remembers everything and gives customers the right answers every time.",
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>
@@ -66,8 +66,8 @@ export const Features = () => {
       )
     },
     {
-      title: "AI Voice Assistant.",
-      description: "Natural voice conversations that answer calls and handle customer inquiries with human-like responses.",
+      title: "Never Miss a Phone Call Again",
+      description: "Every call gets answered professionally. Our AI sounds like your best employee and books appointments even when you're busy.",
       isComingSoon: false,
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">

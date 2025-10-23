@@ -14,10 +14,10 @@ export default function About() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              About Netia
+              We Know What It's Like to Miss a Sale
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              We&apos;re building the future of customer service with AI that understands your business and delivers exceptional experiences.
+              We built Netia because we've been there. Missing calls, losing customers, watching money walk out the door. Now every small business can have the customer service of a Fortune 500 company.
             </p>
           </div>
 
@@ -27,10 +27,10 @@ export default function About() {
               <div>
                 <h2 className="font-display text-3xl font-semibold text-fg mb-6">Our Mission</h2>
                 <p className="text-lg text-muted mb-6">
-                  Every business deserves access to world-class customer service. We&apos;re democratizing AI-powered customer support by making it accessible, affordable, and easy to implement for businesses of all sizes.
+                  We built Netia because we've experienced firsthand how difficult it can be to provide excellent customer service while managing all the other aspects of growing a company.
                 </p>
                 <p className="text-muted">
-                  From small dental practices to growing e-commerce stores, Netia helps businesses provide 24/7 customer support that feels personal, professional, and perfectly aligned with their brand.
+                  That's why we built Netia - to give every business access to the kind of customer service that used to be reserved for large corporations with dedicated support teams.
                 </p>
               </div>
               <div className="bg-primary-50 border border-primary-200 rounded-lg p-8">
@@ -96,10 +96,10 @@ export default function About() {
             <div className="bg-surface border border-border rounded-lg p-8">
               <div className="text-center">
                 <p className="text-lg text-muted mb-6">
-                  Netia was founded by entrepreneurs who understand the challenges of running a business. We&apos;ve experienced firsthand how difficult it can be to provide excellent customer service while managing all the other aspects of growing a company.
+                  We've been in your shoes. The frustration of missing calls, the stress of trying to be everywhere at once, the fear of losing customers to competitors who answer their phones.
                 </p>
                 <p className="text-muted">
-                  That&apos;s why we built Netia - to give every business access to the kind of customer service that used to be reserved for large corporations with dedicated support teams.
+                  That's why we built Netia - so you never have to choose between growing your business and serving your customers. Now you can do both.
                 </p>
               </div>
             </div>
@@ -130,10 +130,10 @@ export default function About() {
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="font-display text-2xl font-semibold text-fg mb-4">
-              Ready to join the future of customer service?
+              Ready to stop missing calls and start booking more customers?
             </h2>
             <p className="text-muted mb-8">
-              Start your free trial today and see how Netia can transform your customer support.
+              Join 500+ businesses who never miss another opportunity. Start your free trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -22,10 +22,10 @@ export default function Pricing() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              Choose the right solution for your business
+              Stop Losing Money on Missed Calls
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Powerful AI tools designed for service-based businesses. No setup fees, no contracts, cancel anytime.
+              Every missed call costs you money. Our AI never sleeps, never takes breaks, and never misses an opportunity to book your next customer.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export default function Pricing() {
                   $79<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
-                  AI assistant for your website
+                  Turn website visitors into customers instantly
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -97,7 +97,7 @@ export default function Pricing() {
                   $199<span className="text-lg font-normal text-blue-200">/month</span>
                 </div>
                 <p className="text-sm text-blue-200 mt-2">
-                  AI receptionist for your phone calls
+                  Answer every phone call like a pro
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -151,7 +151,7 @@ export default function Pricing() {
                   $199<span className="text-lg font-normal text-blue-200">/month</span>
                 </div>
                 <p className="text-sm text-blue-200 mt-2">
-                  AI follow-up for your leads
+                  Turn 'maybe' into 'yes' with smart follow-ups
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">

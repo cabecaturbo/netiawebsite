@@ -12,9 +12,9 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-2 animate-fade-in-up">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
-                <span className="block animate-slide-in-left animate-stagger-1">AI Assistant</span>
+                <span className="block animate-slide-in-left animate-stagger-1">Never Miss Another</span>
                 <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
-                  That Never Sleeps
+                  Customer Call Again
                 </span>
               </h1>
               <div className="flex items-center space-x-0.5 animate-fade-in animate-stagger-3">
@@ -26,8 +26,8 @@ export const Hero = () => {
                 />
               </div>
               <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-4">
-                Answer every call with natural voice conversations, chatbot chats with website visitors 24/7, book appointments automatically, and never miss a lead again. 
-                <span className="text-fg font-medium">Start free, no credit card required.</span>
+                Stop losing $2,000+ in missed appointments every month. Our AI answers every call, books appointments, and follows up with leads - even at 2 AM. 
+                <span className="text-fg font-medium">Start free today.</span>
               </p>
               
             </div>
