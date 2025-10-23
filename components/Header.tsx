@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [userEmail, setUserEmail] = useState('')
+  const pathname = usePathname()
 
   useEffect(() => {
     const updateScrollProgress = () => {
@@ -40,6 +42,9 @@ export const Header = () => {
     setUserEmail('')
     window.location.href = '/'
   }
+
+  // Only show dashboard/logout when logged in AND on dashboard page
+  const showDashboardButtons = isLoggedIn && pathname === '/dashboard'
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border transition-all duration-300">
@@ -79,7 +84,7 @@ export const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            {isLoggedIn ? (
+            {showDashboardButtons ? (
               <>
                 <span className="text-sm text-muted">{userEmail}</span>
                 <Link
@@ -190,7 +195,7 @@ export const Header = () => {
               Integrate
             </Link>
             <div className="pt-4 space-y-2">
-              {isLoggedIn ? (
+              {showDashboardButtons ? (
                 <>
                   <div className={`text-center text-sm text-muted mb-2 ${
                     isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
