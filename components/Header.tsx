@@ -81,21 +81,19 @@ export const Header = () => {
           <div className="hidden md:flex items-center space-x-3">
             {isLoggedIn ? (
               <>
+                <span className="text-sm text-muted">{userEmail}</span>
                 <Link
                   href="/dashboard"
                   className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
                 >
                   Dashboard
                 </Link>
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm text-muted">{userEmail}</span>
-                  <button
-                    onClick={handleLogout}
-                    className="px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-full hover:bg-red-600 transition-all duration-300 hover-lift btn-enhanced"
-                  >
-                    Logout
-                  </button>
-                </div>
+                <button
+                  onClick={handleLogout}
+                  className="px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-full hover:bg-red-600 transition-all duration-300 hover-lift btn-enhanced"
+                >
+                  Logout
+                </button>
               </>
             ) : (
               <>
@@ -194,12 +192,19 @@ export const Header = () => {
             <div className="pt-4 space-y-2">
               {isLoggedIn ? (
                 <>
+                  <div className={`text-center text-sm text-muted mb-2 ${
+                    isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                  }`}
+                  style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
+                  >
+                    {userEmail}
+                  </div>
                   <Link
                     href="/dashboard"
                     className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
-                    style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
+                    style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
                   >
                     Dashboard
                   </Link>
@@ -208,7 +213,7 @@ export const Header = () => {
                     className={`block w-full px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-full text-center hover:bg-red-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
-                    style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
+                    style={{transitionDelay: isMenuOpen ? '0.4s' : '0s'}}
                   >
                     Logout
                   </button>

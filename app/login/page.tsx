@@ -145,7 +145,7 @@ export default function Login() {
               <p className="text-muted">
                 Don&apos;t have an account?{' '}
                 <Link href="/pricing" className="text-primary-600 hover:text-primary-700 font-medium">
-                  Get started with Netia
+                  Sign Up
                 </Link>
               </p>
             </div>
