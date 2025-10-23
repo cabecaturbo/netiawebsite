@@ -18,7 +18,7 @@ interface PapercupsWebhookPayload {
  * Verify Papercups webhook signature (if they provide one)
  * This is a placeholder - implement based on Papercups documentation
  */
-function verifySignature(_payload: string, _signature: string, _secret: string): boolean {
+function verifySignature(): boolean {
   // TODO: Implement signature verification based on Papercups webhook documentation
   // For now, we'll return true as a placeholder
   return true;
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get('x-papercups-signature') || '';
     
     // Verify signature if token is provided
-    if (config.token && !verifySignature(body, signature, config.token)) {
+    if (config.token && !verifySignature()) {
       return NextResponse.json(
         { error: 'Invalid signature' },
         { status: 401 }

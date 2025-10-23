@@ -5,13 +5,6 @@ import { Footer } from "@/components/Footer"
 import { FloatingBalls } from "@/components/FloatingBalls"
 
 export default function Pricing() {
-  const scrollToSelection = () => {
-    const element = document.getElementById('ai-selection-box')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' })
-    }
-  }
-
   const handleGetStarted = () => {
     // After successful signup, redirect to login
     window.location.href = '/login'

@@ -33,7 +33,7 @@ export default function Login() {
       } else {
         setError('Please enter both email and password')
       }
-    } catch (err) {
+    } catch {
       setError('Login failed. Please try again.')
     } finally {
       setIsLoading(false)
@@ -129,7 +129,7 @@ export default function Login() {
             {/* Sign Up Link */}
             <div className="mt-8 text-center">
               <p className="text-muted">
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <Link href="/pricing" className="text-primary-600 hover:text-primary-700 font-medium">
                   Get started with Netia
                 </Link>
