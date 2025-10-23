@@ -24,89 +24,74 @@ export default function Pricing() {
           {/* Pricing Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             
-            {/* ChatBot Card - Featured */}
-            <div className="bg-gradient-to-br from-primary-50 to-white border-2 border-primary-200 rounded-lg p-8 shadow-lg flex flex-col h-full hover-lift transition-all duration-500 group relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                  Most Popular
-                </span>
-              </div>
+            {/* ChatBot Card */}
+            <div className="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-lg p-8 shadow-lg flex flex-col h-full hover-lift transition-all duration-500 group">
               <div className="mb-6">
+                <div className="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Chat</div>
                 <h3 className="font-display text-2xl font-semibold text-fg mb-2">
                   AI ChatBot
                 </h3>
-                <div className="text-4xl font-bold text-primary-600 mt-4">
+                <div className="text-4xl font-bold text-blue-600 mt-4">
                   $79<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
-                  Your flagship AI assistant that never sleeps
+                  Your AI assistant that never sleeps
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Never miss a customer inquiry - 24/7 automated responses
+                  <span><strong>24/7 Customer Service</strong> - Never miss a customer question again</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Instantly answer common questions while you focus on your business
+                  <span><strong>Instant Answers</strong> - Customers get help right away</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Qualify leads and collect information automatically
+                  <span><strong>Smart Scheduling</strong> - Books appointments without the hassle</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Schedule appointments without the back-and-forth
+                  <span><strong>Lead Capture</strong> - Gets customer info while you work</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Integrates seamlessly with your website
+                  <span><strong>Easy Setup</strong> - Works with your website in minutes</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Train it on your business - it learns your services and pricing
-                </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Professional responses that sound like you
-                </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-primary-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Analytics to understand your customers better
+                  <span><strong>Smart Learning</strong> - Gets better at helping your customers</span>
                 </li>
               </ul>
               <a
                 href="/signup"
-                className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
+                className="block w-full px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
                 Get Started
               </a>
             </div>
 
             {/* AI Voice Receptionist Card */}
-            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
+            <div className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-lg p-8 shadow-lg flex flex-col h-full hover-lift transition-all duration-500 group">
               <div className="mb-6">
+                <div className="text-green-600 font-semibold text-sm uppercase tracking-wide mb-2">Voice</div>
                 <h3 className="font-display text-2xl font-semibold text-fg mb-2">
                   AI Voice Receptionist
                 </h3>
-                <div className="text-4xl font-bold text-fg mt-4">
+                <div className="text-4xl font-bold text-green-600 mt-4">
                   $199<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
@@ -114,70 +99,59 @@ export default function Pricing() {
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Answer every call, even when you&apos;re with customers
+                  <span><strong>Never Miss a Call</strong> - Answers every call, even when you&apos;re busy</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Natural conversations that sound human
+                  <span><strong>Natural Conversations</strong> - Sounds like a real person on the phone</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Book appointments directly to your calendar
+                  <span><strong>Smart Booking</strong> - Books appointments right to your calendar</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Handle multiple calls simultaneously
+                  <span><strong>Multiple Calls</strong> - Handles many calls at the same time</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Transfer important calls to you
+                  <span><strong>Smart Transfer</strong> - Sends important calls to you</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Capture customer information and requests
-                </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Works after hours and on weekends
-                </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  No more missed opportunities
+                  <span><strong>24/7 Coverage</strong> - Works nights and weekends too</span>
                 </li>
               </ul>
               <a
                 href="/signup"
-                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 mt-auto text-center"
+                className="block w-full px-6 py-3 bg-green-500 text-white rounded-lg font-medium hover:bg-green-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
                 Get Started
               </a>
             </div>
 
-            {/* AI Lead Follow-Up Card */}
-            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm flex flex-col h-full hover-lift transition-all duration-500 group">
+            {/* AI Voice Lead Follow-Up Card */}
+            <div className="bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 rounded-lg p-8 shadow-lg flex flex-col h-full hover-lift transition-all duration-500 group">
               <div className="mb-6">
+                <div className="text-purple-600 font-semibold text-sm uppercase tracking-wide mb-2">Voice</div>
                 <h3 className="font-display text-2xl font-semibold text-fg mb-2">
-                  AI Lead Follow-Up
+                  AI Voice Lead Follow-Up
                 </h3>
-                <div className="text-4xl font-bold text-fg mt-4">
+                <div className="text-4xl font-bold text-purple-600 mt-4">
                   $199<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
@@ -185,58 +159,46 @@ export default function Pricing() {
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Automatically reach out to new leads within minutes
+                  <span><strong>Instant Follow-Up</strong> - Reaches out to new leads in minutes</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Personalized follow-up messages that convert
+                  <span><strong>Personal Messages</strong> - Custom messages that get responses</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Nurture leads until they&apos;re ready to buy
+                  <span><strong>Smart Nurturing</strong> - Keeps leads warm until they&apos;re ready</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Never let a lead go cold again
+                  <span><strong>No Cold Leads</strong> - Never lets a lead go cold again</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Schedule follow-ups based on customer behavior
+                  <span><strong>Smart Timing</strong> - Knows when to follow up for best results</span>
                 </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <li className="flex items-start text-muted">
+                  <svg className="w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  Track which messages get responses
-                </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Free up your time for closing deals
-                </li>
-                <li className="flex items-center text-muted">
-                  <svg className="w-5 h-5 text-muted mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Consistent follow-up that builds trust
+                  <span><strong>More Sales Time</strong> - Frees you up to close deals</span>
                 </li>
               </ul>
               <a
                 href="/signup"
-                className="block w-full px-6 py-3 bg-surface border border-border rounded-lg text-fg font-medium hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 mt-auto text-center"
+                className="block w-full px-6 py-3 bg-purple-500 text-white rounded-lg font-medium hover:bg-purple-600 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
                 Get Started
               </a>
