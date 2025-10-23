@@ -126,26 +126,28 @@ export default function Login() {
               </button>
             </form>
 
-            {/* Sign Up Link */}
+            {/* Demo Mode Button */}
             <div className="mt-8 text-center">
+              <button
+                onClick={() => {
+                  localStorage.setItem('netia_customer_logged_in', 'true')
+                  localStorage.setItem('netia_customer_email', 'demo@netia.com')
+                  window.location.href = '/dashboard'
+                }}
+                className="w-full px-6 py-3 bg-gray-100 text-gray-700 border border-gray-300 rounded-lg font-medium hover:bg-gray-200 transition-colors btn-enhanced"
+              >
+                Try Demo Mode
+              </button>
+            </div>
+
+            {/* Sign Up Link */}
+            <div className="mt-6 text-center">
               <p className="text-muted">
                 Don&apos;t have an account?{' '}
                 <Link href="/pricing" className="text-primary-600 hover:text-primary-700 font-medium">
                   Get started with Netia
                 </Link>
               </p>
-            </div>
-
-            {/* Demo Credentials */}
-            <div className="mt-8 bg-primary-50 border border-primary-200 rounded-lg p-4">
-              <h4 className="font-semibold text-fg mb-2">Demo Credentials</h4>
-              <p className="text-sm text-muted mb-2">
-                For testing purposes, you can use any email and password combination.
-              </p>
-              <div className="text-xs text-muted">
-                <p><strong>Email:</strong> demo@example.com</p>
-                <p><strong>Password:</strong> password123</p>
-              </div>
             </div>
           </div>
         </div>

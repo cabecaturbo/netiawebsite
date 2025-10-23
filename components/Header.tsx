@@ -99,18 +99,18 @@ export const Header = () => {
               </>
             ) : (
               <>
-                <a
-                  href="/demo"
-                  className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
-                >
-                  Watch Demo
-                </a>
                 <Link
                   href="/login"
                   className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
                 >
                   Login
                 </Link>
+                <a
+                  href="/demo"
+                  className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
+                >
+                  Watch Demo
+                </a>
                 <a
                   href="/pricing"
                   className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced hover-glow shadow-md"
@@ -215,24 +215,24 @@ export const Header = () => {
                 </>
               ) : (
                 <>
-                  <a
-                    href="/demo"
-                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
-                      isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                    }`}
-                    style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
-                  >
-                    Watch Demo
-                  </a>
                   <Link
                     href="/login"
                     className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
-                    style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
+                    style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
                   >
                     Login
                   </Link>
+                  <a
+                    href="/demo"
+                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
+                      isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    }`}
+                    style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
+                  >
+                    Watch Demo
+                  </a>
                   <a
                     href="/pricing"
                     className={`block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-all duration-300 hover-lift hover-glow transform ${
