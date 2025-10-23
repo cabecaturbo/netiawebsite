@@ -91,7 +91,7 @@ export default function Pricing() {
               <div className="mb-6">
                 <div className="text-blue-200 font-semibold text-sm uppercase tracking-wide mb-2">Voice</div>
                 <h3 className="font-display text-2xl font-semibold text-white mb-2">
-                  AI Voice Receptionist
+                  AI Receptionist
                 </h3>
                 <div className="text-4xl font-bold text-white mt-4">
                   $199<span className="text-lg font-normal text-blue-200">/month</span>
@@ -145,7 +145,7 @@ export default function Pricing() {
               <div className="mb-6">
                 <div className="text-blue-200 font-semibold text-sm uppercase tracking-wide mb-2">Voice</div>
                 <h3 className="font-display text-2xl font-semibold text-white mb-2">
-                  AI Voice Lead Follow-Up
+                  AI Lead Follow-Up
                 </h3>
                 <div className="text-4xl font-bold text-white mt-4">
                   $199<span className="text-lg font-normal text-blue-200">/month</span>
@@ -216,7 +216,7 @@ export default function Pricing() {
                   <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group">
                     <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
                     <div className="ml-4 flex-1">
-                      <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Voice Receptionist - $199/month</div>
+                      <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Receptionist - $199/month</div>
                       <div className="text-muted">AI receptionist for your phone calls</div>
                     </div>
                     <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -225,7 +225,7 @@ export default function Pricing() {
                   <label className="flex items-center p-6 border-2 border-blue-200 rounded-xl hover:bg-blue-50 cursor-pointer transition-all duration-300 hover:border-blue-300 hover:shadow-md group">
                     <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2" />
                     <div className="ml-4 flex-1">
-                      <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Voice Lead Follow-Up - $199/month</div>
+                      <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Lead Follow-Up - $199/month</div>
                       <div className="text-muted">AI follow-up for your leads</div>
                     </div>
                     <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>

@@ -26,7 +26,7 @@ export const Hero = () => {
                 />
               </div>
               <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-4">
-                Answer every call with natural voice conversations, chat with website visitors 24/7, book appointments automatically, and never miss a lead again. 
+                Answer every call with natural voice conversations, chatbot chats with website visitors 24/7, book appointments automatically, and never miss a lead again. 
                 <span className="text-fg font-medium">Start free, no credit card required.</span>
               </p>
               
