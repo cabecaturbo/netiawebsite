@@ -12,7 +12,7 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-2 animate-fade-in-up">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
-                <span className="block animate-slide-in-left animate-stagger-1">AI Receptionist</span>
+                <span className="block animate-slide-in-left animate-stagger-1">AI Assistant</span>
                 <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
                   That Never Sleeps
                 </span>
@@ -26,7 +26,7 @@ export const Hero = () => {
                 />
               </div>
               <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-4">
-                Answer every call with natural voice conversations, book appointments automatically, and never miss a lead again. 
+                Answer every call with natural voice conversations, chat with website visitors 24/7, book appointments automatically, and never miss a lead again. 
                 <span className="text-fg font-medium">Start free, no credit card required.</span>
               </p>
               
