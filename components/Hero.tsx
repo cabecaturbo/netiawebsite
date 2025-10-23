@@ -27,7 +27,7 @@ export const Hero = () => {
               </div>
               <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-4">
                 Stop losing money on missed appointments every month. Our AI answers every call, books appointments, and follows up with leads - even at 2 AM. 
-                <span className="text-fg font-medium">Start free today.</span>
+                <span className="text-fg font-medium"> Start free today.</span>
               </p>
               
             </div>
