@@ -13,9 +13,8 @@ export const Hero = () => {
             <div className="space-y-2 animate-fade-in-up">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
                 <span className="block animate-slide-in-left animate-stagger-1">AI Receptionist</span>
-                <span className="block text-primary-500 animate-slide-in-left animate-stagger-2 relative">
+                <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
                   That Never Sleeps
-                  <span className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse-subtle"></span>
                 </span>
               </h1>
               <div className="flex items-center space-x-0.5 animate-fade-in animate-stagger-3">
