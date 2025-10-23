@@ -74,7 +74,7 @@ export default function Pricing() {
                 href="/signup"
                 className="block w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Get Started
+                Start 7 day free trial
               </a>
             </div>
 
@@ -128,7 +128,7 @@ export default function Pricing() {
                 href="/signup"
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Get Started
+                Start 7 day free trial
               </a>
             </div>
 
@@ -182,7 +182,7 @@ export default function Pricing() {
                 href="/signup"
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Get Started
+                Start 7 day free trial
               </a>
             </div>
           </div>
@@ -224,10 +224,13 @@ export default function Pricing() {
                   href="/signup"
                   className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors hover-lift btn-enhanced"
                 >
-                  Get Started
+                  Start 7 day free trial
                 </a>
                 <p className="text-sm text-muted mt-3">
-                  Credit card required • Processed by Stripe • Cancel anytime
+                  Cancel Anytime
+                </p>
+                <p className="text-xs text-muted mt-1">
+                  Processed by Stripe
                 </p>
               </div>
             </div>
