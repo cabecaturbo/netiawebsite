@@ -10,6 +10,11 @@ export default function Pricing() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
+  }
+
+  const handleGetStarted = () => {
+    // After successful signup, redirect to login
+    window.location.href = '/login'
   } 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
@@ -79,10 +84,10 @@ export default function Pricing() {
                 </li>
               </ul>
               <button
-                onClick={scrollToSelection}
+                onClick={handleGetStarted}
                 className="block w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Start 7 day free trial
+                Get Started
               </button>
             </div>
 
@@ -133,10 +138,10 @@ export default function Pricing() {
                 </li>
               </ul>
               <button
-                onClick={scrollToSelection}
+                onClick={handleGetStarted}
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Start 7 day free trial
+                Get Started
               </button>
             </div>
 
@@ -187,10 +192,10 @@ export default function Pricing() {
                 </li>
               </ul>
               <button
-                onClick={scrollToSelection}
+                onClick={handleGetStarted}
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Start 7 day free trial
+                Get Started
               </button>
             </div>
           </div>
@@ -234,16 +239,13 @@ export default function Pricing() {
               
                 <div className="mt-8 text-center">
                   <button
-                    onClick={scrollToSelection}
+                    onClick={handleGetStarted}
                     className="inline-block px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-medium hover:bg-blue-200 active:bg-blue-200 transition-colors hover-lift btn-enhanced"
                   >
-                    Start 7 day free trial
+                    Get Started
                   </button>
                   <p className="text-sm text-muted mt-3">
-                    Cancel Anytime
-                  </p>
-                  <p className="text-xs text-muted mt-1">
-                    Processed by Stripe
+                    Credit card required • Processed by Stripe • Cancel anytime
                   </p>
                 </div>
               </div>

@@ -1,10 +1,44 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Header } from "@/components/Header"
+import { useRouter } from 'next/navigation'
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('overview')
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const router = useRouter()
+
+  useEffect(() => {
+    // Check if user is logged in
+    const checkAuth = () => {
+      const loggedIn = localStorage.getItem('netia_customer_logged_in')
+      if (loggedIn === 'true') {
+        setIsAuthenticated(true)
+      } else {
+        router.push('/login')
+      }
+      setIsLoading(false)
+    }
+
+    checkAuth()
+  }, [router])
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
+          <p className="text-muted">Loading dashboard...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!isAuthenticated) {
+    return null
+  }
 
   const stats = {
     conversations: 23,

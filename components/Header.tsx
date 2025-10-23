@@ -6,6 +6,8 @@ import Link from 'next/link'
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [userEmail, setUserEmail] = useState('')
 
   useEffect(() => {
     const updateScrollProgress = () => {
@@ -15,9 +17,29 @@ export const Header = () => {
       setScrollProgress(scrollPercent)
     }
 
+    // Check login status
+    const checkLoginStatus = () => {
+      const loggedIn = localStorage.getItem('netia_customer_logged_in')
+      const email = localStorage.getItem('netia_customer_email')
+      if (loggedIn === 'true') {
+        setIsLoggedIn(true)
+        setUserEmail(email || '')
+      }
+    }
+
     window.addEventListener('scroll', updateScrollProgress)
+    checkLoginStatus()
+
     return () => window.removeEventListener('scroll', updateScrollProgress)
   }, [])
+
+  const handleLogout = () => {
+    localStorage.removeItem('netia_customer_logged_in')
+    localStorage.removeItem('netia_customer_email')
+    setIsLoggedIn(false)
+    setUserEmail('')
+    window.location.href = '/'
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border transition-all duration-300">
@@ -57,18 +79,46 @@ export const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <a
-              href="/demo"
-              className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
-            >
-              Watch Demo
-            </a>
-            <a
-              href="/pricing"
-              className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced hover-glow shadow-md"
-            >
-              Start Free Trial
-            </a>
+            {isLoggedIn ? (
+              <>
+                <Link
+                  href="/dashboard"
+                  className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
+                >
+                  Dashboard
+                </Link>
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm text-muted">{userEmail}</span>
+                  <button
+                    onClick={handleLogout}
+                    className="px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-full hover:bg-red-600 transition-all duration-300 hover-lift btn-enhanced"
+                  >
+                    Logout
+                  </button>
+                </div>
+              </>
+            ) : (
+              <>
+                <a
+                  href="/demo"
+                  className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
+                >
+                  Watch Demo
+                </a>
+                <Link
+                  href="/login"
+                  className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
+                >
+                  Login
+                </Link>
+                <a
+                  href="/pricing"
+                  className="px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced hover-glow shadow-md"
+                >
+                  Start Free Trial
+                </a>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -142,24 +192,58 @@ export const Header = () => {
               Integrate
             </Link>
             <div className="pt-4 space-y-2">
-              <a
-                href="/demo"
-                className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
-                  isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                }`}
-                style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
-              >
-                Watch Demo
-              </a>
-              <a
-                href="/pricing"
-                className={`block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-all duration-300 hover-lift hover-glow transform ${
-                  isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-                }`}
-                style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
-              >
-                Start Free Trial
-              </a>
+              {isLoggedIn ? (
+                <>
+                  <Link
+                    href="/dashboard"
+                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
+                      isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    }`}
+                    style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
+                  >
+                    Dashboard
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className={`block w-full px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-full text-center hover:bg-red-600 transition-all duration-300 hover-lift transform ${
+                      isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    }`}
+                    style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
+                  >
+                    Logout
+                  </button>
+                </>
+              ) : (
+                <>
+                  <a
+                    href="/demo"
+                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
+                      isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    }`}
+                    style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
+                  >
+                    Watch Demo
+                  </a>
+                  <Link
+                    href="/login"
+                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
+                      isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    }`}
+                    style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
+                  >
+                    Login
+                  </Link>
+                  <a
+                    href="/pricing"
+                    className={`block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-all duration-300 hover-lift hover-glow transform ${
+                      isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+                    }`}
+                    style={{transitionDelay: isMenuOpen ? '0.4s' : '0s'}}
+                  >
+                    Start Free Trial
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>
