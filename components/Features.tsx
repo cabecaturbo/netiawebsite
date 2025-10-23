@@ -67,8 +67,8 @@ export const Features = () => {
     },
     {
       title: "AI Voice Assistant.",
-      description: "Coming soon: Natural voice conversations that answer calls and handle customer inquiries with human-like responses.",
-      isComingSoon: true,
+      description: "Natural voice conversations that answer calls and handle customer inquiries with human-like responses.",
+      isComingSoon: false,
       icon: (
         <svg viewBox="0 0 100 100" className="w-16 h-16">
           <defs>

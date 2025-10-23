@@ -42,10 +42,10 @@ const features = [
   },
   {
     name: 'AI Voice Receptionist',
-    description: 'Coming soon: Natural voice conversations that answer calls and handle customer inquiries with human-like responses.',
+    description: 'Natural voice conversations that answer calls and handle customer inquiries with human-like responses.',
     icon: ChatBubbleLeftRightIcon,
     highlights: ['Natural voice conversations', 'Call handling', 'Human-like responses'],
-    isComingSoon: true
+    isComingSoon: false
   }
 ]
 
