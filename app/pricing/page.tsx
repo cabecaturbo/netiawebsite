@@ -74,7 +74,7 @@ export default function Pricing() {
                 href="/signup"
                 className="block w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Start Free Trial
+                Get Started
               </a>
             </div>
 
@@ -128,7 +128,7 @@ export default function Pricing() {
                 href="/signup"
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Start Free Trial
+                Get Started
               </a>
             </div>
 
@@ -182,7 +182,7 @@ export default function Pricing() {
                 href="/signup"
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Start Free Trial
+                Get Started
               </a>
             </div>
           </div>
@@ -224,10 +224,10 @@ export default function Pricing() {
                   href="/signup"
                   className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors hover-lift btn-enhanced"
                 >
-                  Start Free Trial
+                  Get Started
                 </a>
                 <p className="text-sm text-muted mt-3">
-                  No credit card required • Cancel anytime
+                  Credit card required • Cancel anytime
                 </p>
               </div>
             </div>
