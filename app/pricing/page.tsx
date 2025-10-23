@@ -35,7 +35,7 @@ export default function Pricing() {
                   $79<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
-                  Turn website visitors into paying customers automatically
+                  AI assistant for your website
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -43,50 +43,44 @@ export default function Pricing() {
                   <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Never Miss a Sale</strong> - Captures every lead, even at 3 AM</span>
+                  <span><strong>Works 24/7</strong> - Always available for your customers</span>
                 </li>
                 <li className="flex items-start text-muted">
                   <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Qualify Leads Instantly</strong> - Separates serious buyers from tire-kickers</span>
+                  <span><strong>Powered by OpenAI</strong> - For contextual, smart answers</span>
                 </li>
                 <li className="flex items-start text-muted">
                   <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Book Appointments</strong> - Schedules meetings while you sleep</span>
+                  <span><strong>Qualifies Leads</strong> - Separates serious inquiries from casual browsers</span>
                 </li>
                 <li className="flex items-start text-muted">
                   <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Answer Common Questions</strong> - Stops the same questions from eating your time</span>
+                  <span><strong>Books Appointments</strong> - Schedules meetings automatically</span>
                 </li>
                 <li className="flex items-start text-muted">
                   <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Works 24/7</strong> - Makes money while you&apos;re not working</span>
+                  <span><strong>Answers Questions</strong> - Handles common inquiries so you don&apos;t have to</span>
                 </li>
                 <li className="flex items-start text-muted">
                   <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Easy Setup</strong> - Running in 5 minutes, no tech skills needed</span>
-                </li>
-                <li className="flex items-start text-muted">
-                  <svg className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span><strong>Powered by OpenAI</strong> - GPT gives smart, human-like answers to any question</span>
+                  <span><strong>Easy Setup</strong> - Get started in minutes</span>
                 </li>
               </ul>
               <a
                 href="/signup"
                 className="block w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Start Making Money
+                Start Free Trial
               </a>
             </div>
 
@@ -101,7 +95,7 @@ export default function Pricing() {
                   $199<span className="text-lg font-normal text-blue-200">/month</span>
                 </div>
                 <p className="text-sm text-blue-200 mt-2">
-                  Never miss another phone call or opportunity
+                  AI receptionist for your phone calls
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -109,44 +103,44 @@ export default function Pricing() {
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Never Miss a Call</strong> - Every call gets answered, even at midnight</span>
+                  <span><strong>Answers Every Call</strong> - Never miss a customer inquiry</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Sounds Human</strong> - Customers can&apos;t tell it&apos;s not a real person</span>
+                  <span><strong>Natural Voice</strong> - Sounds like a real person</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Books Appointments</strong> - Schedules meetings directly to your calendar</span>
+                  <span><strong>Books Appointments</strong> - Schedules meetings to your calendar</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Handles Multiple Calls</strong> - Takes 10 calls at once without breaking a sweat</span>
+                  <span><strong>Multiple Calls</strong> - Handles several calls at once</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Smart Filtering</strong> - Only sends you the calls that matter</span>
+                  <span><strong>Smart Transfer</strong> - Routes important calls to you</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Works 24/7</strong> - Makes money while you sleep</span>
+                  <span><strong>Works 24/7</strong> - Available around the clock</span>
                 </li>
               </ul>
               <a
                 href="/signup"
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Stop Missing Calls
+                Start Free Trial
               </a>
             </div>
 
@@ -161,7 +155,7 @@ export default function Pricing() {
                   $199<span className="text-lg font-normal text-blue-200">/month</span>
                 </div>
                 <p className="text-sm text-blue-200 mt-2">
-                  Turn every lead into a paying customer automatically
+                  AI follow-up for your leads
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
@@ -169,45 +163,91 @@ export default function Pricing() {
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Instant Follow-Up</strong> - Calls new leads within 5 minutes</span>
+                  <span><strong>Quick Follow-Up</strong> - Calls new leads within minutes</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Personal Touch</strong> - Each call sounds like it&apos;s from you</span>
+                  <span><strong>Personal Voice</strong> - Sounds like you on the phone</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Never Lose a Lead</strong> - Keeps following up until they buy</span>
+                  <span><strong>Keeps Following Up</strong> - Never lets leads go cold</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Smart Timing</strong> - Knows exactly when to call for best results</span>
+                  <span><strong>Smart Timing</strong> - Knows when to call for best results</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>More Sales</strong> - Converts 3x more leads into customers</span>
+                  <span><strong>Better Conversion</strong> - Turns more leads into customers</span>
                 </li>
                 <li className="flex items-start text-blue-100">
                   <svg className="w-5 h-5 text-blue-300 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span><strong>Works 24/7</strong> - Follows up while you focus on closing deals</span>
+                  <span><strong>Works 24/7</strong> - Follows up while you focus on other tasks</span>
                 </li>
               </ul>
               <a
                 href="/signup"
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Convert More Leads
+                Start Free Trial
               </a>
+            </div>
+          </div>
+
+          {/* Selection Flow */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-surface border border-border rounded-lg p-8 shadow-sm">
+              <h3 className="font-display text-2xl font-semibold text-fg mb-6 text-center">
+                Choose Your AI Solutions
+              </h3>
+              <div className="space-y-4">
+                <label className="flex items-center p-4 border border-border rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
+                  <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
+                  <div className="ml-4 flex-1">
+                    <div className="font-medium text-fg">AI ChatBot - $79/month</div>
+                    <div className="text-sm text-muted">AI assistant for your website</div>
+                  </div>
+                </label>
+                
+                <label className="flex items-center p-4 border border-border rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
+                  <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
+                  <div className="ml-4 flex-1">
+                    <div className="font-medium text-fg">AI Voice Receptionist - $199/month</div>
+                    <div className="text-sm text-muted">AI receptionist for your phone calls</div>
+                  </div>
+                </label>
+                
+                <label className="flex items-center p-4 border border-border rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
+                  <input type="checkbox" className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500" />
+                  <div className="ml-4 flex-1">
+                    <div className="font-medium text-fg">AI Voice Lead Follow-Up - $199/month</div>
+                    <div className="text-sm text-muted">AI follow-up for your leads</div>
+                  </div>
+                </label>
+              </div>
+              
+              <div className="mt-8 text-center">
+                <a
+                  href="/signup"
+                  className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors hover-lift btn-enhanced"
+                >
+                  Start Free Trial
+                </a>
+                <p className="text-sm text-muted mt-3">
+                  No credit card required • Cancel anytime
+                </p>
+              </div>
             </div>
           </div>
 
