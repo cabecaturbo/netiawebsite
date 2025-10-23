@@ -151,7 +151,7 @@ export default function Pricing() {
                   $199<span className="text-lg font-normal text-blue-200">/month</span>
                 </div>
                 <p className="text-sm text-blue-200 mt-2">
-                  Turn 'maybe' into 'yes' with smart follow-ups
+                  Turn &apos;maybe&apos; into &apos;yes&apos; with smart follow-ups
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">

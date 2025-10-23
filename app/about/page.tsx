@@ -14,10 +14,10 @@ export default function About() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              We Know What It's Like to Miss a Sale
+              We Know What It&apos;s Like to Miss a Sale
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              We built Netia because we've been there. Missing calls, losing customers, watching money walk out the door. Now every small business can have the customer service of a Fortune 500 company.
+              We built Netia because we&apos;ve been there. Missing calls, losing customers, watching money walk out the door. Now every small business can have the customer service of a Fortune 500 company.
             </p>
           </div>
 
@@ -27,10 +27,10 @@ export default function About() {
               <div>
                 <h2 className="font-display text-3xl font-semibold text-fg mb-6">Our Mission</h2>
                 <p className="text-lg text-muted mb-6">
-                  We built Netia because we've experienced firsthand how difficult it can be to provide excellent customer service while managing all the other aspects of growing a company.
+                  We built Netia because we&apos;ve experienced firsthand how difficult it can be to provide excellent customer service while managing all the other aspects of growing a company.
                 </p>
                 <p className="text-muted">
-                  That's why we built Netia - to give every business access to the kind of customer service that used to be reserved for large corporations with dedicated support teams.
+                  That&apos;s why we built Netia - to give every business access to the kind of customer service that used to be reserved for large corporations with dedicated support teams.
                 </p>
               </div>
               <div className="bg-primary-50 border border-primary-200 rounded-lg p-8">
@@ -96,10 +96,10 @@ export default function About() {
             <div className="bg-surface border border-border rounded-lg p-8">
               <div className="text-center">
                 <p className="text-lg text-muted mb-6">
-                  We've been in your shoes. The frustration of missing calls, the stress of trying to be everywhere at once, the fear of losing customers to competitors who answer their phones.
+                  We&apos;ve been in your shoes. The frustration of missing calls, the stress of trying to be everywhere at once, the fear of losing customers to competitors who answer their phones.
                 </p>
                 <p className="text-muted">
-                  That's why we built Netia - so you never have to choose between growing your business and serving your customers. Now you can do both.
+                  That&apos;s why we built Netia - so you never have to choose between growing your business and serving your customers. Now you can do both.
                 </p>
               </div>
             </div>
