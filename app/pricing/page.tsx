@@ -80,7 +80,7 @@ export default function Pricing() {
                 onClick={handleGetStarted}
                 className="block w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Get Started
+                Start 7 day free trial
               </button>
             </div>
 
@@ -97,6 +97,11 @@ export default function Pricing() {
                 <p className="text-sm text-blue-200 mt-2">
                   Answer every phone call like a pro
                 </p>
+                <div className="mt-2">
+                  <span className="inline-block bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold">
+                    Coming Soon
+                  </span>
+                </div>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start text-blue-100">
@@ -134,7 +139,7 @@ export default function Pricing() {
                 onClick={handleGetStarted}
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Get Started
+                Sign up for waitlist
               </button>
             </div>
 
@@ -151,6 +156,11 @@ export default function Pricing() {
                 <p className="text-sm text-blue-200 mt-2">
                   Turn &apos;maybe&apos; into &apos;yes&apos; with smart follow-ups
                 </p>
+                <div className="mt-2">
+                  <span className="inline-block bg-yellow-500 text-yellow-900 px-3 py-1 rounded-full text-xs font-semibold">
+                    Coming Soon
+                  </span>
+                </div>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">
                 <li className="flex items-start text-blue-100">
@@ -188,7 +198,7 @@ export default function Pricing() {
                 onClick={handleGetStarted}
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
-                Get Started
+                Sign up for waitlist
               </button>
             </div>
           </div>
@@ -216,6 +226,7 @@ export default function Pricing() {
                     <div className="ml-4 flex-1">
                       <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Receptionist - $199/month</div>
                       <div className="text-muted">AI receptionist for your phone calls</div>
+                      <div className="text-xs text-yellow-600 font-semibold mt-1">Coming Soon</div>
                     </div>
                     <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </label>
@@ -225,6 +236,7 @@ export default function Pricing() {
                     <div className="ml-4 flex-1">
                       <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Lead Follow-Up - $199/month</div>
                       <div className="text-muted">AI follow-up for your leads</div>
+                      <div className="text-xs text-yellow-600 font-semibold mt-1">Coming Soon</div>
                     </div>
                     <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </label>
@@ -235,10 +247,10 @@ export default function Pricing() {
                     onClick={handleGetStarted}
                     className="inline-block px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-medium hover:bg-blue-200 active:bg-blue-200 transition-colors hover-lift btn-enhanced"
                   >
-                    Get Started
+                    Start 7 day free trial
                   </button>
                   <p className="text-sm text-muted mt-3">
-                    Credit card required • Processed by Stripe • Cancel anytime
+                    Processed by Stripe • Cancel anytime
                   </p>
                 </div>
               </div>
