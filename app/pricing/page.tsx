@@ -6,8 +6,13 @@ import { FloatingBalls } from "@/components/FloatingBalls"
 
 export default function Pricing() {
   const handleGetStarted = () => {
-    // After successful signup, redirect to login
-    window.location.href = '/login'
+    // Redirect to starter signup for AI ChatBot
+    window.location.href = '/signup/starter'
+  }
+
+  const handleWaitlistSignup = () => {
+    // Redirect to waitlist for voice products
+    window.location.href = '/waitlist'
   } 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
@@ -136,7 +141,7 @@ export default function Pricing() {
                 </li>
               </ul>
               <button
-                onClick={handleGetStarted}
+                onClick={handleWaitlistSignup}
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
                 Sign up for waitlist
@@ -195,7 +200,7 @@ export default function Pricing() {
                 </li>
               </ul>
               <button
-                onClick={handleGetStarted}
+                onClick={handleWaitlistSignup}
                 className="block w-full px-6 py-3 bg-white text-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors mt-auto text-center hover-lift btn-enhanced"
               >
                 Sign up for waitlist
