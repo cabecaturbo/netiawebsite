@@ -45,6 +45,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
+      <head>
+        <script 
+          id="vtag-ai-js" 
+          async 
+          src="https://r2.leadsy.ai/tag.js" 
+          data-pid="Ne4Ckpfnly0wfqc1" 
+          data-version="062024"
+        />
+      </head>
       <body className="font-sans antialiased bg-white text-fg">
         {children}
         <PapercupsBootstrap />

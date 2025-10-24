@@ -1,0 +1,21 @@
+name: Daily lead refresh
+on:
+  schedule:
+    - cron: '0 21 * * *'  # 14:00 PT
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
+      - run: pnpm install
+      - env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: pnpm leadgen:run
+      - run: pnpm outreach:prep --limit=200
+      - name: Upload outbox
+        uses: actions/upload-artifact@v4
+        with:
+          name: outbox
+          path: ops/samples/outbox/**
