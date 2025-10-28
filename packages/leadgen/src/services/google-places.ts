@@ -188,3 +188,4 @@ export class GooglePlacesService {
     return mockBusinesses.slice(0, maxResults);
   }
 }
+

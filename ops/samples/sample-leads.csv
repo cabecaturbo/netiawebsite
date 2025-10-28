@@ -4,3 +4,4 @@ name,company_domain,email,phone,city,state,gmb_rating,gmb_reviews,has_live_chat,
 "Radiant Med Spa","radiantmedspa.com","hello@radiantmedspa.com","(555) 456-7890","Chicago","IL",4.9,203,false,true,"[""Botox"",""Dermal Fillers"",""Laser Hair Removal"",""Chemical Peels""]",4.5
 "Beauty & Beyond","beautyandbeyond.com","info@beautyandbeyond.com","(555) 321-0987","Houston","TX",4.4,156,true,true,"[""Botox"",""Laser Treatments"",""Facials""]",3.9
 "Aesthetic Excellence","aestheticexcellence.com","contact@aestheticexcellence.com","(555) 654-3210","Phoenix","AZ",4.7,94,false,false,"[""Botox"",""Dermal Fillers"",""CoolSculpting""]",4.1
+

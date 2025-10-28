@@ -170,3 +170,4 @@ For issues or questions:
 3. **Scale up**: Increase lead volume and bot capacity
 4. **Integrate**: Connect to your CRM and booking systems
 5. **Optimize**: A/B test messaging and improve conversion rates
+
