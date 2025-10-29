@@ -9,7 +9,8 @@ export const Footer = () => {
         { name: "Demo", href: "/demo" },
         { name: "Pricing", href: "/pricing" },
         { name: "Integration Guide", href: "/integrate" },
-        { name: "Dashboard", href: "/dashboard" }
+        { name: "Dashboard", href: "https://app.netia.ai/dashboard" },
+        { name: "Cancel Subscription", href: "/cancel" }
       ]
     },
     {

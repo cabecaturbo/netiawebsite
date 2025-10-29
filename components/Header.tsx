@@ -36,8 +36,11 @@ export const Header = () => {
   }, [])
 
   const handleLogout = () => {
+    // Clear all auth data
     localStorage.removeItem('netia_customer_logged_in')
     localStorage.removeItem('netia_customer_email')
+    localStorage.removeItem('netia_customer_token')
+    localStorage.removeItem('netia_customer_renew_token')
     setIsLoggedIn(false)
     setUserEmail('')
     window.location.href = '/'
@@ -87,12 +90,12 @@ export const Header = () => {
             {showDashboardButtons ? (
               <>
                 <span className="text-sm text-muted">{userEmail}</span>
-                <Link
-                  href="/dashboard"
+                <a
+                  href="https://app.netia.ai/dashboard"
                   className="px-4 py-2 text-sm font-medium text-fg border border-border rounded-full hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift btn-enhanced"
                 >
                   Dashboard
-                </Link>
+                </a>
                 <button
                   onClick={handleLogout}
                   className="px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-full hover:bg-red-600 transition-all duration-300 hover-lift btn-enhanced"
@@ -205,7 +208,7 @@ export const Header = () => {
                     {userEmail}
                   </div>
                   <Link
-                    href="/dashboard"
+                    href="https://app.netia.ai/dashboard"
                     className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}

@@ -6,31 +6,117 @@ import { Footer } from "@/components/Footer"
 
 export default function StarterSignup() {
   const [formData, setFormData] = useState({
-    businessName: '',
+    companyName: '',
     email: '',
-    industry: '',
-    websiteUrl: '',
-    hearAbout: ''
+    password: '',
+    passwordConfirmation: '',
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errors, setErrors] = useState<string[]>([])
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    // Redirect to dashboard
-    window.location.href = '/dashboard'
+    setErrors([])
+    setFieldErrors({})
+
+    // Client-side validation
+    if (formData.password !== formData.passwordConfirmation) {
+      setFieldErrors({ passwordConfirmation: 'Passwords do not match' })
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      // Step 1: Register user
+      const registerResponse = await fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          companyName: formData.companyName,
+          email: formData.email,
+          password: formData.password,
+          passwordConfirmation: formData.passwordConfirmation,
+        }),
+      })
+
+      const registerData = await registerResponse.json()
+
+      if (!registerResponse.ok) {
+        // Handle backend validation errors
+        if (registerData.error?.errors) {
+          const newFieldErrors: Record<string, string> = {}
+          Object.keys(registerData.error.errors).forEach(key => {
+            const errorMessages = registerData.error.errors[key]
+            if (Array.isArray(errorMessages) && errorMessages.length > 0) {
+              newFieldErrors[key] = errorMessages[0]
+            }
+          })
+          setFieldErrors(newFieldErrors)
+        } else {
+          setErrors([registerData.error?.message || 'Registration failed'])
+        }
+        setIsSubmitting(false)
+        return
+      }
+
+      // Store tokens and account info temporarily (will be stored permanently after Stripe checkout)
+      const tokens = registerData.data
+      const accountId = registerData.data?.account_id || registerData.data?.accountId || registerData.data?.user_id || null
+      
+      sessionStorage.setItem('temp_tokens', JSON.stringify(tokens))
+      sessionStorage.setItem('temp_account_email', formData.email)
+      if (accountId) {
+        sessionStorage.setItem('temp_account_id', accountId.toString())
+      }
+
+      // Step 2: Create Stripe Checkout Session
+      const checkoutResponse = await fetch('/api/checkout/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: formData.email,
+          accountId: accountId || formData.email, // Use email as fallback if no account ID
+        }),
+      })
+
+      const checkoutData = await checkoutResponse.json()
+
+      if (!checkoutResponse.ok) {
+        setErrors([checkoutData.error || 'Failed to create checkout session'])
+        setIsSubmitting(false)
+        return
+      }
+
+      // Step 3: Redirect to Stripe Checkout
+      if (checkoutData.url) {
+        window.location.href = checkoutData.url
+      } else {
+        setErrors(['Failed to redirect to payment'])
+        setIsSubmitting(false)
+      }
+    } catch (error) {
+      console.error('Signup error:', error)
+      setErrors(['Network error. Please try again.'])
+      setIsSubmitting(false)
+    }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }))
+    // Clear field errors when user types
+    if (fieldErrors[e.target.name]) {
+      setFieldErrors(prev => {
+        const newErrors = { ...prev }
+        delete newErrors[e.target.name]
+        return newErrors
+      })
+    }
   }
 
   return (
@@ -46,7 +132,7 @@ export default function StarterSignup() {
                 Start Your Free Trial
               </h1>
               <p className="text-muted">
-                Get started with Netia&apos;s Starter plan - completely free forever.
+                Get started with Netia&apos;s 7-day free trial. No credit card required until trial ends.
               </p>
             </div>
 
@@ -54,32 +140,46 @@ export default function StarterSignup() {
             <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 mb-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold text-fg">Starter Plan</h3>
-                  <p className="text-sm text-muted">50 conversations/month</p>
+                  <h3 className="font-semibold text-fg">Netia AI</h3>
+                  <p className="text-sm text-muted">7-day free trial</p>
                 </div>
                 <div className="text-right">
-                  <div className="text-2xl font-bold text-primary-600">$0</div>
-                  <div className="text-sm text-muted">Free forever</div>
+                  <div className="text-2xl font-bold text-primary-600">Free</div>
+                  <div className="text-sm text-muted">for 7 days</div>
                 </div>
               </div>
             </div>
 
+            {/* Error Messages */}
+            {errors.length > 0 && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                {errors.map((error, i) => (
+                  <p key={i} className="text-red-600 text-sm">{error}</p>
+                ))}
+              </div>
+            )}
+
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="businessName" className="block text-sm font-medium text-fg mb-2">
-                  Business Name *
+                <label htmlFor="companyName" className="block text-sm font-medium text-fg mb-2">
+                  Company Name *
                 </label>
                 <input
                   type="text"
-                  id="businessName"
-                  name="businessName"
+                  id="companyName"
+                  name="companyName"
                   required
-                  value={formData.businessName}
+                  value={formData.companyName}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    fieldErrors.company_name ? 'border-red-500' : 'border-border'
+                  }`}
                   placeholder="Your business name"
                 />
+                {fieldErrors.company_name && (
+                  <p className="text-red-500 text-sm mt-1">{fieldErrors.company_name}</p>
+                )}
               </div>
 
               <div>
@@ -93,69 +193,59 @@ export default function StarterSignup() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    fieldErrors.email ? 'border-red-500' : 'border-border'
+                  }`}
                   placeholder="your@email.com"
                 />
+                {fieldErrors.email && (
+                  <p className="text-red-500 text-sm mt-1">{fieldErrors.email}</p>
+                )}
               </div>
 
               <div>
-                <label htmlFor="industry" className="block text-sm font-medium text-fg mb-2">
-                  Industry *
-                </label>
-                <select
-                  id="industry"
-                  name="industry"
-                  required
-                  value={formData.industry}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                >
-                  <option value="">Select your industry</option>
-                  <option value="healthcare">Healthcare</option>
-                  <option value="professional-services">Professional Services</option>
-                  <option value="retail">Retail</option>
-                  <option value="restaurant">Restaurant</option>
-                  <option value="fitness">Fitness & Wellness</option>
-                  <option value="beauty">Beauty & Personal Care</option>
-                  <option value="education">Education</option>
-                  <option value="real-estate">Real Estate</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="websiteUrl" className="block text-sm font-medium text-fg mb-2">
-                  Website URL (Optional)
+                <label htmlFor="password" className="block text-sm font-medium text-fg mb-2">
+                  Password *
                 </label>
                 <input
-                  type="url"
-                  id="websiteUrl"
-                  name="websiteUrl"
-                  value={formData.websiteUrl}
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  minLength={8}
+                  value={formData.password}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="https://yourwebsite.com"
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    fieldErrors.password ? 'border-red-500' : 'border-border'
+                  }`}
+                  placeholder="Minimum 8 characters"
                 />
+                {fieldErrors.password && (
+                  <p className="text-red-500 text-sm mt-1">{fieldErrors.password}</p>
+                )}
               </div>
 
               <div>
-                <label htmlFor="hearAbout" className="block text-sm font-medium text-fg mb-2">
-                  How did you hear about Netia?
+                <label htmlFor="passwordConfirmation" className="block text-sm font-medium text-fg mb-2">
+                  Confirm Password *
                 </label>
-                <select
-                  id="hearAbout"
-                  name="hearAbout"
-                  value={formData.hearAbout}
+                <input
+                  type="password"
+                  id="passwordConfirmation"
+                  name="passwordConfirmation"
+                  required
+                  value={formData.passwordConfirmation}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                >
-                  <option value="">Select an option</option>
-                  <option value="google">Google Search</option>
-                  <option value="social-media">Social Media</option>
-                  <option value="referral">Referral</option>
-                  <option value="advertisement">Advertisement</option>
-                  <option value="other">Other</option>
-                </select>
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent ${
+                    fieldErrors.password_confirmation || fieldErrors.passwordConfirmation ? 'border-red-500' : 'border-border'
+                  }`}
+                  placeholder="Re-enter your password"
+                />
+                {(fieldErrors.password_confirmation || fieldErrors.passwordConfirmation) && (
+                  <p className="text-red-500 text-sm mt-1">
+                    {fieldErrors.password_confirmation || fieldErrors.passwordConfirmation}
+                  </p>
+                )}
               </div>
 
               <button
@@ -163,12 +253,13 @@ export default function StarterSignup() {
                 disabled={isSubmitting}
                 className="w-full px-6 py-3 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Creating Your Account...' : 'Start Free'}
+                {isSubmitting ? 'Creating Your Account...' : 'Start Free Trial'}
               </button>
             </form>
 
             <p className="text-xs text-muted text-center mt-6">
               By signing up, you agree to our Terms of Service and Privacy Policy.
+              You&apos;ll be redirected to Stripe to add your payment method for after your trial ends.
             </p>
           </div>
         </div>
@@ -177,3 +268,4 @@ export default function StarterSignup() {
     </div>
   )
 }
+

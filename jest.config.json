@@ -1,0 +1,15 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "roots": ["<rootDir>"],
+  "testMatch": ["**/__tests__/**/*.test.ts"],
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/$1"
+  },
+  "collectCoverageFrom": [
+    "app/api/**/*.ts",
+    "!**/*.d.ts"
+  ],
+  "setupFilesAfterEnv": ["<rootDir>/__tests__/setup.ts"]
+}
+
