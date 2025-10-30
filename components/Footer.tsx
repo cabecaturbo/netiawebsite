@@ -8,34 +8,25 @@ export const Footer = () => {
         { name: "Home", href: "/" },
         { name: "Demo", href: "/demo" },
         { name: "Pricing", href: "/pricing" },
-        { name: "Dashboard", href: "https://app.netia.ai/dashboard" }
-      ]
-    },
-    {
-      title: "Features",
-      links: [
-        { name: "AI Chat", href: "/features/chat" },
-        { name: "Business Profiles", href: "/features/profiles" },
-        { name: "Netia Integration", href: "/features/netia" },
-        { name: "Multi-tenant", href: "/features/multi-tenant" }
+        { name: "Login", href: "/login" },
+        { name: "Sign Up", href: "/signup" }
       ]
     },
     {
       title: "Support",
       links: [
-        { name: "Help Center", href: "/help" },
-        { name: "API Documentation", href: "/api-docs" },
-        { name: "Setup Guide", href: "/setup" },
-        { name: "Contact Support", href: "/contact" }
+        { name: "Contact Support", href: "mailto:support@netia.ai" },
+        { name: "Security", href: "/security" },
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms of Service", href: "/terms" }
       ]
     },
     {
       title: "Company",
       links: [
         { name: "About", href: "/about" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "Security", href: "/security" }
+        { name: "Help", href: "/help" },
+        { name: "Waitlist", href: "/waitlist" }
       ]
     }
   ]
