@@ -13,6 +13,17 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Validate accountId (must be a UUID-like value, never an email)
+    const isEmailLike = typeof accountId === 'string' && accountId.includes('@')
+    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+    const isUuidLike = typeof accountId === 'string' && uuidRegex.test(accountId)
+    if (isEmailLike || !isUuidLike) {
+      return NextResponse.json(
+        { error: 'Invalid accountId: expected Netia account UUID' },
+        { status: 400 }
+      )
+    }
+
     if (!process.env.STRIPE_SECRET_KEY) {
       return NextResponse.json(
         { error: 'Stripe not configured' },

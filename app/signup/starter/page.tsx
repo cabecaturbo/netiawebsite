@@ -72,13 +72,20 @@ export default function StarterSignup() {
         sessionStorage.setItem('temp_account_id', accountId.toString())
       }
 
+      // Ensure we have a valid Netia account ID before proceeding to Stripe
+      if (!accountId) {
+        setErrors(['Unable to determine account ID after registration. Please try again.'])
+        setIsSubmitting(false)
+        return
+      }
+
       // Step 2: Create Stripe Checkout Session
       const checkoutResponse = await fetch('/api/checkout/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email: formData.email,
-          accountId: accountId || formData.email, // Use email as fallback if no account ID
+          accountId,
         }),
       })
 
