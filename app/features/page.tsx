@@ -14,37 +14,43 @@ const features = [
     name: 'Answer Visitor Questions Instantly',
     description: 'Someone lands on your website and has questions. Our chatbot answers them right away - even at 2 AM. No more "we\'ll get back to you."',
     icon: ChatBubbleLeftRightIcon,
-    highlights: ['Works 24/7', 'Answers fast', 'Saves you time']
+    highlights: ['Works 24/7', 'Answers fast', 'Saves you time'],
+    isComingSoon: false
   },
   {
     name: 'Capture Every Client',
     description: 'When someone visits your site, we don\'t let them leave without their contact info. We ask the right questions and get their email or phone.',
     icon: SparklesIcon,
-    highlights: ['Never lose a client', 'Collect contact info', 'Follow up automatically']
+    highlights: ['Never lose a client', 'Collect contact info', 'Follow up automatically'],
+    isComingSoon: false
   },
   {
     name: 'Book Appointments Automatically',
     description: 'Your visitor wants to schedule? We handle it. We share your calendar link and help them pick a time that works.',
     icon: ClockIcon,
-    highlights: ['Books appointments', 'Sends calendar links', 'Confirms bookings']
+    highlights: ['Books appointments', 'Sends calendar links', 'Confirms bookings'],
+    isComingSoon: false
   },
   {
     name: 'Know Your Business',
     description: 'Tell us your hours, prices, and services once. We remember everything and give customers the right answers every time.',
     icon: ShieldCheckIcon,
-    highlights: ['Remembers your info', 'Gets answers right', 'No training needed']
+    highlights: ['Remembers your info', 'Gets answers right', 'No training needed'],
+    isComingSoon: false
   },
   {
     name: 'Your Data is Private',
     description: 'Your customer conversations stay private. We don\'t share your data with anyone. Each business gets their own secure space.',
     icon: ShieldCheckIcon,
-    highlights: ['Data stays private', 'Secure storage', 'Your information protected']
+    highlights: ['Data stays private', 'Secure storage', 'Your information protected'],
+    isComingSoon: false
   },
   {
     name: 'Works on Your Website',
     description: 'Add a simple code snippet to your website. That\'s it. Your chatbot starts working in minutes.',
     icon: CogIcon,
-    highlights: ['Easy setup', 'One code snippet', 'Ready in minutes']
+    highlights: ['Easy setup', 'One code snippet', 'Ready in minutes'],
+    isComingSoon: false
   }
 ]
 
