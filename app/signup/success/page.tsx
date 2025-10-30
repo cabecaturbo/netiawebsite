@@ -15,18 +15,26 @@ export default function SignupSuccess() {
 
   useEffect(() => {
     const verifySession = async () => {
+      console.log('Success page loaded, sessionId:', sessionId)
+      
       if (!sessionId) {
+        console.error('No session ID found')
         setError('Missing session ID')
         setIsVerifying(false)
         return
       }
 
       try {
+        console.log('Starting session verification...')
         // Verify Stripe session
+        console.log('Calling /api/checkout/verify with sessionId:', sessionId)
         const response = await fetch(`/api/checkout/verify?session_id=${sessionId}`)
         const data = await response.json()
+        
+        console.log('Verification response:', { status: response.status, data })
 
         if (!response.ok || !data.success) {
+          console.error('Verification failed:', data)
           setError(data.error || 'Failed to verify payment session')
           setIsVerifying(false)
           return
@@ -36,6 +44,12 @@ export default function SignupSuccess() {
         const tempTokens = sessionStorage.getItem('temp_tokens')
         const tempEmail = sessionStorage.getItem('temp_account_email')
         const tempAccountId = sessionStorage.getItem('temp_account_id')
+        
+        console.log('SessionStorage data:', { 
+          hasTokens: !!tempTokens, 
+          hasEmail: !!tempEmail, 
+          hasAccountId: !!tempAccountId 
+        })
 
         if (tempTokens && tempEmail) {
           const tokens = JSON.parse(tempTokens)
@@ -85,7 +99,7 @@ export default function SignupSuccess() {
         }
       } catch (error) {
         console.error('Verification error:', error)
-        setError('Failed to verify session. Please try logging in.')
+        setError(`Failed to verify session: ${error.message || 'Unknown error'}`)
         setIsVerifying(false)
       }
     }
@@ -99,6 +113,15 @@ export default function SignupSuccess() {
       <main className="py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-md mx-auto text-center">
+            {/* Debug info - remove in production */}
+            {process.env.NODE_ENV === 'development' && (
+              <div className="mb-4 p-2 bg-gray-100 text-xs text-left">
+                <div>Session ID: {sessionId || 'None'}</div>
+                <div>Is Verifying: {isVerifying ? 'Yes' : 'No'}</div>
+                <div>Is Verified: {isVerified ? 'Yes' : 'No'}</div>
+                <div>Error: {error || 'None'}</div>
+              </div>
+            )}
             
             {isVerifying && (
               <>
