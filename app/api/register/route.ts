@@ -72,25 +72,43 @@ export async function POST(request: NextRequest) {
     // Fallback: if we have a token but no accountId, query accounts/me
     if (!accountId && data?.data?.token) {
       try {
-        const meResp = await fetch(`${apiUrl}/api/accounts/me`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${data.data.token}`,
-          },
-        })
-        if (meResp.ok) {
-          const me = await meResp.json()
-          accountId =
-            me?.data?.account_id ||
-            me?.data?.accountId ||
-            me?.data?.id ||
-            me?.account_id ||
-            me?.accountId ||
-            me?.id ||
-            me?.data?.account?.id ||
-            me?.account?.id ||
-            accountId
+        // Try multiple auth header formats and paths
+        const tryFetchMe = async (path: string, headers: Record<string, string>) => {
+          const resp = await fetch(`${apiUrl}${path}`, { method: 'GET', headers })
+          if (resp.ok) {
+            const me = await resp.json()
+            return (
+              me?.data?.account_id ||
+              me?.data?.accountId ||
+              me?.data?.id ||
+              me?.account_id ||
+              me?.accountId ||
+              me?.id ||
+              me?.data?.account?.id ||
+              me?.account?.id ||
+              null
+            )
+          }
+          return null
+        }
+
+        const token = data.data.token as string
+        const headerVariants: Record<string, string>[] = [
+          { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+          { 'Content-Type': 'application/json', Authorization: `Token token=${token}` },
+          { 'Content-Type': 'application/json', Authorization: `token ${token}` },
+        ]
+        const paths = ['/api/accounts/me', '/api/me']
+
+        for (const headers of headerVariants) {
+          for (const path of paths) {
+            const maybeId = await tryFetchMe(path, headers)
+            if (maybeId) {
+              accountId = maybeId
+              break
+            }
+          }
+          if (accountId) break
         }
       } catch (e) {
         // ignore and proceed without accountId
@@ -105,6 +123,10 @@ export async function POST(request: NextRequest) {
         renew_token: data.data.renew_token,
         account_id: accountId,
       },
+      // Include minimal debug shape to help diagnose in case account_id is missing
+      shape: process.env.NODE_ENV !== 'production' ? {
+        registration_keys: Object.keys(data?.data || {}),
+      } : undefined,
     })
   } catch (error) {
     console.error('Registration error:', error)
