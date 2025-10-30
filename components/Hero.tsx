@@ -17,7 +17,7 @@ export const Hero = () => {
                   Client Again
                 </span>
               </h1>
-              <div className="h-3"></div>
+              <div className="h-2"></div>
               <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-3">
                 Our AI chatbot answers visitor questions instantly and books appointments 24/7 - never miss another client. 
                 <span className="text-fg font-semibold"> Start free today.</span>
