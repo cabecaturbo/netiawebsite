@@ -76,11 +76,13 @@ export async function POST(request: NextRequest) {
       subscription_data: {
         trial_period_days: 7,
         metadata: {
-          netia_account_id: accountId,
+            netia_account_id: accountId,
+            netia_account_email: email,
         },
       },
       metadata: {
-        netia_account_id: accountId,
+          netia_account_id: accountId,
+          netia_account_email: email,
       },
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/signup/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/signup/cancel`,
