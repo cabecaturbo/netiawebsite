@@ -43,7 +43,7 @@ export default function SignupSuccess() {
         // Get stored tokens and account info from sessionStorage
         const tempTokens = sessionStorage.getItem('temp_tokens')
         const tempEmail = sessionStorage.getItem('temp_account_email')
-        const tempAccountId = sessionStorage.getItem('temp_account_id')
+        let tempAccountId = sessionStorage.getItem('temp_account_id')
         
         console.log('SessionStorage data:', { 
           hasTokens: !!tempTokens, 
@@ -54,6 +54,28 @@ export default function SignupSuccess() {
         if (tempTokens && tempEmail) {
           const tokens = JSON.parse(tempTokens)
           
+          // If account id is missing, fetch it from backend using the token
+          if (!tempAccountId) {
+            try {
+              const meResp = await fetch('/api/account/me', {
+                headers: {
+                  'Authorization': `Bearer ${tokens.token}`,
+                },
+                cache: 'no-store',
+              })
+              const meData = await meResp.json()
+              if (meResp.ok) {
+                const possibleId = meData.data?.data?.account_id || meData.data?.data?.id || meData.data?.account_id || meData.data?.id
+                if (possibleId) {
+                  tempAccountId = String(possibleId)
+                  sessionStorage.setItem('temp_account_id', tempAccountId)
+                }
+              }
+            } catch (e) {
+              console.error('Failed to fetch account id:', e)
+            }
+          }
+
           // Store tokens permanently in localStorage
           localStorage.setItem('netia_customer_token', tokens.token)
           localStorage.setItem('netia_customer_renew_token', tokens.renew_token)
@@ -61,7 +83,7 @@ export default function SignupSuccess() {
           localStorage.setItem('netia_customer_email', tempEmail)
 
           // Send Stripe IDs to backend if available
-          if (data.session?.customer_id && data.session?.subscription_id) {
+          if (data.session?.customer_id && data.session?.subscription_id && tempAccountId) {
             try {
               await fetch('/api/stripe/link', {
                 method: 'POST',
@@ -70,7 +92,7 @@ export default function SignupSuccess() {
                   'Authorization': `Bearer ${tokens.token}`,
                 },
                 body: JSON.stringify({
-                  account_id: tempAccountId, // Account ID from registration
+                  account_id: tempAccountId, // Account ID from registration or fetched
                   stripe_customer_id: data.session.customer_id,
                   stripe_subscription_id: data.session.subscription_id,
                 }),

@@ -22,8 +22,10 @@ export async function GET(request: NextRequest) {
 
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
-    // Retrieve the Checkout Session
-    const session = await stripe.checkout.sessions.retrieve(sessionId)
+    // Retrieve the Checkout Session with expansions so we can reliably access IDs
+    const session = await stripe.checkout.sessions.retrieve(sessionId, {
+      expand: ['subscription', 'customer']
+    })
 
     if (!session) {
       return NextResponse.json(
@@ -37,13 +39,22 @@ export async function GET(request: NextRequest) {
     // Status 'complete' indicates successful checkout
     if (session.status === 'complete') {
       // Extract customer and subscription IDs (can be string or object)
-      const customerId = typeof session.customer === 'string' 
-        ? session.customer 
-        : session.customer?.id || null
+      const customerId = typeof session.customer === 'string'
+        ? session.customer
+        : (session.customer as Stripe.Customer | null)?.id || session.customer_email || null
       
-      const subscriptionId = typeof session.subscription === 'string'
-        ? session.subscription
-        : session.subscription?.id || null
+      let subscriptionId: string | null = null
+      if (typeof session.subscription === 'string') {
+        subscriptionId = session.subscription
+      } else if (session.subscription && (session.subscription as Stripe.Subscription).id) {
+        subscriptionId = (session.subscription as Stripe.Subscription).id
+      } else {
+        // As a fallback, try to locate the subscription by customer
+        if (customerId && typeof customerId === 'string') {
+          const subs = await stripe.subscriptions.list({ customer: customerId, limit: 1 })
+          subscriptionId = subs.data?.[0]?.id || null
+        }
+      }
 
       return NextResponse.json({
         success: true,
