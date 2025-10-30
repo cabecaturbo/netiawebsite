@@ -37,11 +37,11 @@ export const Features = () => {
           {features.map((feature, index) => (
             <article 
               key={index} 
-              className="text-center group animate-fade-in-up hover-lift transition-all duration-500 p-8 flex flex-col h-full"
+              className="text-center group animate-fade-in-up hover-lift transition-all duration-500 p-6 flex flex-col h-full"
               style={{animationDelay: `${index * 0.2}s`}}
             >
               {/* Icon */}
-              <div className="flex justify-center mb-6">
+              <div className="flex justify-center mb-5">
                 <div className="w-32 h-32 bg-white border-2 border-gray-300 rounded-2xl flex items-center justify-center group-hover:border-primary-400 transition-all duration-300 relative overflow-hidden shadow-sm group-hover:shadow-lg" role="img" aria-label={feature.title}>
                   <div className="flex items-center justify-center w-full h-full text-gray-800 group-hover:text-primary-600 transition-colors duration-300">
                     {feature.icon}
@@ -51,7 +51,7 @@ export const Features = () => {
               
               {/* Content */}
               <div className="flex flex-col flex-grow">
-                <div className="mb-3 min-h-[5rem] flex items-center justify-center">
+                <div className="mb-4 min-h-[5rem] flex items-center justify-center">
                   {feature.title === "Powered by OpenAI" ? (
                     <div className="flex flex-col items-center">
                       <h3 className="font-display text-2xl font-semibold text-fg group-hover:text-primary-600 transition-colors duration-300 leading-tight">
@@ -76,7 +76,7 @@ export const Features = () => {
               </div>
               
               {/* Decorative line */}
-              <div className="w-0 group-hover:w-16 h-0.5 bg-primary-500 mx-auto transition-all duration-500 mt-6" aria-hidden="true"></div>
+              <div className="w-0 group-hover:w-16 h-0.5 bg-primary-500 mx-auto transition-all duration-500 mt-5" aria-hidden="true"></div>
             </article>
           ))}
         </div>

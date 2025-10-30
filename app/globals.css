@@ -285,15 +285,15 @@ p, .text-base, .text-lg {
   letter-spacing: 0.01em;
 }
 
-/* Consistent section spacing */
+/* Consistent section spacing - Optimized with 8px base scale */
 .section-spacing {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 3rem;   /* 48px - mobile */
+  padding-bottom: 3rem; /* 48px - mobile */
 }
 
 @media (min-width: 768px) {
   .section-spacing {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;    /* 80px - tablet/desktop (64px would be 4rem, using 5rem for better breathing) */
+    padding-bottom: 5rem; /* 80px - tablet/desktop */
   }
 }

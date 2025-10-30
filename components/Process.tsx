@@ -29,7 +29,7 @@ export const Process = () => {
   return (
     <section className="section-spacing bg-white" aria-labelledby="process-heading">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 id="process-heading" className="font-display text-3xl md:text-4xl font-semibold text-fg mb-4">
             From Setup to Success in 15 Minutes
           </h2>
@@ -49,12 +49,12 @@ export const Process = () => {
                 </div>
               </div>
               <div className="flex flex-col flex-1">
-                <h3 className="font-display text-xl font-semibold text-fg leading-tight mb-2">
+                <h3 className="font-display text-xl font-semibold text-fg leading-tight mb-3">
                   {step.title}
                 </h3>
                 
                 {/* Description */}
-                <p className="text-muted leading-relaxed flex-grow mb-4">
+                <p className="text-muted leading-relaxed flex-grow mb-3">
                   {step.description}
                 </p>
                 
