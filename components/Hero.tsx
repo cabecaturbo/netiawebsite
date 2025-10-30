@@ -1,5 +1,7 @@
 // import { FloatingBalls } from './FloatingBalls'
 
+import Image from 'next/image'
+
 export const Hero = () => {
   return (
     <section className="section-spacing relative overflow-hidden">
@@ -10,15 +12,15 @@ export const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
           <div className="space-y-8">
-            <div className="space-y-4 animate-fade-in-up">
+            <div className="space-y-4 md:animate-fade-in-up">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
-                <span className="block animate-slide-in-left animate-stagger-1">Never Miss Another</span>
-                <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
+                <span className="block md:animate-slide-in-left md:animate-stagger-1">Never Miss Another</span>
+                <span className="block text-primary-500 md:animate-slide-in-left md:animate-stagger-2">
                   Appointment Again
                 </span>
               </h1>
               <div className="h-2"></div>
-              <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-3">
+              <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed md:animate-fade-in-up md:animate-stagger-3">
                 Your potential patients are browsing treatments and services on your website—ready to book. Our AI chatbot answers their questions 24/7 and schedules consultations instantly. 
                 <span className="text-fg font-semibold"> Start free today.</span>
               </p>
@@ -28,7 +30,7 @@ export const Hero = () => {
             <div className="h-6"></div>
             
             {/* Urgency Banner */}
-            <div className="inline-flex items-center px-4 py-3 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 animate-fade-in-up animate-stagger-4">
+            <div className="inline-flex items-center px-4 py-3 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 md:animate-fade-in-up md:animate-stagger-4">
               <span>Free trial</span>
               <span className="mx-2">•</span>
               <span>No setup fees</span>
@@ -40,13 +42,18 @@ export const Hero = () => {
             <div className="h-8"></div>
             
             {/* Powered by OpenAI */}
-            <div className="flex items-center space-x-2 animate-fade-in-up animate-stagger-5">
+            <div className="flex items-center space-x-2 md:animate-fade-in-up md:animate-stagger-5">
               <span className="text-base text-gray-600">Powered by</span>
-              <img 
-                src="/openai-logo.png" 
-                alt="OpenAI" 
-                className="h-10 hover-glow transition-all duration-300"
-              />
+              <div className="relative h-10 w-[120px]">
+                <Image
+                  src="/openai-logo.png"
+                  alt="OpenAI"
+                  fill
+                  sizes="(max-width: 640px) 120px, 120px"
+                  className="object-contain"
+                  priority={false}
+                />
+              </div>
             </div>
             
             {/* Social Proof Badges */}
@@ -82,20 +89,20 @@ export const Hero = () => {
           <div className="flex justify-center md:justify-end">
             <div className="w-full max-w-md lg:max-w-lg relative pt-4" role="img" aria-label="AI chatbot conversation demo">
               {/* Floating elements hugging the chat image */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500/20 rounded-full animate-float" aria-hidden="true"></div>
-              <div className="absolute top-1/2 -right-12 w-4 h-4 bg-blue-500/20 rounded-full animate-float-slow" aria-hidden="true"></div>
-              <div className="absolute -top-8 -right-4 w-5 h-5 bg-purple-500/20 rounded-full animate-float" style={{animationDelay: '2s'}} aria-hidden="true"></div>
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500/20 rounded-full md:animate-float" aria-hidden="true"></div>
+              <div className="absolute top-1/2 -right-12 w-4 h-4 bg-blue-500/20 rounded-full md:animate-float-slow" aria-hidden="true"></div>
+              <div className="absolute -top-8 -right-4 w-5 h-5 bg-purple-500/20 rounded-full md:animate-float" style={{animationDelay: '2s'}} aria-hidden="true"></div>
               
               {/* Additional floating balls in margins */}
               
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover-lift transition-all duration-500 relative overflow-hidden h-[36rem]" role="dialog" aria-label="Conversation with Netia AI">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg md:hover-lift transition-all duration-500 relative overflow-hidden h-[36rem]" role="dialog" aria-label="Conversation with Netia AI">
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50/10 via-transparent to-transparent pointer-events-none"></div>
                 
                 {/* Chat Header */}
                 <div className="flex items-center justify-between pb-3 border-b border-gray-100 relative z-10">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center animate-pulse-subtle">
+                    <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center md:animate-pulse-subtle">
                       <div className="w-4 h-4 bg-white rounded-full"></div>
                     </div>
                     <div>
