@@ -21,7 +21,7 @@ export const Hero = () => {
               </h1>
               <div className="h-2"></div>
               <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed md:animate-fade-in-up md:animate-stagger-3">
-                Your potential customers are browsing treatments and services on your website—ready to book. Our AI chatbot answers their questions 24/7 and schedules consultations instantly. 
+                Your potential customers are browsing your services on your website—ready to book. Our AI chatbot answers their questions 24/7 and schedules consultations instantly. 
                 <span className="text-fg font-semibold"> Start free today.</span>
               </p>
             </div>
