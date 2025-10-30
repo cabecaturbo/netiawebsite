@@ -46,8 +46,7 @@ export default function SignupSuccess() {
         
         console.log('SessionStorage data:', { 
           hasTokens: !!tempTokens, 
-          hasEmail: !!tempEmail, 
-          hasAccountId: !!tempAccountId 
+          hasEmail: !!tempEmail
         })
 
         if (tempTokens && tempEmail) {
