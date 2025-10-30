@@ -42,7 +42,7 @@ export const Hero = () => {
             <div className="h-2 md:h-8"></div>
             
             {/* Powered by OpenAI */}
-            <div className="flex items-center space-x-2 md:animate-fade-in-up md:animate-stagger-5">
+            <div className="flex items-center space-x-0.5 md:animate-fade-in-up md:animate-stagger-5">
               <span className="text-base text-gray-600">Powered by</span>
               <div className="relative h-10 w-[120px]">
                 <Image
