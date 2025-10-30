@@ -99,7 +99,8 @@ export default function SignupSuccess() {
         }
       } catch (error) {
         console.error('Verification error:', error)
-        setError(`Failed to verify session: ${error.message || 'Unknown error'}`)
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+        setError(`Failed to verify session: ${errorMessage}`)
         setIsVerifying(false)
       }
     }
