@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { gyrochrome, sora } from "./fonts";
+import { gyrochrome, sora, inter } from "./fonts";
 import "./globals.css";
 import { PapercupsBootstrap } from "@/src/components/integrations/PapercupsBootstrap";
 
@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${gyrochrome.variable} ${sora.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sora.variable} ${gyrochrome.variable}`}>
       <head>
         <script 
           id="vtag-ai-js" 

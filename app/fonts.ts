@@ -1,4 +1,4 @@
-import { Sora } from 'next/font/google'
+import { Sora, Inter } from 'next/font/google'
 import localFont from 'next/font/local'
 
 export const gyrochrome = localFont({
@@ -42,6 +42,12 @@ export const sora = Sora({
   subsets: ['latin'], 
   display: 'swap',
   variable: '--font-sora'
+})
+
+export const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter'
 })
 
 
