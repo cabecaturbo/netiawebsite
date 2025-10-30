@@ -21,13 +21,13 @@ export const Hero = () => {
               </h1>
               <div className="h-2"></div>
               <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed md:animate-fade-in-up md:animate-stagger-3">
-                Your potential patients are browsing treatments and services on your website—ready to book. Our AI chatbot answers their questions 24/7 and schedules consultations instantly. 
+                Your potential customers are browsing treatments and services on your website—ready to book. Our AI chatbot answers their questions 24/7 and schedules consultations instantly. 
                 <span className="text-fg font-semibold"> Start free today.</span>
               </p>
             </div>
             
             {/* Spacer */}
-            <div className="h-6"></div>
+            <div className="h-2 md:h-6"></div>
             
             {/* Urgency Banner */}
             <div className="inline-flex items-center px-4 py-3 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 md:animate-fade-in-up md:animate-stagger-4">
@@ -39,7 +39,7 @@ export const Hero = () => {
             </div>
             
             {/* Spacer */}
-            <div className="h-8"></div>
+            <div className="h-2 md:h-8"></div>
             
             {/* Powered by OpenAI */}
             <div className="flex items-center space-x-2 md:animate-fade-in-up md:animate-stagger-5">
