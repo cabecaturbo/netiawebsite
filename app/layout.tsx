@@ -5,8 +5,8 @@ import "./globals.css";
 import { PapercupsBootstrap } from "@/src/components/integrations/PapercupsBootstrap";
 
 export const metadata: Metadata = {
-  title: "Netia - AI That Works",
-  description: "AI-powered customer service that schedules appointments, answers instantly, and works seamlessly with your business.",
+  title: "NETIA — AI powered Chatbot",
+  description: "NETIA — AI powered Chatbot",
   keywords: ["AI", "customer service", "automation", "chatbot", "appointments", "Netia integration", "business AI"],
   authors: [{ name: "Netia" }],
   creator: "Netia",
@@ -23,16 +23,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Netia - AI That Works",
-    description: "AI-powered customer service that schedules appointments, answers instantly, and works seamlessly with your business.",
+    title: "NETIA — AI powered Chatbot",
+    description: "NETIA — AI powered Chatbot",
     type: "website",
     locale: "en_US",
     siteName: "Netia",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "NETIA — AI powered Chatbot" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Netia - AI That Works",
-    description: "AI-powered customer service that schedules appointments, answers instantly, and works seamlessly with your business.",
+    title: "NETIA — AI powered Chatbot",
+    description: "NETIA — AI powered Chatbot",
+    images: ["/twitter-image"],
   },
   verification: {
     google: "your-google-verification-code",
