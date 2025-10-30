@@ -30,9 +30,9 @@ export const Hero = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
               Never Miss Another <span className="text-primary-500">Appointment</span>
             </h1>
-            <div className="mt-1 flex items-center gap-0.5">
+            <div className="mt-1 flex items-center gap-0">
               <span className="text-base text-gray-700">Powered by</span>
-              <div className="relative h-7 w-[110px] md:h-8 md:w-[124px]">
+              <div className="relative h-7 w-[110px] md:h-8 md:w-[124px] -ml-1">
                 <Image src="/openai-logo.png" alt="OpenAI" fill sizes="(max-width: 768px) 110px, 124px" className="object-contain" />
               </div>
             </div>
@@ -46,6 +46,7 @@ export const Hero = () => {
               <span className="mx-2">•</span>
               <span>Cancel anytime</span>
             </div>
+<<<<<<< HEAD
             <div className="mt-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-4">
               <a
                 href="/pricing"
@@ -65,6 +66,53 @@ export const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
               </a>
+=======
+            
+            {/* Spacer */}
+            <div className="h-2 md:h-8"></div>
+            
+            {/* Powered by OpenAI */}
+            <div className="flex items-center space-x-0 md:animate-fade-in-up md:animate-stagger-5">
+              <span className="text-base text-gray-600">Powered by</span>
+              <div className="relative h-10 w-[120px] -ml-1">
+                <Image
+                  src="/openai-logo.png"
+                  alt="OpenAI"
+                  fill
+                  sizes="(max-width: 640px) 120px, 120px"
+                  className="object-contain"
+                  priority={false}
+                />
+              </div>
+            </div>
+            
+            {/* Social Proof Badges */}
+            <div className="flex items-center gap-6 animate-fade-in-up animate-stagger-6">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-sm text-muted">AI-Powered</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <span className="text-sm text-muted">24/7 Available</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <span className="text-sm text-muted">Secure</span>
+              </div>
+>>>>>> de8821a (Hero spacing: set gap-0 and -ml-1 for OpenAI logo (hero))
             </div>
           </div>
 
