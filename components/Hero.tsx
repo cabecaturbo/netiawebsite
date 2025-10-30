@@ -14,7 +14,7 @@ export const Hero = () => {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
                 <span className="block animate-slide-in-left animate-stagger-1">Never Miss Another</span>
                 <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
-                  Appointment Booking Again
+                  Appointment Again
                 </span>
               </h1>
               <div className="h-2"></div>
