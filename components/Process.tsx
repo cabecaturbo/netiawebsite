@@ -2,8 +2,8 @@ export const Process = () => {
   const steps = [
     {
       number: "01",
-      title: "Tell us about your business",
-      description: "Add your hours, services, and prices. Takes 5 minutes.",
+      title: "Add your practice details",
+      description: "Input your hours, services, and consultation prices. Takes 5 minutes.",
       action: "Get started"
     },
     {
@@ -14,14 +14,14 @@ export const Process = () => {
     },
     {
       number: "03",
-      title: "Start booking customers", 
-      description: "Your AI starts working immediately. No training required.",
+      title: "Start Booking Appointments", 
+      description: "Your AI starts working immediately—booking consultations and answering patient questions. No training required.",
       action: "See it in action"
     },
     {
       number: "04",
-      title: "Watch your business grow",
-      description: "More appointments, fewer missed potential clients, happier customers.",
+      title: "Watch Your Practice Grow",
+      description: "More scheduled appointments, fewer missed inquiries, happier patients.",
       action: "View dashboard"
     }
   ]
@@ -34,8 +34,8 @@ export const Process = () => {
             From Setup to Success in 15 Minutes
           </h2>
           <p className="text-lg text-muted max-w-3xl mx-auto">
-            Tell us about your business, add our widget to your website, and start booking customers immediately. 
-            Simple setup, powerful results—just add your information and watch the appointments roll in.
+            Tell us about your practice, add our widget to your website, and start booking appointments immediately. 
+            Simple setup, powerful results—just add your information and watch the consultations roll in.
           </p>
         </div>
 

@@ -25,10 +25,10 @@ export default function Pricing() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              Stop Losing Money on Missed Calls
+              Stop Losing Patient Bookings After Hours
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              Every missed call costs you money. Our AI never sleeps, never takes breaks, and never misses an opportunity to book your next customer.
+              Every missed inquiry after hours costs you money. Our AI never sleeps, never takes breaks, and never misses an opportunity to book your next appointment.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export default function Pricing() {
                   $79<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
-                  Turn website visitors into customers instantly
+                  Turn website visitors into booked appointments instantly
                 </p>
               </div>
               <ul className="space-y-3 mb-8 flex-grow">

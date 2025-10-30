@@ -14,12 +14,12 @@ export const Hero = () => {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
                 <span className="block animate-slide-in-left animate-stagger-1">Never Miss Another</span>
                 <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
-                  Client Again
+                  Appointment Booking Again
                 </span>
               </h1>
               <div className="h-2"></div>
               <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-3">
-                Our AI chatbot answers visitor questions instantly and books appointments 24/7 - never miss another client. 
+                Your potential patients are browsing treatments and services on your website—ready to book. Our AI chatbot answers their questions 24/7 and schedules consultations instantly. 
                 <span className="text-fg font-semibold"> Start free today.</span>
               </p>
             </div>

@@ -3,23 +3,23 @@ import { FloatingBalls } from './FloatingBalls'
 export const Features = () => {
   const features = [
     {
-      title: "Turn Every Visitor Into a Customer",
-      description: "Your website visitors get instant answers to their questions. No more 'I'll call you back' - they book appointments right then and there.",
+      title: "Turn Every Visitor Into a Booked Appointment",
+      description: "Potential patients get instant answers to their treatment and service questions. No more 'we'll call you back'—they book consultations right then and there.",
       icon: <img src="/bolt.png" alt="Fast response" className="w-20 h-20 brightness-0 opacity-80" />
     },
     {
-      title: "Your Business, Your Rules",
-      description: "We never share your customer data. Each business gets their own secure space. Your information stays private and protected.",
+      title: "Capture Patient Information Automatically",
+      description: "Collect contact details, preferences, and questions from every visitor. We never share patient data—your information stays private and secure.",
       icon: <img src="/lightbulb-on.png" alt="Security" className="w-20 h-20 brightness-0 opacity-80" />
     },
     {
-      title: "Knows Your Business Inside Out",
-      description: "Tell us your hours, services, and prices once. Our AI remembers everything and gives customers the right answers every time.",
+      title: "Knows Your Practice Inside Out",
+      description: "Tell us your hours, services, and consultation prices once. Our AI remembers everything and gives patients accurate answers about appointments, treatments, and availability.",
       icon: <img src="/journal.png" alt="Business knowledge" className="w-20 h-20 brightness-0 opacity-80" />
     },
     {
       title: "Powered by OpenAI",
-      description: "Built with cutting-edge AI technology that understands context and delivers smart, helpful responses to your customers.",
+      description: "Built with cutting-edge AI technology that understands context and delivers smart, helpful responses to your patients.",
       icon: <img src="/brightness.png" alt="AI Technology" className="w-20 h-20 brightness-0 opacity-80" />
     }
   ]
