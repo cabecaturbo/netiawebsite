@@ -46,10 +46,10 @@ const features = [
     isComingSoon: false
   },
   {
-    name: 'Works on Your Website',
-    description: 'Add a simple code snippet to your website. That\'s it. Your chatbot starts working in minutes.',
+    name: 'Powered by OpenAI',
+    description: 'Built with cutting-edge AI technology that understands context and delivers smart, helpful responses to your patients.',
     icon: CogIcon,
-    highlights: ['Easy setup', 'One code snippet', 'Ready in minutes'],
+    highlights: ['State-of-the-art AI', 'Contextual understanding', 'Natural conversations'],
     isComingSoon: false
   }
 ]
