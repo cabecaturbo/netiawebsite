@@ -83,9 +83,7 @@ export default function Demo() {
               <h2 className="font-display text-2xl font-semibold text-primary-600 mb-4">
                 Ready to get started?
               </h2>
-              <p className="text-muted mb-8">
-                Join thousands of businesses already using Netia to improve their customer service.
-              </p>
+              {/* Removed exaggerated claim to keep copy truthful */}
               <div className="flex justify-center">
                 <a
                   href="/signup/starter"
