@@ -2,7 +2,7 @@
 
 export const Hero = () => {
   return (
-    <section className="py-12 md:py-16 relative overflow-hidden">
+    <section className="section-spacing relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 via-transparent to-primary-50/20"></div>
       
@@ -14,63 +14,78 @@ export const Hero = () => {
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
                 <span className="block animate-slide-in-left animate-stagger-1">Never Miss Another</span>
                 <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
-                  Customer Call Again
+                  Lead Again
                 </span>
               </h1>
-              <div className="flex items-center space-x-0.5 animate-fade-in animate-stagger-3">
-                <span className="text-sm text-gray-600">Powered by</span>
-                <img 
-                  src="/openai-logo.png" 
-                  alt="OpenAI" 
-                  className="h-8 hover-glow transition-all duration-300"
-                />
-              </div>
-              <p className="text-xl md:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-4">
-                Stop losing money on missed appointments every month. Our AI answers every call, books appointments, and follows up with leads - even at 2 AM. 
-                <span className="text-fg font-medium"> Start free today.</span>
+              <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-3">
+                Stop losing leads on your website. Our AI chatbot answers visitor questions instantly and books appointments 24/7 - never miss another customer. 
+                <span className="text-fg font-semibold"> Start free today.</span>
               </p>
               
             </div>
             
-            {/* Social Proof - Moved down with more spacing */}
-            <div className="flex items-center space-x-4 animate-fade-in-up animate-stagger-5 pt-8">
-              <div className="flex -space-x-2">
-                <div className="w-8 h-8 bg-primary-100 rounded-full border-2 border-white"></div>
-                <div className="w-8 h-8 bg-blue-100 rounded-full border-2 border-white"></div>
-                <div className="w-8 h-8 bg-green-100 rounded-full border-2 border-white"></div>
-              </div>
-              <div>
-                <div className="flex items-center space-x-1">
-                  <div className="flex text-yellow-400">
-                    {'★'.repeat(5)}
-                  </div>
-                  <span className="text-sm text-muted ml-1">4.9/5</span>
-                </div>
-                <p className="text-xs text-muted">Trusted by 500+ businesses</p>
-              </div>
-            </div>
-            
-            {/* Urgency Banner - Moved down with more spacing */}
-            <div className="inline-flex items-center px-4 py-3 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 animate-fade-in-up animate-stagger-5">
+            {/* Urgency Banner */}
+            <div className="inline-flex items-center px-4 py-3 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 animate-fade-in-up animate-stagger-4">
               <span>Free trial</span>
               <span className="mx-2">•</span>
               <span>No setup fees</span>
               <span className="mx-2">•</span>
               <span>Cancel anytime</span>
             </div>
+            
+            {/* Spacer */}
+            <div className="h-4"></div>
+            
+            {/* Powered by OpenAI */}
+            <div className="flex items-center space-x-2 animate-fade-in-up animate-stagger-5">
+              <span className="text-base text-gray-600">Powered by</span>
+              <img 
+                src="/openai-logo.png" 
+                alt="OpenAI" 
+                className="h-10 hover-glow transition-all duration-300"
+              />
+            </div>
+            
+            {/* Social Proof Badges */}
+            <div className="flex items-center gap-6 animate-fade-in-up animate-stagger-6">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-sm text-muted">AI-Powered</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <span className="text-sm text-muted">24/7 Available</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <span className="text-sm text-muted">Secure</span>
+              </div>
+            </div>
           </div>
 
           {/* Right Visual */}
           <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-md lg:max-w-lg relative pt-4">
+            <div className="w-full max-w-md lg:max-w-lg relative pt-4" role="img" aria-label="AI chatbot conversation demo">
               {/* Floating elements hugging the chat image */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500/20 rounded-full animate-float"></div>
-              <div className="absolute top-1/2 -right-12 w-4 h-4 bg-blue-500/20 rounded-full animate-float-slow"></div>
-              <div className="absolute -top-8 -right-4 w-5 h-5 bg-purple-500/20 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
+              <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500/20 rounded-full animate-float" aria-hidden="true"></div>
+              <div className="absolute top-1/2 -right-12 w-4 h-4 bg-blue-500/20 rounded-full animate-float-slow" aria-hidden="true"></div>
+              <div className="absolute -top-8 -right-4 w-5 h-5 bg-purple-500/20 rounded-full animate-float" style={{animationDelay: '2s'}} aria-hidden="true"></div>
               
               {/* Additional floating balls in margins */}
               
-              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover-lift transition-all duration-500 relative overflow-hidden h-[32rem]">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover-lift transition-all duration-500 relative overflow-hidden h-[36rem]" role="dialog" aria-label="Conversation with Netia AI">
                 {/* Subtle gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50/10 via-transparent to-transparent pointer-events-none"></div>
                 
@@ -96,7 +111,7 @@ export const Hero = () => {
                 </div>
                 
                 {/* Chat Messages */}
-                <div className="space-y-3 relative z-10 h-[28rem] overflow-hidden">
+                <div className="space-y-4 relative z-10 h-[32rem] overflow-hidden">
                   {/* Customer Message */}
                   <div className="flex justify-end">
                     <div className="bg-gray-100 rounded-2xl rounded-br-md px-4 py-2 max-w-xs hover:bg-gray-200 transition-colors duration-300">
@@ -105,8 +120,10 @@ export const Hero = () => {
                   </div>
                   
                   {/* AI Response */}
-                  <div className="flex justify-start">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                  <div className="flex justify-start items-start gap-2">
+                    <div className="w-7 h-7 bg-blue-600 rounded-full flex-shrink-0 flex items-center justify-center" aria-hidden="true">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
                       <p className="text-sm text-white">We offer cleanings, fillings, crowns, and cosmetic procedures. What type of service are you looking for?</p>
                     </div>
@@ -120,8 +137,10 @@ export const Hero = () => {
                   </div>
                   
                   {/* AI Response */}
-                  <div className="flex justify-start">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                  <div className="flex justify-start items-start gap-2">
+                    <div className="w-7 h-7 bg-blue-600 rounded-full flex-shrink-0 flex items-center justify-center" aria-hidden="true">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
                       <p className="text-sm text-white">A cleaning and checkup is $180 total. This includes exam, cleaning, and X-rays if needed. We accept most insurance plans, so you&apos;d typically just pay your copay.</p>
                     </div>
@@ -136,12 +155,14 @@ export const Hero = () => {
                   
                   
                   {/* AI Response with Calendar Link */}
-                  <div className="flex justify-start">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                  <div className="flex justify-start items-start gap-2">
+                    <div className="w-7 h-7 bg-blue-600 rounded-full flex-shrink-0 flex items-center justify-center" aria-hidden="true">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
                       <p className="text-sm text-white">Here is our calendar:</p>
                       <div className="mt-2 bg-white/20 rounded-lg px-3 py-2 hover:bg-white/30 transition-colors duration-300 cursor-pointer group">
-                        <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300">📅 Book Your Appointment</p>
+                        <p className="text-xs text-white group-hover:scale-105 transition-transform duration-300 font-medium">📅 Book Your Appointment</p>
                       </div>
                     </div>
                   </div>
@@ -154,8 +175,10 @@ export const Hero = () => {
                   </div>
                   
                   {/* AI Response - Final */}
-                  <div className="flex justify-start">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex-shrink-0 mr-2"></div>
+                  <div className="flex justify-start items-start gap-2">
+                    <div className="w-7 h-7 bg-blue-600 rounded-full flex-shrink-0 flex items-center justify-center" aria-hidden="true">
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
                     <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs hover:bg-blue-700 transition-colors duration-300">
                       <p className="text-sm text-white">You&apos;re welcome! We&apos;ll send you a confirmation email once you book. Looking forward to seeing you soon! 😊</p>
                     </div>

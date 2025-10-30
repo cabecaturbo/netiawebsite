@@ -132,7 +132,7 @@ export default function StarterSignup() {
                 Start Your Free Trial
               </h1>
               <p className="text-muted">
-                Get started with Netia&apos;s 7-day free trial. No credit card required until trial ends.
+                Get started with your 7-day free trial.
               </p>
             </div>
 
@@ -140,7 +140,7 @@ export default function StarterSignup() {
             <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 mb-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold text-fg">Netia AI</h3>
+                  <h3 className="font-semibold text-fg">Netia AI 24/7 Chatbot</h3>
                   <p className="text-sm text-muted">7-day free trial</p>
                 </div>
                 <div className="text-right">

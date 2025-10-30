@@ -1,86 +1,61 @@
 export const Performance = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="section-spacing bg-gray-50" aria-labelledby="performance-heading">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold text-fg mb-4">
+          <header className="text-center mb-12 md:mb-16">
+            <h2 id="performance-heading" className="font-display text-3xl md:text-4xl font-semibold text-fg mb-4">
               Built for reliability
             </h2>
-            <h3 className="font-display text-2xl md:text-3xl font-semibold text-fg mb-8">
+            <p className="font-display text-xl md:text-2xl lg:text-3xl font-semibold text-muted mb-8">
               AI that works when you need it most
-            </h3>
-          </div>
+            </p>
+          </header>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <article className="text-center space-y-5 group">
+              <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-100 transition-all duration-300 shadow-sm group-hover:shadow-md" role="img" aria-label="24/7 Availability">
                 <span className="text-2xl font-display font-bold text-primary-600">24/7</span>
               </div>
               <div>
-                <h4 className="font-display text-lg font-semibold text-fg mb-2">
+                <h3 className="font-display text-xl font-semibold text-fg mb-3">
                   Always available
-                </h4>
-                <p className="text-muted">
+                </h3>
+                <p className="text-muted leading-relaxed">
                   AI responds to customer questions around the clock, even outside business hours
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-display font-bold text-primary-600">SECURE</span>
+            <article className="text-center space-y-5 group">
+              <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-100 transition-all duration-300 shadow-sm group-hover:shadow-md" role="img" aria-label="Secure Data Protection">
+                <span className="text-xl font-display font-bold text-primary-600">SECURE</span>
               </div>
               <div>
-                <h4 className="font-display text-lg font-semibold text-fg mb-2">
+                <h3 className="font-display text-xl font-semibold text-fg mb-3">
                   Bank-level security
-                </h4>
-                <p className="text-muted">
+                </h3>
+                <p className="text-muted leading-relaxed">
                   Your business data is protected with the same security standards used by banks and hospitals
                 </p>
               </div>
-            </div>
+            </article>
 
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl font-display font-bold text-primary-600">OpenAI</span>
+            <article className="text-center space-y-5 group">
+              <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-100 transition-all duration-300 shadow-sm group-hover:shadow-md" role="img" aria-label="OpenAI Technology">
+                <span className="text-xl font-display font-bold text-primary-600">OpenAI</span>
               </div>
               <div>
-                <h4 className="font-display text-lg font-semibold text-fg mb-2">
+                <h3 className="font-display text-xl font-semibold text-fg mb-3">
                   Powered by GPT-4
-                </h4>
-                <p className="text-muted">
+                </h3>
+                <p className="text-muted leading-relaxed">
                   Uses OpenAI&apos;s latest models for intelligent, context-aware responses
                 </p>
               </div>
-            </div>
-          </div>
-
-          {/* Testimonial */}
-          <div className="bg-surface border border-border rounded-lg p-8 md:p-12">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-start space-x-6">
-                <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-display font-bold text-lg">SC</span>
-                </div>
-                <div className="flex-1">
-                  <blockquote className="text-lg md:text-xl text-fg leading-relaxed mb-4">
-                    &ldquo;The AI answers customer questions about our hours and pricing instantly, and handles appointment booking when they want to schedule. 
-                    It&apos;s like having a receptionist that never sleeps and always knows the right answer.&rdquo;
-                  </blockquote>
-                  <div>
-                    <cite className="font-display font-semibold text-fg not-italic">
-                      Sarah Chen
-                    </cite>
-                    <p className="text-muted text-sm">
-                      Owner, Chen&apos;s Dental Practice
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
       </div>

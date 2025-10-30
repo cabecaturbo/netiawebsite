@@ -11,73 +11,43 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    name: 'GPT AI Engine',
-    description: 'Powered by OpenAI\'s most advanced language models for natural, intelligent conversations.',
+    name: 'Answer Visitor Questions Instantly',
+    description: 'Someone lands on your website and has questions. Our chatbot answers them right away - even at 2 AM. No more "we\'ll get back to you."',
+    icon: ChatBubbleLeftRightIcon,
+    highlights: ['Works 24/7', 'Answers fast', 'Saves you time']
+  },
+  {
+    name: 'Capture Every Lead',
+    description: 'When someone visits your site, we don\'t let them leave without their contact info. We ask the right questions and get their email or phone.',
     icon: SparklesIcon,
-    highlights: ['Natural language understanding', 'Context-aware responses', 'Multi-language support']
+    highlights: ['Never lose a lead', 'Collect contact info', 'Follow up automatically']
   },
   {
-    name: '24/7 Availability',
-    description: 'Never miss a customer inquiry with round-the-clock AI assistance.',
+    name: 'Book Appointments Automatically',
+    description: 'Your visitor wants to schedule? We handle it. We share your calendar link and help them pick a time that works.',
     icon: ClockIcon,
-    highlights: ['Instant responses', 'No downtime', 'Global timezone support']
+    highlights: ['Books appointments', 'Sends calendar links', 'Confirms bookings']
   },
   {
-    name: '2.3s Average Response',
-    description: 'Lightning-fast responses that keep customers engaged and satisfied.',
-    icon: ChatBubbleLeftRightIcon,
-    highlights: ['Sub-second processing', 'Real-time conversations', 'Optimized performance']
-  },
-  {
-    name: 'Business Integration',
-    description: 'Seamlessly connect with your existing systems and workflows.',
-    icon: CogIcon,
-    highlights: ['API integration', 'Webhook support', 'Custom configurations']
-  },
-  {
-    name: 'Data Security',
-    description: 'Enterprise-grade security with end-to-end encryption and compliance.',
+    name: 'Know Your Business',
+    description: 'Tell us your hours, prices, and services once. We remember everything and give customers the right answers every time.',
     icon: ShieldCheckIcon,
-    highlights: ['GDPR compliant', 'SOC 2 certified', 'Data encryption']
+    highlights: ['Remembers your info', 'Gets answers right', 'No training needed']
   },
   {
-    name: 'AI Voice Receptionist',
-    description: 'Natural voice conversations that answer calls and handle customer inquiries with human-like responses.',
-    icon: ChatBubbleLeftRightIcon,
-    highlights: ['Natural voice conversations', 'Call handling', 'Human-like responses'],
-    isComingSoon: false
+    name: 'Your Data is Private',
+    description: 'Your customer conversations stay private. We don\'t share your data with anyone. Each business gets their own secure space.',
+    icon: ShieldCheckIcon,
+    highlights: ['Data stays private', 'Secure storage', 'Your information protected']
+  },
+  {
+    name: 'Works on Your Website',
+    description: 'Add a simple code snippet to your website. That\'s it. Your chatbot starts working in minutes.',
+    icon: CogIcon,
+    highlights: ['Easy setup', 'One code snippet', 'Ready in minutes']
   }
 ]
 
-const technicalSpecs = [
-  {
-    category: 'AI Technology',
-    specs: [
-      { name: 'Language Model', value: 'GPT-4 Turbo' },
-      { name: 'Context Window', value: '128K tokens' },
-      { name: 'Response Time', value: '< 2.3 seconds' },
-      { name: 'Accuracy Rate', value: '98.5%' }
-    ]
-  },
-  {
-    category: 'Integration',
-    specs: [
-      { name: 'API Endpoints', value: 'REST & GraphQL' },
-      { name: 'Webhook Support', value: 'Real-time events' },
-      { name: 'SDK Languages', value: 'JavaScript, Python, PHP' },
-      { name: 'Authentication', value: 'OAuth 2.0 & API Keys' }
-    ]
-  },
-  {
-    category: 'Infrastructure',
-    specs: [
-      { name: 'Uptime SLA', value: '99.9%' },
-      { name: 'Global CDN', value: 'Edge locations' },
-      { name: 'Data Centers', value: 'Multi-region' },
-      { name: 'Backup Strategy', value: 'Real-time replication' }
-    ]
-  }
-]
 
 export default function FeaturesPage() {
   return (
@@ -89,10 +59,10 @@ export default function FeaturesPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="font-display font-semibold text-4xl md:text-5xl text-fg mb-4">
-              Core AI Capabilities
+              How Netia Helps Your Business
             </h1>
             <p className="text-xl text-muted mb-8 max-w-2xl mx-auto">
-              Built with cutting-edge technology to deliver exceptional customer experiences
+              When someone visits your website, we help you turn them into a paying customer
             </p>
           </div>
 
@@ -152,93 +122,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Technical Specifications */}
-      <section className="py-10 bg-white relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-display font-semibold text-3xl md:text-4xl text-fg mb-4">
-              Technical Specifications
-            </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
-              Enterprise-grade technology stack built for scale and reliability
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {technicalSpecs.map((category, index) => (
-              <div
-                key={category.category}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100 hover-lift transition-all duration-500"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <h3 className="font-display font-semibold text-xl text-fg mb-6 text-center">
-                  {category.category}
-                </h3>
-                
-                <div className="space-y-4">
-                  {category.specs.map((spec, idx) => (
-                    <div key={idx} className="flex justify-between items-center py-3 border-b border-gray-100 last:border-b-0">
-                      <span className="text-sm text-muted font-medium">{spec.name}</span>
-                      <span className="text-sm font-semibold text-fg">{spec.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integration Examples */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-display font-semibold text-3xl md:text-4xl text-fg mb-4">
-              Easy Integration
-            </h2>
-            <p className="text-lg text-muted max-w-2xl mx-auto">
-              Get started in minutes with our simple integration process
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-900 rounded-2xl p-8 text-white font-mono text-sm overflow-x-auto">
-              <div className="flex items-center mb-4">
-                <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-                <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full mr-4"></div>
-                <span className="text-gray-400">Integration Example</span>
-              </div>
-              <pre className="text-green-400">
-{`// Install Netia SDK
-npm install @netia/ai-sdk
-
-// Initialize with your API key
-import { NetiaAI } from '@netia/ai-sdk';
-
-const netia = new NetiaAI({
-  apiKey: 'your-api-key',
-  businessProfile: {
-    name: 'Your Business',
-    hours: '9am-6pm EST',
-    services: ['Consultation', 'Support']
-  }
-});
-
-// Handle customer messages
-app.post('/webhook', async (req, res) => {
-  const response = await netia.processMessage({
-    message: req.body.message,
-    customerId: req.body.customerId
-  });
-  
-  res.json({ reply: response.message });
-});`}
-              </pre>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary-500 to-primary-600 relative overflow-hidden">
@@ -246,10 +130,10 @@ app.post('/webhook', async (req, res) => {
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="font-display font-semibold text-3xl md:text-4xl mb-6">
-              Ready to Transform Your Customer Service?
+              Ready to Turn More Visitors Into Customers?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands of businesses already using Netia to provide exceptional AI-powered customer support.
+              Stop losing leads on your website. Start capturing them today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

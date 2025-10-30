@@ -8,7 +8,6 @@ export const Footer = () => {
         { name: "Home", href: "/" },
         { name: "Demo", href: "/demo" },
         { name: "Pricing", href: "/pricing" },
-        { name: "Integration Guide", href: "/integrate" },
         { name: "Dashboard", href: "https://app.netia.ai/dashboard" },
         { name: "Cancel Subscription", href: "/cancel" }
       ]
@@ -55,7 +54,7 @@ export const Footer = () => {
               </Link>
             </div>
             <p className="text-muted text-sm leading-relaxed">
-              AI receptionist that answers customer questions 24/7 and handles appointment booking.
+              AI chatbot that answers customer questions 24/7 and handles appointment booking.
             </p>
             <div className="flex items-center space-x-0.5 pt-4">
               <span className="text-sm text-gray-600">Powered by</span>

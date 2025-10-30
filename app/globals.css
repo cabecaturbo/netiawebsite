@@ -17,8 +17,8 @@
   --pill-fg: #ffffff;
 
   /* 2025 Design Trends */
-  --mocha-mousse: #8B4513;
-  --warm-accent: #D2691E;
+  --mocha-mousse: #8B7355;
+  --warm-accent: #A8957A;
   --soothing-blue: #E6F3FF;
 }
 
@@ -33,7 +33,7 @@
   --color-primary-600: var(--primary-600);
   --color-pill-bg: var(--pill-bg);
   --color-pill-fg: var(--pill-fg);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-gyrochrome);
   --font-display: var(--font-sora);
 }
 
@@ -46,8 +46,12 @@ html {
 }
 
 body {
-  font-family: var(--font-inter), ui-sans-serif, system-ui;
-  line-height: 1.6;
+  font-family: var(--font-gyrochrome), ui-sans-serif, system-ui;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Smooth animations and transitions */
@@ -262,4 +266,34 @@ body {
 /* Smooth transitions */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Typography scale for better hierarchy */
+h1, .text-4xl, .text-5xl, .text-6xl {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+h2, h3, .text-2xl, .text-3xl {
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+p, .text-base, .text-lg {
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+/* Consistent section spacing */
+.section-spacing {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-spacing {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }

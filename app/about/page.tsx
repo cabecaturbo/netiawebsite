@@ -17,7 +17,7 @@ export default function About() {
               We Know What It&apos;s Like to Miss a Sale
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
-              We built Netia because we&apos;ve been there. Missing calls, losing customers, watching money walk out the door. Now every small business can have the customer service of a Fortune 500 company.
+              We built Netia because we&apos;ve been there. Missing customers, losing opportunities, watching money walk out the door. Now every small business can have the customer service of a Fortune 500 company.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function About() {
             <div className="bg-surface border border-border rounded-lg p-8">
               <div className="text-center">
                 <p className="text-lg text-muted mb-6">
-                  We&apos;ve been in your shoes. The frustration of missing calls, the stress of trying to be everywhere at once, the fear of losing customers to competitors who answer their phones.
+                  We&apos;ve been in your shoes. The frustration of missing customers, the stress of trying to be everywhere at once, the fear of losing opportunities to competitors who respond faster.
                 </p>
                 <p className="text-muted">
                   That&apos;s why we built Netia - so you never have to choose between growing your business and serving your customers. Now you can do both.
@@ -116,24 +116,16 @@ export default function About() {
                 <div className="text-3xl font-bold text-primary-600 mb-2">24/7</div>
                 <div className="text-sm text-muted">Always Available</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">98%</div>
-                <div className="text-sm text-muted">Customer Satisfaction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-2">1000+</div>
-                <div className="text-sm text-muted">Businesses Served</div>
-              </div>
             </div>
           </div>
 
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="font-display text-2xl font-semibold text-fg mb-4">
-              Ready to stop missing calls and start booking more customers?
+              Ready to stop missing customers and start booking more appointments?
             </h2>
             <p className="text-muted mb-8">
-              Join 500+ businesses who never miss another opportunity. Start your free trial today.
+              Start your free trial today and never miss another opportunity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

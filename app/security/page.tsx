@@ -26,9 +26,9 @@ export default function Security() {
             {/* Security Overview */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               <div>
-                <h2 className="font-display text-3xl font-semibold text-fg mb-6">Enterprise-Grade Security</h2>
+                <h2 className="font-display text-3xl font-semibold text-fg mb-6">Security First</h2>
                 <p className="text-lg text-muted mb-6">
-                  We implement industry-leading security measures to protect your data at every level, from encryption to access controls and monitoring.
+                  We take data security seriously and implement industry-standard practices to protect your business and customer information.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
@@ -37,7 +37,7 @@ export default function Security() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-muted">SOC 2 Type II Compliant</span>
+                    <span className="text-muted">HTTPS/TLS Encryption</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
@@ -45,7 +45,7 @@ export default function Security() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-muted">GDPR Compliant</span>
+                    <span className="text-muted">Rate Limiting & Abuse Prevention</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center">
@@ -53,7 +53,7 @@ export default function Security() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                    <span className="text-muted">ISO 27001 Certified</span>
+                    <span className="text-muted">Secure API Authentication</span>
                   </div>
                 </div>
               </div>
@@ -65,8 +65,8 @@ export default function Security() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-fg mb-2">Zero Trust Architecture</h3>
-                  <p className="text-sm text-muted">Every request is verified and authenticated, with no implicit trust assumptions.</p>
+                  <h3 className="font-semibold text-fg mb-2">Input Validation</h3>
+                  <p className="text-sm text-muted">All webhook requests are validated to prevent malicious payloads and ensure data integrity.</p>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function Security() {
                 </div>
                 <h3 className="font-display text-xl font-semibold text-fg mb-3">Access Controls</h3>
                 <p className="text-muted">
-                  Multi-factor authentication, role-based permissions, and regular access reviews ensure secure access.
+                  Secure authentication through environment variables and API keys protect your chatbot configuration.
                 </p>
               </div>
 
@@ -104,9 +104,9 @@ export default function Security() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <h3 className="font-display text-xl font-semibold text-fg mb-3">Monitoring</h3>
+                <h3 className="font-display text-xl font-semibold text-fg mb-3">Error Handling</h3>
                 <p className="text-muted">
-                  24/7 security monitoring with automated threat detection and incident response.
+                  Comprehensive error handling with logging and fallback mechanisms to maintain service reliability.
                 </p>
               </div>
 
@@ -140,9 +140,9 @@ export default function Security() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="font-display text-xl font-semibold text-fg mb-3">Compliance</h3>
+                <h3 className="font-display text-xl font-semibold text-fg mb-3">Environment Isolation</h3>
                 <p className="text-muted">
-                  SOC 2, GDPR, and ISO 27001 compliance with regular third-party security audits.
+                  Safe development practices with DRY_RUN mode and environment-based configurations.
                 </p>
               </div>
             </div>
@@ -153,46 +153,46 @@ export default function Security() {
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="bg-surface border border-border rounded-lg p-8">
-                  <h3 className="font-display text-xl font-semibold text-fg mb-4">Encryption Standards</h3>
-                  <ul className="space-y-3 text-muted">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>TLS 1.3:</strong> All data in transit is encrypted using the latest TLS protocol</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>AES-256:</strong> Data at rest is encrypted using military-grade encryption</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Key Management:</strong> Encryption keys are managed using AWS KMS with automatic rotation</span>
-                    </li>
-                  </ul>
+                <h3 className="font-display text-xl font-semibold text-fg mb-4">Security Practices</h3>
+                <ul className="space-y-3 text-muted">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>HTTPS/TLS:</strong> All web traffic encrypted in transit using secure protocols</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Rate Limiting:</strong> Protection against abuse and DDoS attacks</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Error Logging:</strong> Comprehensive logging for security monitoring and incident response</span>
+                  </li>
+                </ul>
                 </div>
 
                 <div className="bg-surface border border-border rounded-lg p-8">
-                  <h3 className="font-display text-xl font-semibold text-fg mb-4">Access Security</h3>
-                  <ul className="space-y-3 text-muted">
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>MFA Required:</strong> All accounts must use multi-factor authentication</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Role-Based Access:</strong> Granular permissions based on user roles and responsibilities</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Session Management:</strong> Automatic session timeouts and secure session handling</span>
-                    </li>
-                  </ul>
+                <h3 className="font-display text-xl font-semibold text-fg mb-4">Access Security</h3>
+                <ul className="space-y-3 text-muted">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>API Keys:</strong> All external API calls authenticated with secure keys</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Environment Variables:</strong> Sensitive configuration stored securely</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+                    <span><strong>Request Validation:</strong> All incoming requests validated before processing</span>
+                  </li>
+                </ul>
                 </div>
               </div>
             </div>
 
-            {/* Security Certifications */}
+            {/* Infrastructure Security */}
             <div className="mb-16">
-              <h2 className="font-display text-3xl font-semibold text-fg text-center mb-12">Security Certifications</h2>
+              <h2 className="font-display text-3xl font-semibold text-fg text-center mb-12">Infrastructure Security</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
@@ -201,8 +201,8 @@ export default function Security() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-fg mb-2">SOC 2 Type II</h3>
-                  <p className="text-sm text-muted">Audited security controls and processes</p>
+                  <h3 className="font-semibold text-fg mb-2">Cloud Hosting</h3>
+                  <p className="text-sm text-muted">Deployed on secure cloud infrastructure</p>
                 </div>
                 
                 <div className="text-center">
@@ -211,8 +211,8 @@ export default function Security() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-fg mb-2">GDPR Compliant</h3>
-                  <p className="text-sm text-muted">European data protection standards</p>
+                  <h3 className="font-semibold text-fg mb-2">Regular Updates</h3>
+                  <p className="text-sm text-muted">Dependencies and packages kept up to date</p>
                 </div>
                 
                 <div className="text-center">
@@ -221,8 +221,8 @@ export default function Security() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <h3 className="font-semibold text-fg mb-2">ISO 27001</h3>
-                  <p className="text-sm text-muted">Information security management</p>
+                  <h3 className="font-semibold text-fg mb-2">Data Privacy</h3>
+                  <p className="text-sm text-muted">Commitment to protecting user data</p>
                 </div>
               </div>
             </div>
@@ -233,14 +233,14 @@ export default function Security() {
                 Questions about security?
               </h2>
               <p className="text-muted mb-8">
-                Our security team is available to answer any questions about our security measures and compliance.
+                We&apos;re committed to security best practices and continuous improvement. Contact us with any questions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="mailto:security@netia.ai"
+                  href="mailto:support@netia.ai"
                   className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-colors btn-enhanced"
                 >
-                  Contact Security Team
+                  Contact Support
                 </a>
                 <a
                   href="/privacy"

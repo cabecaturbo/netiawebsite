@@ -65,22 +65,18 @@ export const Header = () => {
             </Link>
             
             {/* Navigation Links */}
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="/features" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
+            <nav className="hidden md:flex items-center space-x-6" role="navigation" aria-label="Main navigation">
+              <Link href="/features" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group" aria-label="View features">
                 Features
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
               </Link>
-              <Link href="/pricing" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
+              <Link href="/pricing" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group" aria-label="View pricing">
                 Pricing
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
               </Link>
-              <Link href="/demo" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
+              <Link href="/demo" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group" aria-label="Watch demo">
                 Demo
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
-              </Link>
-              <Link href="/integrate" className="text-sm text-muted hover:text-fg transition-all duration-300 relative group">
-                Integrate
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
               </Link>
             </nav>
           </div>
@@ -129,7 +125,7 @@ export const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 hover:bg-surface rounded-lg transition-colors duration-300"
+            className="md:hidden p-3 min-w-[44px] min-h-[44px] hover:bg-surface rounded-lg transition-colors duration-300 flex items-center justify-center"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
@@ -188,15 +184,6 @@ export const Header = () => {
             >
               Demo
             </Link>
-            <Link 
-              href="/integrate" 
-              className={`block w-full text-left text-sm text-muted hover:text-fg transition-all duration-300 transform ${
-                isMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-4 opacity-0'
-              }`}
-              style={{transitionDelay: isMenuOpen ? '0.25s' : '0s'}}
-            >
-              Integrate
-            </Link>
             <div className="pt-4 space-y-2">
               {showDashboardButtons ? (
                 <>
@@ -209,7 +196,7 @@ export const Header = () => {
                   </div>
                   <Link
                     href="https://app.netia.ai/dashboard"
-                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
+                    className={`block w-full px-4 py-3 min-h-[44px] text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
                     style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
@@ -218,7 +205,7 @@ export const Header = () => {
                   </Link>
                   <button
                     onClick={handleLogout}
-                    className={`block w-full px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-full text-center hover:bg-red-600 transition-all duration-300 hover-lift transform ${
+                    className={`block w-full px-4 py-3 min-h-[44px] text-sm font-medium text-white bg-red-500 rounded-full text-center hover:bg-red-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
                     style={{transitionDelay: isMenuOpen ? '0.4s' : '0s'}}
@@ -230,7 +217,7 @@ export const Header = () => {
                 <>
                   <Link
                     href="/login"
-                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
+                    className={`block w-full px-4 py-3 min-h-[44px] text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
                     style={{transitionDelay: isMenuOpen ? '0.3s' : '0s'}}
@@ -239,7 +226,7 @@ export const Header = () => {
                   </Link>
                   <a
                     href="/demo"
-                    className={`block w-full px-4 py-2 text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
+                    className={`block w-full px-4 py-3 min-h-[44px] text-sm font-medium text-fg border border-border rounded-full text-center hover:bg-surface hover:border-primary-200 hover:text-primary-600 transition-all duration-300 hover-lift transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
                     style={{transitionDelay: isMenuOpen ? '0.35s' : '0s'}}
@@ -248,7 +235,7 @@ export const Header = () => {
                   </a>
                   <a
                     href="/pricing"
-                    className={`block w-full px-4 py-2 text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-all duration-300 hover-lift hover-glow transform ${
+                    className={`block w-full px-4 py-3 min-h-[44px] text-sm font-medium text-white bg-primary-500 rounded-full text-center hover:bg-primary-600 transition-all duration-300 hover-lift hover-glow transform ${
                       isMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                     }`}
                     style={{transitionDelay: isMenuOpen ? '0.4s' : '0s'}}

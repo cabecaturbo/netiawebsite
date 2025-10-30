@@ -208,60 +208,6 @@ export default function Pricing() {
             </div>
           </div>
 
-          {/* Selection Flow */}
-          <div className="mt-16 max-w-4xl mx-auto">
-            <div id="ai-selection-box" className="relative bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="relative z-10">
-                <h3 className="font-display text-3xl font-bold text-fg mb-2 text-center">
-                  Choose Your AI Solutions
-                </h3>
-                <p className="text-muted text-center mb-8 text-lg">Select the AI tools that will transform your business</p>
-                <div className="space-y-4">
-                  <label className="flex items-center p-6 border-2 border-gray-200 rounded-xl hover:bg-gray-50 cursor-pointer transition-all duration-300 hover:border-gray-300 hover:shadow-md group has-[:checked]:bg-blue-200 has-[:checked]:border-blue-300 has-[:checked]:text-blue-800">
-                    <input type="checkbox" className="w-5 h-5 text-blue-500 border-gray-300 rounded focus:ring-blue-400 focus:ring-2" />
-                    <div className="ml-4 flex-1">
-                      <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI ChatBot - $79/month</div>
-                      <div className="text-muted">AI assistant for your website</div>
-                    </div>
-                    <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  </label>
-                  
-                  <label className="flex items-center p-6 border-2 border-gray-200 rounded-xl hover:bg-gray-50 cursor-pointer transition-all duration-300 hover:border-gray-300 hover:shadow-md group has-[:checked]:bg-blue-200 has-[:checked]:border-blue-300 has-[:checked]:text-blue-800">
-                    <input type="checkbox" className="w-5 h-5 text-blue-500 border-gray-300 rounded focus:ring-blue-400 focus:ring-2" />
-                    <div className="ml-4 flex-1">
-                      <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Receptionist - $199/month</div>
-                      <div className="text-muted">AI receptionist for your phone calls</div>
-                      <div className="text-xs text-yellow-600 font-semibold mt-1">Coming Soon</div>
-                    </div>
-                    <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  </label>
-                  
-                  <label className="flex items-center p-6 border-2 border-gray-200 rounded-xl hover:bg-gray-50 cursor-pointer transition-all duration-300 hover:border-gray-300 hover:shadow-md group has-[:checked]:bg-blue-200 has-[:checked]:border-blue-300 has-[:checked]:text-blue-800">
-                    <input type="checkbox" className="w-5 h-5 text-blue-500 border-gray-300 rounded focus:ring-blue-400 focus:ring-2" />
-                    <div className="ml-4 flex-1">
-                      <div className="font-semibold text-fg text-lg group-hover:text-blue-700 transition-colors">AI Lead Follow-Up - $199/month</div>
-                      <div className="text-muted">AI follow-up for your leads</div>
-                      <div className="text-xs text-yellow-600 font-semibold mt-1">Coming Soon</div>
-                    </div>
-                    <div className="w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  </label>
-                </div>
-              
-                <div className="mt-8 text-center">
-                  <button
-                    onClick={handleGetStarted}
-                    className="inline-block px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-medium hover:bg-blue-200 active:bg-blue-200 transition-colors hover-lift btn-enhanced"
-                  >
-                    Start 7 day free trial
-                  </button>
-                  <p className="text-sm text-muted mt-3">
-                    Processed by Stripe • Cancel anytime
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </main>
       <Footer />
