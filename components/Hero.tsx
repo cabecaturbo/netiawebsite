@@ -87,7 +87,7 @@ export const Hero = () => {
 
           {/* Right Visual */}
           <div className="flex justify-center md:justify-end">
-            <div className="w-full max-w-md lg:max-w-lg relative pt-4" role="img" aria-label="AI chatbot conversation demo">
+            <div className="w-full max-w-md lg:max-w-lg relative pt-4 font-display md:font-sans" role="img" aria-label="AI chatbot conversation demo">
               {/* Floating elements hugging the chat image */}
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary-500/20 rounded-full md:animate-float" aria-hidden="true"></div>
               <div className="absolute top-1/2 -right-12 w-4 h-4 bg-blue-500/20 rounded-full md:animate-float-slow" aria-hidden="true"></div>
