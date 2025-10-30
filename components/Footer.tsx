@@ -8,8 +8,7 @@ export const Footer = () => {
         { name: "Home", href: "/" },
         { name: "Demo", href: "/demo" },
         { name: "Pricing", href: "/pricing" },
-        { name: "Dashboard", href: "https://app.netia.ai/dashboard" },
-        { name: "Cancel Subscription", href: "/cancel" }
+        { name: "Dashboard", href: "https://app.netia.ai/dashboard" }
       ]
     },
     {
