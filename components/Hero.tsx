@@ -9,19 +9,23 @@ export const Hero = () => {
       <div className="container mx-auto px-4 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div className="space-y-4 animate-fade-in-up">
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
                 <span className="block animate-slide-in-left animate-stagger-1">Never Miss Another</span>
                 <span className="block text-primary-500 animate-slide-in-left animate-stagger-2">
-                  Lead Again
+                  Client Again
                 </span>
               </h1>
+              <div className="h-3"></div>
               <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-3">
-                Our AI chatbot answers visitor questions instantly and books appointments 24/7 - never miss another customer. 
+                Our AI chatbot answers visitor questions instantly and books appointments 24/7 - never miss another client. 
                 <span className="text-fg font-semibold"> Start free today.</span>
               </p>
             </div>
+            
+            {/* Spacer */}
+            <div className="h-6"></div>
             
             {/* Urgency Banner */}
             <div className="inline-flex items-center px-4 py-3 bg-green-50 border border-green-200 rounded-full text-sm text-green-700 animate-fade-in-up animate-stagger-4">
@@ -31,6 +35,9 @@ export const Hero = () => {
               <span className="mx-2">•</span>
               <span>Cancel anytime</span>
             </div>
+            
+            {/* Spacer */}
+            <div className="h-8"></div>
             
             {/* Powered by OpenAI */}
             <div className="flex items-center space-x-2 animate-fade-in-up animate-stagger-5">

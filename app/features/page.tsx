@@ -17,10 +17,10 @@ const features = [
     highlights: ['Works 24/7', 'Answers fast', 'Saves you time']
   },
   {
-    name: 'Capture Every Lead',
+    name: 'Capture Every Client',
     description: 'When someone visits your site, we don\'t let them leave without their contact info. We ask the right questions and get their email or phone.',
     icon: SparklesIcon,
-    highlights: ['Never lose a lead', 'Collect contact info', 'Follow up automatically']
+    highlights: ['Never lose a client', 'Collect contact info', 'Follow up automatically']
   },
   {
     name: 'Book Appointments Automatically',
