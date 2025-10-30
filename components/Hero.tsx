@@ -202,7 +202,7 @@ export const Hero = () => {
         {/* Stats and CTA Buttons - Horizontally Aligned */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-16">
           {/* CTA Buttons Section - Left Side */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-0">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-4 mb-6 md:mb-0">
             <a
               href="/pricing"
               className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced group shadow-lg"
