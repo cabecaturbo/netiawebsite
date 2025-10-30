@@ -12,7 +12,6 @@ export default function SignupSuccess() {
   const [isVerifying, setIsVerifying] = useState(true)
   const [isVerified, setIsVerified] = useState(false)
   const [error, setError] = useState('')
-  const [error, setError] = useState('')
 
   useEffect(() => {
     const verifySession = async () => {
