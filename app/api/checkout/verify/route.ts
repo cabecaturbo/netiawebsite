@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '')
-
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
@@ -21,6 +19,8 @@ export async function GET(request: NextRequest) {
         { status: 500 }
       )
     }
+
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
     // Retrieve the Checkout Session
     const session = await stripe.checkout.sessions.retrieve(sessionId)

@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '')
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -22,10 +20,12 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+
     // Use Stripe Price ID if available, otherwise use price_data
     const stripePriceId = process.env.STRIPE_PRICE_ID
     
-    let lineItems
+    let lineItems: Stripe.Checkout.SessionCreateParams.LineItem[]
     if (stripePriceId) {
       // Use existing Stripe Price ID (recommended)
       lineItems = [
@@ -48,7 +48,7 @@ export async function POST(request: NextRequest) {
             },
             unit_amount: monthlyPrice,
             recurring: {
-              interval: 'month',
+              interval: 'month' as const,
             },
           },
           quantity: 1,
