@@ -49,7 +49,7 @@ const features = [
     name: 'Powered by OpenAI',
     description: 'Built with cutting-edge AI technology that understands context and delivers smart, helpful responses to your patients.',
     icon: CogIcon,
-    highlights: ['State-of-the-art AI', 'Contextual understanding', 'Natural conversations'],
+    highlights: ['Using the latest models', 'Contextual understanding', 'Natural conversations'],
     isComingSoon: false
   }
 ]
