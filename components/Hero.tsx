@@ -18,7 +18,7 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl lg:text-2xl text-muted max-w-2xl leading-relaxed animate-fade-in-up animate-stagger-3">
-                Stop losing leads on your website. Our AI chatbot answers visitor questions instantly and books appointments 24/7 - never miss another customer. 
+                Stop losing potential clients on your website. Our AI chatbot answers visitor questions instantly and books appointments 24/7 - never miss another customer. 
                 <span className="text-fg font-semibold"> Start free today.</span>
               </p>
               

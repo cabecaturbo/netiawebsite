@@ -133,7 +133,7 @@ export default function FeaturesPage() {
               Ready to Turn More Visitors Into Customers?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Stop losing leads on your website. Start capturing them today.
+              Stop losing potential clients on your website. Start capturing them today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

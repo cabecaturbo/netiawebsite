@@ -21,7 +21,7 @@ export const Process = () => {
     {
       number: "04",
       title: "Watch your business grow",
-      description: "More appointments, fewer missed leads, happier customers.",
+      description: "More appointments, fewer missed potential clients, happier customers.",
       action: "View dashboard"
     }
   ]
