@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { inter, sora } from "./fonts";
 import "./globals.css";
 import { PapercupsBootstrap } from "@/src/components/integrations/PapercupsBootstrap";
+import { ChatWidget } from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   title: "Netia - AI That Works",
@@ -57,6 +58,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-white text-fg">
         {children}
         <PapercupsBootstrap />
+        <ChatWidget enabled={process.env.NEXT_PUBLIC_CHAT_WIDGET_ENABLED !== 'false'} />
       </body>
     </html>
   );

@@ -39,9 +39,20 @@ export async function GET(request: NextRequest) {
     // Status 'complete' indicates successful checkout
     if (session.status === 'complete') {
       // Extract customer and subscription IDs (can be string or object)
-      const customerId = typeof session.customer === 'string'
-        ? session.customer
-        : (session.customer as Stripe.Customer | null)?.id || session.customer_email || null
+      let customerId: string | null = null
+      if (typeof session.customer === 'string') {
+        customerId = session.customer
+      } else if (session.customer && (session.customer as Stripe.Customer).id) {
+        customerId = (session.customer as Stripe.Customer).id
+      } else if (typeof session.subscription === 'string') {
+        try {
+          const s = await stripe.subscriptions.retrieve(session.subscription)
+          customerId = typeof s.customer === 'string' ? s.customer : s.customer?.id || null
+        } catch {}
+      } else if (session.subscription && (session.subscription as Stripe.Subscription).customer) {
+        const sub = session.subscription as Stripe.Subscription
+        customerId = typeof sub.customer === 'string' ? sub.customer : sub.customer?.id || null
+      }
       
       let subscriptionId: string | null = null
       if (typeof session.subscription === 'string') {
