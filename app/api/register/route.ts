@@ -59,14 +59,51 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(data, { status: response.status })
     }
 
-    // Return tokens and account_id if available (frontend will store them)
+    // Try to determine account_id from various possible shapes
+    let accountId =
+      data?.data?.account_id ||
+      data?.data?.accountId ||
+      data?.data?.user_id ||
+      data?.data?.id ||
+      data?.data?.account?.id ||
+      data?.account?.id ||
+      null
+
+    // Fallback: if we have a token but no accountId, query accounts/me
+    if (!accountId && data?.data?.token) {
+      try {
+        const meResp = await fetch(`${apiUrl}/api/accounts/me`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${data.data.token}`,
+          },
+        })
+        if (meResp.ok) {
+          const me = await meResp.json()
+          accountId =
+            me?.data?.account_id ||
+            me?.data?.accountId ||
+            me?.data?.id ||
+            me?.account_id ||
+            me?.accountId ||
+            me?.id ||
+            me?.data?.account?.id ||
+            me?.account?.id ||
+            accountId
+        }
+      } catch (e) {
+        // ignore and proceed without accountId
+      }
+    }
+
+    // Return tokens and best-effort account_id (frontend will require UUID before Stripe)
     return NextResponse.json({
       success: true,
       data: {
         token: data.data.token,
         renew_token: data.data.renew_token,
-        // Pass through account_id if backend returns it (check various possible field names)
-        account_id: data.data.account_id || data.data.accountId || data.data.user_id || data.data.id,
+        account_id: accountId,
       },
     })
   } catch (error) {
