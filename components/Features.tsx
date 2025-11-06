@@ -19,13 +19,9 @@ export const Features = () => {
       icon: <img src="/journal.png" alt="Business knowledge" className="w-8 h-8" style={{filter: 'brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(3086%) hue-rotate(210deg) brightness(99%) contrast(101%)'}} />
     },
     {
-      title: "Powered by OpenAI",
-      description: "Built with cutting-edge AI technology that understands context and delivers smart, helpful responses to your customers.",
-      icon: (
-        <div className="relative w-24 h-8">
-          <Image src="/openai-logo.png" alt="OpenAI" fill className="object-contain" />
-        </div>
-      )
+      title: "Fast, No‑Code Setup",
+      description: "Add a single script and start helping customers in minutes—no engineering required.",
+      icon: <img src="/window.svg" alt="Easy setup" className="w-8 h-8" style={{filter: 'brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(3086%) hue-rotate(210deg) brightness(99%) contrast(101%)'}} />
     }
   ]
 
