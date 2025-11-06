@@ -43,7 +43,7 @@ export default function Pricing() {
                   AI ChatBot
                 </h3>
                 <div className="text-4xl font-bold text-blue-700 mt-4">
-                  $79<span className="text-lg font-normal text-muted">/month</span>
+                  $49<span className="text-lg font-normal text-muted">/month</span>
                 </div>
                 <p className="text-sm text-muted mt-2">
                   Turn website visitors into booked appointments instantly

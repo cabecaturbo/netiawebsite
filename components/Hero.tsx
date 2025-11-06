@@ -1,11 +1,12 @@
 // import { FloatingBalls } from './FloatingBalls'
 
 import Image from 'next/image'
+import { Button } from './Button'
 
 export const Hero = () => {
   return (
-    <section className="relative overflow-hidden pt-20 pb-12 md:pt-28 md:pb-16">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50/30 via-transparent to-primary-50/20" />
+    <section className="section-spacing relative overflow-hidden bg-soft">
+      <div className="absolute inset-0 bg-noise pointer-events-none" />
 
       {/* Floating decorative balls */}
       <div className="pointer-events-none absolute inset-0">
@@ -23,54 +24,39 @@ export const Hero = () => {
         <div className="absolute bottom-[22%] right-[32%] w-3 h-3 rounded-full bg-primary-500/20 animate-float" />
       </div>
 
-      <div className="container mx-auto px-4 relative">
+      <div className="container-g relative">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left column */}
           <div className="max-w-3xl">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-fg leading-tight">
-              Never Miss Another <span className="text-primary-500">Appointment</span>
+            <h1 className="font-display tracking-tight text-fg text-5xl md:text-6xl lg:text-7xl leading-[1.05] font-bold mb-6">
+              Never Miss Another <span className="text-brand-500">Appointment</span>
             </h1>
-            <div className="mt-1 flex items-center gap-0">
-              <span className="text-base text-gray-700">Powered by</span>
+
+            <div className="mt-3 mb-6 flex items-center gap-0">
+              <span className="text-base text-muted font-medium">Powered by</span>
               <div className="relative h-7 w-[110px] md:h-8 md:w-[124px] -ml-[20px]">
                 <Image src="/openai-logo.png" alt="OpenAI" fill sizes="(max-width: 768px) 110px, 124px" className="object-contain" />
               </div>
             </div>
-            <p className="mt-4 text-lg md:text-xl text-muted leading-relaxed max-w-2xl">
-              Your potential customers are browsing your services on your website—ready to book. Netia answers questions 24/7 and schedules consultations instantly.
+
+            <p className="mt-6 mb-8 text-xl md:text-2xl text-muted leading-relaxed max-w-2xl font-light">
+              Your potential customers are browsing your services—ready to book. Netia answers questions 24/7 and schedules consultations instantly.
             </p>
-            <div className="mt-6 inline-flex items-center rounded-full border border-green-200 bg-green-50 px-4 py-2.5 text-sm text-green-700">
-              <span>Free trial</span>
-              <span className="mx-2">•</span>
-              <span>No setup fees</span>
-              <span className="mx-2">•</span>
-              <span>Cancel anytime</span>
+
+            <div className="mb-8 inline-flex items-center rounded-full border-2 border-green-200 bg-green-50 px-5 py-3 text-sm font-medium text-green-800 shadow-sm">
+              <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+              Free trial <span className="mx-2.5">•</span> No setup fees <span className="mx-2.5">•</span> Cancel anytime
+          </div>
+
+            <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
+              <Button href="/pricing">Start Free Trial</Button>
+              <Button href="/demo" variant="secondary">Watch Demo</Button>
             </div>
-            <div className="mt-8 flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-4">
-              <a
-                href="/pricing"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-primary-500 rounded-full hover:bg-primary-600 transition-all duration-300 hover-lift btn-enhanced group shadow-lg"
-              >
-                <span className="relative z-10">Start Free Trial</span>
-                <svg className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </a>
-              <a
-                href="/demo"
-                className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-fg border-2 border-border rounded-full hover:bg-surface transition-all duration-300 hover-lift btn-enhanced group"
-              >
-                <span className="relative z-10">Watch Demo</span>
-                <svg className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-              </a>
-            </div>
-            </div>
+          </div>
 
           {/* Right column visual (dental chat) */}
           <div className="hidden md:block">
-            <div className="relative overflow-hidden rounded-xl border bg-white p-6 shadow-sm h-[28rem]">
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-white p-6 shadow-card hover:shadow-hover transition h-[28rem]">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-50/10 via-transparent to-transparent pointer-events-none" />
               <div className="flex items-center justify-between pb-3 border-b border-gray-100">
                 <div className="flex items-center gap-3">

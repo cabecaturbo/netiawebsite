@@ -1,22 +1,52 @@
+import Image from 'next/image'
+
 export const Footer = () => {
   return (
-    <footer className="bg-white border-t border-border">
-      <div className="container mx-auto px-4 py-10">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm text-muted">
-            © 2025 Netia. All rights reserved. Seattle, WA
-          </p>
-          <div className="flex items-center space-x-6">
-            <a href="/terms" className="text-sm text-muted hover:text-fg transition-colors">
-              Terms
-            </a>
-            <a href="/privacy" className="text-sm text-muted hover:text-fg transition-colors">
-              Privacy
-            </a>
-            <a href="/security" className="text-sm text-muted hover:text-fg transition-colors">
-              Security
-            </a>
+    <footer className="border-t border-border bg-white">
+      <div className="container-g py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div>
+            <div className="text-sm font-semibold text-fg mb-3">Product</div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/features" className="text-muted hover:text-fg transition-colors">Features</a></li>
+              <li><a href="/features/chat" className="text-muted hover:text-fg transition-colors">Chatbot</a></li>
+              <li><a href="/demo" className="text-muted hover:text-fg transition-colors">Demo</a></li>
+              <li><a href="/pricing" className="text-muted hover:text-fg transition-colors">Pricing</a></li>
+            </ul>
           </div>
+          <div>
+            <div className="text-sm font-semibold text-fg mb-3">Company</div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/about" className="text-muted hover:text-fg transition-colors">About</a></li>
+              <li><a href="/waitlist" className="text-muted hover:text-fg transition-colors">Waitlist</a></li>
+              <li><a href="/login" className="text-muted hover:text-fg transition-colors">Login</a></li>
+              <li><a href="/signup/starter" className="text-muted hover:text-fg transition-colors">Sign up</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-sm font-semibold text-fg mb-3">Resources</div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/help" className="text-muted hover:text-fg transition-colors">Help Center</a></li>
+              <li><a href="/api-docs" className="text-muted hover:text-fg transition-colors">API Docs</a></li>
+            </ul>
+          </div>
+          <div>
+            <div className="text-sm font-semibold text-fg mb-3">Legal</div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/privacy" className="text-muted hover:text-fg transition-colors">Privacy</a></li>
+              <li><a href="/terms" className="text-muted hover:text-fg transition-colors">Terms</a></li>
+              <li><a href="/security" className="text-muted hover:text-fg transition-colors">Security</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-10 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted">© {new Date().getFullYear()} Netia. All rights reserved.</p>
+          <span className="flex items-center gap-2 text-sm text-muted">
+            <span>Powered by</span>
+            <span className="relative inline-block w-[86px] h-[20px]">
+              <Image src="/openai-logo.png" alt="OpenAI" fill className="object-contain" />
+            </span>
+          </span>
         </div>
       </div>
     </footer>
