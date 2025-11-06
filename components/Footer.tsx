@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="border-t border-border bg-white">
       <div className="container-g py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center text-center">
           <div>
             <div className="text-sm font-semibold text-fg mb-3">Product</div>
             <ul className="space-y-2 text-sm">
@@ -43,7 +43,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-8 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 text-center">
           <p className="text-sm text-muted">© {new Date().getFullYear()} Netia. All rights reserved.</p>
           <nav className="flex items-center gap-6 text-sm">
             <a href="/privacy" className="text-muted hover:text-fg transition-colors">Privacy</a>
