@@ -3,6 +3,7 @@
 import { Header } from "@/components/Header"
 import { Footer } from "@/components/Footer"
 import { FloatingBalls } from "@/components/FloatingBalls"
+import { AmbientGlow } from "@/components/AmbientGlow"
 
 export default function Pricing() {
   const handleGetStarted = () => {
@@ -16,6 +17,7 @@ export default function Pricing() {
   } 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
+      <AmbientGlow />
       {/* Floating elements */}
       <FloatingBalls />
       
@@ -25,7 +27,7 @@ export default function Pricing() {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-fg mb-4">
-              Stop Losing Patient Bookings After Hours
+              Stop Losing Customer Bookings After Hours
             </h1>
             <p className="text-lg text-muted max-w-2xl mx-auto">
               Every missed inquiry after hours costs you money. Our AI never sleeps, never takes breaks, and never misses an opportunity to book your next appointment.

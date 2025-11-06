@@ -19,8 +19,8 @@ export default function FAQ() {
       answer: "The AI is trained to handle 90%+ of common questions. For complex medical questions or situations it can't handle, it will politely direct the visitor to book a consultation or call your clinic directly."
     },
     {
-      question: "Is my patient data secure?",
-      answer: "Absolutely. We're HIPAA compliant and use enterprise-grade security. All conversations are encrypted, and we never store sensitive patient information. Your data stays private and secure."
+      question: "Is my customer data secure?",
+      answer: "Absolutely. We're HIPAA compliant and use enterprise-grade security. All conversations are encrypted, and we never store sensitive customer information. Your data stays private and secure."
     },
     {
       question: "Can I customize the AI's responses?",

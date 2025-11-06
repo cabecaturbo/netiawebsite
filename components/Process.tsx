@@ -15,13 +15,13 @@ export const Process = () => {
     {
       number: "03",
       title: "Start Booking Appointments", 
-      description: "Your AI starts working immediately—booking consultations and answering patient questions. No training required.",
+      description: "Your AI starts working immediately—booking consultations and answering customer questions. No training required.",
       action: "See it in action"
     },
     {
       number: "04",
       title: "Watch Your Practice Grow",
-      description: "More scheduled appointments, fewer missed inquiries, happier patients.",
+      description: "More scheduled appointments, fewer missed inquiries, happier customers.",
       action: "View dashboard"
     }
   ]

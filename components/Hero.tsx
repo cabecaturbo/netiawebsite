@@ -91,7 +91,7 @@ export const Hero = () => {
                     <div className="w-3 h-3 bg-white rounded-full" />
                   </div>
                   <div className="bg-blue-600 rounded-2xl rounded-bl-md px-4 py-2 max-w-xs">
-                    <p className="text-sm text-white">Yes, we offer routine cleanings and whitening. Our new patient special (cleaning + exam + X‑rays) is $180. Would you like to see our availability?</p>
+                    <p className="text-sm text-white">Yes, we offer routine cleanings and whitening. Our new customer special (cleaning + exam + X‑rays) is $180. Would you like to see our availability?</p>
                   </div>
                 </div>
                 {/* Customer */}

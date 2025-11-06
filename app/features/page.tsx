@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { CheckIcon, SparklesIcon, ClockIcon, ShieldCheckIcon, ChatBubbleLeftRightIcon, CogIcon } from '@heroicons/react/24/outline'
+import { AmbientGlow } from '@/components/AmbientGlow'
+import { FloatingBalls } from '@/components/FloatingBalls'
 
 export const metadata: Metadata = {
   title: 'Features - Netia AI Customer Service',
@@ -47,7 +49,7 @@ const features = [
   },
   {
     name: 'Powered by OpenAI',
-    description: 'Built with cutting-edge AI technology that understands context and delivers smart, helpful responses to your patients.',
+    description: 'Built with cutting-edge AI technology that understands context and delivers smart, helpful responses to your customers.',
     icon: CogIcon,
     highlights: ['Using the latest models', 'Contextual understanding', 'Natural conversations'],
     isComingSoon: false
@@ -57,7 +59,9 @@ const features = [
 
 export default function FeaturesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-primary-50/30 relative">
+      <AmbientGlow />
+      <FloatingBalls />
       <Header />
       
       {/* Core Features */}
