@@ -82,6 +82,46 @@ export async function POST(request: NextRequest) {
       ]
     }
 
+    // Validate metadata values (Stripe has a 500 character limit per key)
+    const metadata = {
+      netia_account_id: accountIdStr,
+      netia_account_email: email,
+    }
+    
+    // Check metadata length limits
+    for (const [key, value] of Object.entries(metadata)) {
+      if (value && value.length > 500) {
+        console.error(`Metadata value too long for key ${key}:`, value.length)
+        return NextResponse.json(
+          { error: `Metadata value too long for ${key} (max 500 characters)` },
+          { status: 400 }
+        )
+      }
+    }
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json(
+        { error: 'Invalid email format' },
+        { status: 400 }
+      )
+    }
+
+    // Build URLs
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+    const successUrl = `${baseUrl}/signup/success?session_id={CHECKOUT_SESSION_ID}`
+    const cancelUrl = `${baseUrl}/signup/cancel`
+
+    // Log request parameters (without sensitive data) for debugging
+    console.log('Creating Stripe checkout session:', {
+      email,
+      accountId: accountIdStr,
+      hasPriceId: !!stripePriceId,
+      baseUrl,
+      metadataKeys: Object.keys(metadata),
+    })
+
     // Create Stripe Checkout Session
     const session = await stripe.checkout.sessions.create({
       customer_email: email,
@@ -90,17 +130,11 @@ export async function POST(request: NextRequest) {
       line_items: lineItems,
       subscription_data: {
         trial_period_days: 7,
-        metadata: {
-            netia_account_id: accountIdStr,
-            netia_account_email: email,
-        },
+        metadata,
       },
-      metadata: {
-          netia_account_id: accountIdStr,
-          netia_account_email: email,
-      },
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/signup/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/signup/cancel`,
+      metadata,
+      success_url: successUrl,
+      cancel_url: cancelUrl,
     })
 
     return NextResponse.json({
@@ -129,12 +163,13 @@ export async function POST(request: NextRequest) {
       if (stripeError.type) {
         // Handle Stripe-specific errors
         if (stripeError.type === 'StripeInvalidRequestError') {
+          // Include safe error details even in production (code and param are safe to expose)
           return NextResponse.json(
             { 
               error: 'Invalid Stripe request',
-              details: process.env.NODE_ENV === 'development' 
-                ? `${stripeError.message}${stripeError.param ? ` (param: ${stripeError.param})` : ''}`
-                : undefined
+              code: stripeError.code || undefined,
+              param: stripeError.param || undefined,
+              message: process.env.NODE_ENV === 'development' ? stripeError.message : undefined,
             },
             { status: 400 }
           )
