@@ -13,13 +13,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Validate accountId (must be a UUID-like value, never an email)
-    const isEmailLike = typeof accountId === 'string' && accountId.includes('@')
-    const uuidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
-    const isUuidLike = typeof accountId === 'string' && uuidRegex.test(accountId)
-    if (isEmailLike || !isUuidLike) {
+    // Validate accountId (must not be an email, can be string or number)
+    // Convert to string if it's a number
+    const accountIdStr = typeof accountId === 'number' ? accountId.toString() : accountId
+    const isEmailLike = typeof accountIdStr === 'string' && accountIdStr.includes('@')
+    if (isEmailLike || !accountIdStr || typeof accountIdStr !== 'string') {
       return NextResponse.json(
-        { error: 'Invalid accountId: expected Netia account UUID' },
+        { error: 'Invalid accountId: expected Netia account ID (not an email)' },
         { status: 400 }
       )
     }
@@ -48,7 +48,22 @@ export async function POST(request: NextRequest) {
     } else {
       // Fallback to inline price_data
       // Get monthly price from env or default to $99 (9900 cents)
-      const monthlyPrice = parseInt(process.env.STRIPE_MONTHLY_PRICE_CENTS || '9900', 10)
+      const monthlyPriceStr = process.env.STRIPE_MONTHLY_PRICE_CENTS
+      if (!monthlyPriceStr) {
+        console.error('Missing pricing configuration: STRIPE_PRICE_ID or STRIPE_MONTHLY_PRICE_CENTS must be set')
+        return NextResponse.json(
+          { error: 'Pricing configuration missing' },
+          { status: 500 }
+        )
+      }
+      const monthlyPrice = parseInt(monthlyPriceStr, 10)
+      if (isNaN(monthlyPrice) || monthlyPrice <= 0) {
+        console.error('Invalid STRIPE_MONTHLY_PRICE_CENTS:', monthlyPriceStr)
+        return NextResponse.json(
+          { error: 'Invalid pricing configuration' },
+          { status: 500 }
+        )
+      }
       lineItems = [
         {
           price_data: {
@@ -76,12 +91,12 @@ export async function POST(request: NextRequest) {
       subscription_data: {
         trial_period_days: 7,
         metadata: {
-            netia_account_id: accountId,
+            netia_account_id: accountIdStr,
             netia_account_email: email,
         },
       },
       metadata: {
-          netia_account_id: accountId,
+          netia_account_id: accountIdStr,
           netia_account_email: email,
       },
       success_url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/signup/success?session_id={CHECKOUT_SESSION_ID}`,
@@ -93,7 +108,88 @@ export async function POST(request: NextRequest) {
       url: session.url,
     })
   } catch (error) {
-    console.error('Checkout session creation error:', error)
+    // Log detailed error information for debugging
+    const errorDetails = {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      type: error instanceof Error ? error.constructor.name : typeof error,
+      stack: error instanceof Error ? error.stack : undefined,
+      // Include Stripe-specific error details if available
+      stripeType: (error as any)?.type || undefined,
+      stripeCode: (error as any)?.code || undefined,
+      stripeParam: (error as any)?.param || undefined,
+      stripeDeclineCode: (error as any)?.decline_code || undefined,
+    }
+    console.error('Checkout session creation error:', errorDetails)
+
+    // Return more specific error messages based on error type
+    if (error instanceof Error) {
+      const stripeError = error as any
+      
+      // Check if it's a Stripe error (Stripe errors have a 'type' property)
+      if (stripeError.type) {
+        // Handle Stripe-specific errors
+        if (stripeError.type === 'StripeInvalidRequestError') {
+          return NextResponse.json(
+            { 
+              error: 'Invalid Stripe request',
+              details: process.env.NODE_ENV === 'development' 
+                ? `${stripeError.message}${stripeError.param ? ` (param: ${stripeError.param})` : ''}`
+                : undefined
+            },
+            { status: 400 }
+          )
+        }
+        
+        if (stripeError.type === 'StripeAuthenticationError') {
+          return NextResponse.json(
+            { error: 'Stripe authentication failed - check API key configuration' },
+            { status: 500 }
+          )
+        }
+
+        if (stripeError.type === 'StripeAPIError' || stripeError.type === 'StripeConnectionError') {
+          return NextResponse.json(
+            { 
+              error: 'Stripe API connection error',
+              details: process.env.NODE_ENV === 'development' ? stripeError.message : undefined
+            },
+            { status: 500 }
+          )
+        }
+
+        if (stripeError.type === 'StripeCardError') {
+          return NextResponse.json(
+            { 
+              error: 'Card error',
+              details: process.env.NODE_ENV === 'development' ? stripeError.message : undefined
+            },
+            { status: 400 }
+          )
+        }
+
+        // Generic Stripe error
+        return NextResponse.json(
+          { 
+            error: 'Stripe error occurred',
+            details: process.env.NODE_ENV === 'development' 
+              ? `${stripeError.type}: ${stripeError.message}`
+              : undefined
+          },
+          { status: 500 }
+        )
+      }
+
+      // Generic error with message in development
+      return NextResponse.json(
+        { 
+          error: 'Failed to create checkout session',
+          details: process.env.NODE_ENV === 'development' ? error.message : undefined
+        },
+        { status: 500 }
+      )
+    }
+
+    // Fallback for unknown error types
     return NextResponse.json(
       { error: 'Failed to create checkout session' },
       { status: 500 }
