@@ -36,6 +36,18 @@ export async function POST(request: NextRequest) {
     // Use Stripe Price ID if available, otherwise use price_data
     const stripePriceId = process.env.STRIPE_PRICE_ID
     
+    // Validate Price ID format if provided (should start with 'price_')
+    if (stripePriceId && !stripePriceId.startsWith('price_')) {
+      console.error('Invalid STRIPE_PRICE_ID format:', stripePriceId)
+      return NextResponse.json(
+        { 
+          error: 'Invalid Stripe Price ID format. Price ID should start with "price_"',
+          param: 'STRIPE_PRICE_ID',
+        },
+        { status: 400 }
+      )
+    }
+    
     let lineItems: Stripe.Checkout.SessionCreateParams.LineItem[]
     if (stripePriceId) {
       // Use existing Stripe Price ID (recommended)
@@ -163,10 +175,19 @@ export async function POST(request: NextRequest) {
       if (stripeError.type) {
         // Handle Stripe-specific errors
         if (stripeError.type === 'StripeInvalidRequestError') {
+          // Provide helpful error messages for common issues
+          let errorMessage = 'Invalid Stripe request'
+          
+          if (stripeError.param === 'line_items[0][price]') {
+            errorMessage = 'Invalid Stripe Price ID. Please check that STRIPE_PRICE_ID is correct and exists in your Stripe dashboard.'
+          } else if (stripeError.param) {
+            errorMessage = `Invalid Stripe parameter: ${stripeError.param}`
+          }
+          
           // Include safe error details even in production (code and param are safe to expose)
           return NextResponse.json(
             { 
-              error: 'Invalid Stripe request',
+              error: errorMessage,
               code: stripeError.code || undefined,
               param: stripeError.param || undefined,
               message: process.env.NODE_ENV === 'development' ? stripeError.message : undefined,
