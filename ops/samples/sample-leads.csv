@@ -1,7 +1,0 @@
-name,company_domain,email,phone,city,state,gmb_rating,gmb_reviews,has_live_chat,runs_ads,services,score
-"Elite Aesthetics","eliteaesthetics.com","info@eliteaesthetics.com","(555) 123-4567","Los Angeles","CA",4.8,127,false,true,"[""Botox"",""Dermal Fillers"",""Laser Treatments""]",4.2
-"Perfect Skin Clinic","perfectskin.com","contact@perfectskin.com","(555) 987-6543","New York","NY",4.6,89,true,false,"[""Botox"",""CoolSculpting"",""Microneedling""]",3.8
-"Radiant Med Spa","radiantmedspa.com","hello@radiantmedspa.com","(555) 456-7890","Chicago","IL",4.9,203,false,true,"[""Botox"",""Dermal Fillers"",""Laser Hair Removal"",""Chemical Peels""]",4.5
-"Beauty & Beyond","beautyandbeyond.com","info@beautyandbeyond.com","(555) 321-0987","Houston","TX",4.4,156,true,true,"[""Botox"",""Laser Treatments"",""Facials""]",3.9
-"Aesthetic Excellence","aestheticexcellence.com","contact@aestheticexcellence.com","(555) 654-3210","Phoenix","AZ",4.7,94,false,false,"[""Botox"",""Dermal Fillers"",""CoolSculpting""]",4.1
-

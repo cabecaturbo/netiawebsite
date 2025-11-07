@@ -31,14 +31,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "apps/**/*",
-    "Ai-Chatbot-v1/**/*",
-    "chatbotdetect/**/*",
-    "netiaredditbot/**/*",
-    "yelp-email-scraper/**/*",
-    "packages/**/*",
-    "src/**/*",
-    "web/**/*"
+    "node_modules"
   ]
 }
