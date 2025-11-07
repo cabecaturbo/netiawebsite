@@ -179,7 +179,12 @@ export async function POST(request: NextRequest) {
           let errorMessage = 'Invalid Stripe request'
           
           if (stripeError.param === 'line_items[0][price]') {
-            errorMessage = 'Invalid Stripe Price ID. Please check that STRIPE_PRICE_ID is correct and exists in your Stripe dashboard.'
+            if (stripeError.code === 'resource_missing') {
+              const priceId = process.env.STRIPE_PRICE_ID || 'unknown'
+              errorMessage = `Stripe Price ID not found: The Price ID '${priceId}' does not exist in your Stripe account. Please verify: 1) The Price ID is correct, 2) You're using the correct Stripe account (test vs live), 3) The Price ID hasn't been deleted or archived.`
+            } else {
+              errorMessage = 'Invalid Stripe Price ID. Please check that STRIPE_PRICE_ID is correct and exists in your Stripe dashboard.'
+            }
           } else if (stripeError.param) {
             errorMessage = `Invalid Stripe parameter: ${stripeError.param}`
           }
