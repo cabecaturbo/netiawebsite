@@ -5,7 +5,7 @@ export const Features = () => {
   const features = [
     {
       title: "Turn Every Visitor Into a Booked Appointment",
-      description: "Potential customers get instant answers to their treatment and service questions. No more 'we'll call you back'—they book consultations right then and there.",
+      description: "Potential customers get instant answers to their treatment and service questions. No more 'we'll call you back'—they schedule instantly.",
       icon: <img src="/bolt.png" alt="Fast response" className="w-8 h-8" style={{filter: 'brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(3086%) hue-rotate(210deg) brightness(99%) contrast(101%)'}} />
     },
     {
