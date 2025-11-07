@@ -92,7 +92,22 @@ export default function StarterSignup() {
       const checkoutData = await checkoutResponse.json()
 
       if (!checkoutResponse.ok) {
-        setErrors([checkoutData.error || 'Failed to create checkout session'])
+        // Log full error details for debugging
+        console.error('Checkout error:', checkoutData)
+        
+        // Build error message with details
+        let errorMessage = checkoutData.error || 'Failed to create checkout session'
+        if (checkoutData.code) {
+          errorMessage += ` (Code: ${checkoutData.code})`
+        }
+        if (checkoutData.param) {
+          errorMessage += ` (Param: ${checkoutData.param})`
+        }
+        if (checkoutData.message) {
+          errorMessage += ` - ${checkoutData.message}`
+        }
+        
+        setErrors([errorMessage])
         setIsSubmitting(false)
         return
       }
