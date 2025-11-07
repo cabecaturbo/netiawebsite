@@ -44,8 +44,7 @@ export const Hero = () => {
             </p>
 
             <div className="mb-8 inline-flex items-center rounded-full border-2 border-green-200 bg-green-50 px-5 py-3 text-sm font-medium text-green-800 shadow-sm">
-              <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              Free trial <span className="mx-2.5">•</span> No setup fees <span className="mx-2.5">•</span> Cancel anytime
+              <span className="mx-2.5">•</span> Free trial <span className="mx-2.5">•</span> No setup fees <span className="mx-2.5">•</span> Cancel anytime
           </div>
 
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
