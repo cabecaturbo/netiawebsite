@@ -40,7 +40,7 @@ export const Hero = () => {
             </div>
 
             <p className="mt-6 mb-8 text-xl md:text-2xl text-muted leading-relaxed max-w-2xl font-light">
-              Your potential customers are browsing your services—ready to book. Netia answers questions 24/7 and schedules consultations instantly.
+              Your potential customers are browsing your services—ready to book. Netia answers questions 24/7 and schedules instantly.
             </p>
 
             <div className="mb-8 inline-flex items-center rounded-full border-2 border-green-200 bg-green-50 px-5 py-3 text-sm font-medium text-green-800 shadow-sm">
